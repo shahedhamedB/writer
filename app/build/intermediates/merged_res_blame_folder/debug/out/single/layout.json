@@ -1,0 +1,10 @@
+[
+    {
+        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_home.xml",
+        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/layout/activity_home.xml"
+    },
+    {
+        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_home.xml",
+        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/layout/fragment_home.xml"
+    }
+]

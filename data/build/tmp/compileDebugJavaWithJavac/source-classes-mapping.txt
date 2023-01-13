@@ -1,0 +1,21 @@
+com/example/dynamodb/retrofit/interceptors/LanguageInterceptor_Factory.java
+ com.example.dynamodb.retrofit.interceptors.LanguageInterceptor_Factory
+com/example/dynamodb/BuildConfig.java
+ com.example.dynamodb.BuildConfig
+com/example/dynamodb/retrofit/di/AppModule_ProvideGsonFactory.java
+ com.example.dynamodb.retrofit.di.AppModule_ProvideGsonFactory
+ com.example.dynamodb.retrofit.di.AppModule_ProvideGsonFactory$InstanceHolder
+com/example/dynamodb/retrofit/di/AppModule_ProvideNetworkServiceFactory.java
+ com.example.dynamodb.retrofit.di.AppModule_ProvideNetworkServiceFactory
+com/example/dynamodb/retrofit/di/AppModule_GetLanguageHeaderOkHttpClientFactory.java
+ com.example.dynamodb.retrofit.di.AppModule_GetLanguageHeaderOkHttpClientFactory
+hilt_aggregated_deps/_com_example_dynamodb_retrofit_di_AppModule.java
+ hilt_aggregated_deps._com_example_dynamodb_retrofit_di_AppModule
+com/example/dynamodb/retrofit/di/AppModule_ProvideRetrofitFactory.java
+ com.example.dynamodb.retrofit.di.AppModule_ProvideRetrofitFactory
+com/example/dynamodb/utils/Prefs_Factory.java
+ com.example.dynamodb.utils.Prefs_Factory
+com/example/dynamodb/retrofit/data/HomeDataSourse_Factory.java
+ com.example.dynamodb.retrofit.data.HomeDataSourse_Factory
+com/example/dynamodb/retrofit/di/AppModule_ProvideSharedPreferencesFactory.java
+ com.example.dynamodb.retrofit.di.AppModule_ProvideSharedPreferencesFactory
