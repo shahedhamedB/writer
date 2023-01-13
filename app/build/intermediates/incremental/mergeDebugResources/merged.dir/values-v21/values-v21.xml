@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources>
+<resources xmlns:ns1="http://schemas.android.com/tools">
     <color name="notification_action_color_filter">@color/androidx_core_secondary_text_default_material_light</color>
+    <dimen name="cancel_icon_height">16dp</dimen>
+    <dimen name="cancel_icon_width">16dp</dimen>
+    <dimen name="cancel_payment_width">48dp</dimen>
     <dimen name="mtrl_calendar_pre_l_text_clip_padding">0dp</dimen>
     <dimen name="mtrl_exposed_dropdown_menu_popup_vertical_offset">1dp</dimen>
     <item format="float" name="mtrl_high_ripple_default_alpha" type="dimen">0.48</item>
@@ -14,6 +17,7 @@
     <dimen name="notification_content_margin_start">0dp</dimen>
     <dimen name="notification_main_column_padding_top">0dp</dimen>
     <dimen name="notification_media_narrow_margin">12dp</dimen>
+    <string name="textview_disclaimer_save_card_header_title">Enter Card Details</string>
     <style name="Base.TextAppearance.AppCompat" parent="android:TextAppearance.Material"/>
     <style name="Base.TextAppearance.AppCompat.Body1" parent="android:TextAppearance.Material.Body1"/>
     <style name="Base.TextAppearance.AppCompat.Body2" parent="android:TextAppearance.Material.Body2"/>
@@ -271,6 +275,46 @@
       <item name="android:popupElevation">8dp</item>
       <item name="android:dropDownVerticalOffset">1dp</item>
     </style>
+    <style name="GoSellSDKAppTheme" parent="Theme.MaterialComponents.Light.Bridge">
+        <item name="actionBarStyle">@style/GoSellSDKActionBar</item>
+        <item name="android:statusBarColor" ns1:ignore="NewApi">@color/french_gray</item>
+    </style>
+    <style name="GoSellSDKAppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">@color/french_gray</item>
+
+    </style>
+    <style name="GoSellSDKAppTheme_Full" parent="GoSellSDKAppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor" ns1:ignore="NewApi">@color/french_gray</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+    <style name="MD_Dark" parent="Theme.AppCompat.Dialog.Alert">
+    <item name="android:windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+    <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+
+    <item name="md_divider">@color/md_divider_white</item>
+    <item name="md_list_selector">?android:selectableItemBackground</item>
+    <item name="md_btn_stacked_selector">?android:selectableItemBackground</item>
+    <item name="md_btn_positive_selector">@drawable/md_btn_selector_ripple_dark</item>
+    <item name="md_btn_neutral_selector">@drawable/md_btn_selector_ripple_dark</item>
+    <item name="md_btn_negative_selector">@drawable/md_btn_selector_ripple_dark</item>
+  </style>
+    <style name="MD_Light" parent="Theme.AppCompat.Light.Dialog.Alert">
+    <item name="android:windowMinWidthMajor">@dimen/abc_dialog_min_width_major</item>
+    <item name="android:windowMinWidthMinor">@dimen/abc_dialog_min_width_minor</item>
+
+    <item name="md_divider">@color/md_divider_black</item>
+    <item name="md_list_selector">?android:selectableItemBackground</item>
+    <item name="md_btn_stacked_selector">?android:selectableItemBackground</item>
+    <item name="md_btn_positive_selector">@drawable/md_btn_selector_ripple</item>
+    <item name="md_btn_neutral_selector">@drawable/md_btn_selector_ripple</item>
+    <item name="md_btn_negative_selector">@drawable/md_btn_selector_ripple</item>
+  </style>
     <style name="MaterialAlertDialog.MaterialComponents.Picker.Date.Calendar" parent="android:Widget.DeviceDefault.DatePicker">
     <item name="backgroundInsetTop">@dimen/mtrl_alert_dialog_picker_background_inset</item>
     <item name="backgroundInsetBottom">@dimen/mtrl_alert_dialog_picker_background_inset</item>
@@ -325,6 +369,13 @@
 
         <item name="android:buttonBarStyle">?attr/buttonBarStyle</item>
         <item name="android:buttonBarButtonStyle">?attr/buttonBarButtonStyle</item>
+    </style>
+    <style name="SecurityText">
+        <item name="android:textColor">@color/security_text_color</item>
+        <item name="android:textSize">@dimen/font_size_13sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily" ns1:targetApi="jelly_bean">@font/avenir_next_regular</item>
+        <item name="android:lineSpacingExtra">@dimen/title_lineSpacingExtra_0</item>
     </style>
     <style name="TextAppearance.Compat.Notification" parent="@android:style/TextAppearance.Material.Notification"/>
     <style name="TextAppearance.Compat.Notification.Info" parent="@android:style/TextAppearance.Material.Notification.Info"/>
@@ -385,6 +436,14 @@
     <style name="ThemeOverlay.MaterialComponents.MaterialAlertDialog.Picker.Date.Spinner">
     <item name="android:datePickerStyle">@style/MaterialAlertDialog.MaterialComponents.Picker.Date.Spinner</item>
   </style>
+    <style name="TransparentCompat" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:statusBarColor" ns1:ignore="NewApi">@color/french_gray</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+    </style>
     <style name="Widget.Compat.NotificationActionContainer" parent="">
         <item name="android:background">@drawable/notification_action_background</item>
     </style>
@@ -404,4 +463,7 @@
     <style name="Widget.MaterialComponents.Slider" parent="Base.Widget.MaterialComponents.Slider">
     <item name="android:background">?attr/controlBackground</item>
   </style>
+    <style name="popup_window_animation_phone">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+    </style>
 </resources>

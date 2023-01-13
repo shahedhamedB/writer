@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-w600dp-land-v13/values-w600dp-land-v13.xml",
+            "outputFile": "com.example.dynamodb.app-mergeDebugResources-117:/values-w600dp-land-v13/values-w600dp-land-v13.xml",
             "map": [
                 {
-                    "source": "/Users/shahed/.gradle/caches/transforms-3/a1707f4fbfa40d3d81871d9fde3dc2c4/transformed/material-1.4.0/res/values-w600dp-land-v13/values-w600dp-land-v13.xml",
+                    "source": "/Users/shahed/.gradle/caches/transforms-3/1e0fad24baa26a57f36173e49a07471f/transformed/material-1.4.0/res/values-w600dp-land-v13/values-w600dp-land-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

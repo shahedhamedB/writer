@@ -3,9 +3,9 @@
 3    package="com.example.dynamodb" >
 4
 5    <uses-sdk
-6        android:minSdkVersion="21"
-6-->/Users/shahed/Documents/github/writerdynanodb/data/src/main/AndroidManifest.xml
+6        android:minSdkVersion="16"
+6-->/Users/shahed/Documents/github/writer/data/src/main/AndroidManifest.xml
 7        android:targetSdkVersion="30" />
-7-->/Users/shahed/Documents/github/writerdynanodb/data/src/main/AndroidManifest.xml
+7-->/Users/shahed/Documents/github/writer/data/src/main/AndroidManifest.xml
 8
 9</manifest>

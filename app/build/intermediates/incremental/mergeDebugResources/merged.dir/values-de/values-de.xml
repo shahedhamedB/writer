@@ -31,10 +31,30 @@
     <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"Teilen mit"</string>
     <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"Mit <ns1:g id="APPLICATION_NAME">%s</ns1:g> teilen"</string>
     <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"Minimieren"</string>
+    <string name="actionbar_title_address_on_card">Adresse auf der Karte</string>
+    <string name="app_name">GoSellAPI</string>
     <string name="bottomsheet_action_expand_halfway">Zur Hälfte maximieren</string>
+    <string name="bt_cid">CID</string>
+    <string name="bt_cvc">CVC</string>
+    <string name="bt_cvn">CVN</string>
+    <string name="bt_cvv">CVV</string>
+    <string name="bt_cvv_invalid">%s ist ungültig</string>
+    <string name="bt_cvv_required">%s ist erforderlich</string>
+    <string name="bt_expiration_invalid">Ablaufdatum ist ungültig</string>
+    <string name="bt_expiration_required">Ablaufdatum ist erforderlich</string>
+    <string name="bt_form_hint_cvv">@string/bt_cvv</string>
+    <string name="bt_form_hint_expiration">Ablaufdatum</string>
+    <string name="bt_month">Monat</string>
+    <string name="bt_year">Jahr</string>
+    <string name="btn_title_confirm">Bestätigen</string>
+    <string name="btn_title_save">Speichern</string>
+    <string name="business_icon_description">Betriebszeichen</string>
+    <string name="cancel">Abbrechen</string>
+    <string name="card_saved_before">Ihre Karte wurde bereits gespeichert, Sie können sie nicht zweimal speichern!</string>
     <string name="character_counter_content_description">Eingegebene Zeichen: %1$d von %2$d</string>
     <string name="character_counter_overflowed_content_description">Zeichenbeschränkung überschritten: %1$d/%2$d</string>
     <string name="clear_text_end_icon_content_description">Text löschen</string>
+    <string name="close">Schließen</string>
     <string gender="unknown" name="com_facebook_device_auth_instructions">Gehe zu &lt;b>facebook.com/device&lt;/b> und gib den oben angezeigten Code ein.</string>
     <string gender="unknown" name="com_facebook_image_download_unknown_error">Unerwarteter Fehler beim Herunterladen eines Bildes.</string>
     <string gender="unknown" name="com_facebook_internet_permission_error_message">WebView-Anmeldung erfordert INTERNET-Berechtigung</string>
@@ -58,25 +78,44 @@
     <string gender="unknown" name="com_facebook_smart_login_confirmation_continue_as">Weiter als %1$s</string>
     <string gender="unknown" name="com_facebook_smart_login_confirmation_title">Anmeldung bestätigen</string>
     <string gender="unknown" name="com_facebook_tooltip_default">Du bestimmst, welche Informationen du mit Apps teilen möchtest.</string>
-    <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"Aktivieren"</string>
-    <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> funktioniert erst nach der Aktivierung der Google Play-Dienste."</string>
-    <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"Google Play-Dienste aktivieren"</string>
-    <string msgid="9115728400623041681" name="common_google_play_services_install_button">"Installieren"</string>
-    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"Zur Nutzung von <ns1:g id="APP_NAME">%1$s</ns1:g> sind die Google Play-Dienste erforderlich, die auf deinem Gerät nicht installiert sind."</string>
-    <string msgid="7442193194585196676" name="common_google_play_services_install_title">"Google Play-Dienste installieren"</string>
-    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"Verfügbarkeit von Google Play-Diensten"</string>
-    <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"Fehler bei Zugriff auf Google Play-Dienste"</string>
-    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"<ns1:g id="APP_NAME">%1$s</ns1:g> hat Probleme mit Google Play-Diensten. Bitte versuche es noch einmal."</string>
-    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"Zur Nutzung von <ns1:g id="APP_NAME">%1$s</ns1:g> sind Google Play-Dienste erforderlich, die auf deinem Gerät nicht unterstützt werden."</string>
-    <string msgid="8172070149091615356" name="common_google_play_services_update_button">"Aktualisieren"</string>
-    <string msgid="7773943415006962566" name="common_google_play_services_update_text">"<ns1:g id="APP_NAME">%1$s</ns1:g> wird nur ausgeführt, wenn du die Google Play-Dienste aktualisierst."</string>
-    <string msgid="8706675115216073244" name="common_google_play_services_update_title">"Google Play-Dienste aktualisieren"</string>
-    <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"Zur Nutzung von <ns1:g id="APP_NAME">%1$s</ns1:g> sind Google Play-Dienste erforderlich, die gerade aktualisiert werden."</string>
-    <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"Eine neue Version der Google Play-Dienste wird benötigt. Diese wird in Kürze automatisch aktualisiert."</string>
-    <string msgid="5201977337835724196" name="common_open_on_phone">"Auf Smartphone öffnen"</string>
-    <string msgid="3441753203274453993" name="common_signin_button_text">"Anmelden"</string>
-    <string msgid="669893613918351210" name="common_signin_button_text_long">"Über Google anmelden"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">Aktivieren</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">%1$s funktioniert erst nach der Aktivierung der Google Play-Dienste.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">Google Play-Dienste aktivieren</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">Installieren</string>
+    <string name="common_google_play_services_install_text">Zur Nutzung von %1$s sind die Google Play-Dienste erforderlich, die auf deinem Gerät nicht installiert sind.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">Google Play-Dienste installieren</string>
+    <string name="common_google_play_services_notification_channel_name">Verfügbarkeit von Google Play-Diensten</string>
+    <string name="common_google_play_services_notification_ticker">Fehler bei Zugriff auf Google Play-Dienste</string>
+    <string name="common_google_play_services_unknown_issue">%1$s hat Probleme mit Google Play-Diensten. Bitte versuche es noch einmal.</string>
+    <string name="common_google_play_services_unsupported_text">Zur Nutzung von %1$s sind Google Play-Dienste erforderlich, die auf deinem Gerät nicht unterstützt werden.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">Aktualisieren</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">%1$s wird nur ausgeführt, wenn du die Google Play-Dienste aktualisierst.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">Google Play-Dienste aktualisieren</string>
+    <string name="common_google_play_services_updating_text">Zur Nutzung von %1$s sind Google Play-Dienste erforderlich, die gerade aktualisiert werden.</string>
+    <string name="common_google_play_services_wear_update_text">Eine neue Version der Google Play-Dienste wird benötigt. Diese wird in Kürze automatisch aktualisiert.</string>
+    <string name="common_open_on_phone">Auf Smartphone öffnen</string>
+    <string name="common_signin_button_text">Anmelden</string>
+    <string name="common_signin_button_text_long">Über Google anmelden</string>
     <string msgid="3260749812566568062" name="copy_toast_msg">"Link in Zwischenablage kopiert"</string>
+    <string name="delete_saved_card_button_Cancel">Abbrechen</string>
+    <string name="delete_saved_card_button_Delete">Löschen</string>
+    <string name="delete_saved_card_msg">Möchten Sie die Karte wirklich löschen? </string>
+    <string name="delete_saved_card_title">Karte löschen</string>
+    <string name="device_has_aproblem_in_connectivity_manager">Gerät hat ein Problem im Konnektivitätsmanager</string>
+    <string name="dismiss">Aufgeben</string>
+    <string name="edittext_hint_CVV">CVV</string>
+    <string name="edittext_hint_address_on_card">Adresse auf der Karte</string>
+    <string name="edittext_hint_card_number">Kartennummer</string>
+    <string name="edittext_hint_city">Stadt</string>
+    <string name="edittext_hint_email">Email</string>
+    <string name="edittext_hint_expiration_date">MM/JJ</string>
+    <string name="edittext_hint_line1">Zeile 1</string>
+    <string name="edittext_hint_line2">Zeile 2</string>
+    <string name="edittext_hint_name">Name</string>
+    <string name="edittext_hint_name_on_card">Name auf der Karte</string>
+    <string name="edittext_hint_phone_number">Rufnummer</string>
+    <string name="edittext_hint_state">Bundesland</string>
+    <string name="edittext_hint_zip_code">Postleitzahl</string>
     <string name="ef_camera">KAMERA</string>
     <string name="ef_content_desc_folder" translatable="false">Folder</string>
     <string name="ef_content_desc_image" translatable="false">Image</string>
@@ -97,14 +136,27 @@
     <string name="ef_title_folder">Verzeichnis</string>
     <string name="ef_title_select_image">Tippen um Bilder auszuwählen</string>
     <string name="ef_video" translatable="false">Video</string>
+    <string name="error_deleting_card_msg">Die Karte kann momentan nicht gelöscht werden. Bitte versuchen Sie es später noch einmal.</string>
+    <string name="error_deleting_card_title">Verzeihung</string>
     <string name="error_icon_content_description">Fehler</string>
     <string name="exposed_dropdown_menu_content_description">Drop-down-Menü anzeigen</string>
+    <string name="extra_fees_alert_confirm_message_cancel">Abbrechen</string>
+    <string name="extra_fees_alert_confirm_message_confirm">Bestätigen</string>
+    <string name="extra_fees_alert_confirm_message_title">Zusätzliche Gebühren bestätigen</string>
+    <string name="extra_fees_alert_message">Für diese Zahlungsart wird eine zusätzliche Gebühr in Höhe von %s erhoben, die sich auf einen Gesamtbetrag von %s beläuft </string>
     <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Link kopieren"</string>
     <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Im Browser öffnen"</string>
     <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Link teilen"</string>
-    <string name="fcm_fallback_notification_channel_label">Sonstiges</string>
+    <string name="hello_blank_fragment">Hallo leer Fragment</string>
     <string name="icon_content_description">Dialogfeldsymbol</string>
+    <string name="internet_connection_is_not_available">Internetverbindung nicht verfügbar</string>
+    <string name="internet_connectivity_message">Internetverbindung nicht verfügbar</string>
+    <string name="internet_connectivity_title">Netzwerkfehler</string>
     <string name="item_view_role_description">Tab</string>
+    <string name="key_sdkLanguage">key_sdkLanguage</string>
+    <string name="key_sdk_appearance_mode">key_sdk_appearance_mode</string>
+    <string name="key_sdk_transaction_currency">key_sdk_transaction_currency</string>
+    <string name="key_sdk_transaction_mode">key_sdk_transaction_mode</string>
     <string name="material_clock_toggle_content_description">Vormittags oder Nachmittags auswählen</string>
     <string name="material_hour_selection">Stunde auswählen</string>
     <string name="material_hour_suffix">%1$s Uhr</string>
@@ -117,7 +169,6 @@
     <string name="material_timepicker_pm">PM</string>
     <string name="material_timepicker_select_time">Uhrzeit auswählen</string>
     <string name="material_timepicker_text_input_mode_description">In den Texteingabemodus wechseln, um die Uhrzeit einzugeben.</string>
-    <string name="messenger_send_button_text">Senden</string>
     <string name="mtrl_badge_numberless_content_description">Neue Benachrichtigung</string>
     <string name="mtrl_chip_close_icon_content_description">%1$s entfernen</string>
     <string name="mtrl_exceed_max_badge_number_content_description">Mehr als %1$d neue Benachrichtigungen</string>
@@ -153,10 +204,51 @@
     <string name="mtrl_picker_toggle_to_year_selection">Tippen, um zur Jahresauswahl zu wechseln</string>
     <string msgid="6301633601645100427" name="nav_app_bar_navigate_up_description">"Nach oben"</string>
     <string msgid="7456070600745802113" name="nav_app_bar_open_drawer_description">"Navigationsleiste öffnen"</string>
+    <string name="no_result_found">Kein Ergebnis gefunden</string>
+    <string name="otp_cancel_dialog">Nein</string>
+    <string name="otp_cancel_payment_message">Möchten Sie die Bezahlung abbrechen</string>
+    <string name="otp_cancel_payment_title">Bezahlung abbrechen</string>
+    <string name="otp_confirm_dialog">Bestätigen</string>
     <string name="password_toggle_content_description">Passwort anzeigen</string>
+    <string name="pay">Bezahle</string>
+    <string name="payment_status_alert_declined">Abgelehnt</string>
+    <string name="payment_status_alert_failed">Fehlgeschlagen</string>
+    <string name="payment_status_alert_invalid">Ungültig</string>
+    <string name="payment_status_alert_successful">Erfolgreich</string>
+    <string name="payment_status_alert_timedout">ZEITÜBERSCHREITUNG</string>
+    <string name="payment_status_alert_unknown">UNBEKANNT</string>
+    <string name="retry">Wiederholen</string>
+    <string name="save_card">Karte speichern</string>
+    <string name="sdk_error">Fehler</string>
+    <string name="sdk_not_configure_correctly">SDK Nicht Richtig Konfiguriert</string>
+    <string name="search">Suchen</string>
+    <string name="search_hint">Suche…</string>
     <string msgid="6264217191555673260" name="search_menu_title">"Suche"</string>
+    <string name="select_country">Land auswählen</string>
+    <string name="select_currency_title">Währung wählen</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="textview_disclaimer_go_pay_checkouts">Wenn Sie goPay aktivieren, werden Ihre Kartendaten mit Tap Payments gespeichert, damit Sie in mehreren Apps und Websites schneller und sicherer auschecken können</string>
+    <string name="textview_disclaimer_otp_sent_number">Bitte geben Sie das Passwort ein, das an Sie versendet wurde </string>
+    <string name="textview_disclaimer_save_card">Speichern Sie Ihre Karte für schnellere und sicherere Bezahlung</string>
+    <string name="textview_disclaimer_save_card_header_title">Kartendetails eingeben</string>
+    <string name="textview_disclaimer_save_card_info">Gespeicherte Karten werden nur mit Ihrer Zustimmung verwendet. Sie können sie jederzeit entfernen.</string>
+    <string name="textview_placeholder_last_four_digits">••••%s</string>
+    <string name="textview_title_address_on_card">Adresse auf der Karte</string>
+    <string name="textview_title_country">Land</string>
+    <string name="textview_title_others">Andere</string>
+    <string name="textview_title_personal_info">Ihre persönliche Information</string>
+    <string name="textview_title_recent">Zuletzt</string>
+    <string name="textview_title_recent_cancel">ABBRECHEN</string>
+    <string name="textview_title_recent_edit">BEARRBEITEN</string>
+    <string name="textview_title_resend_again">Passwort nochmal senden </string>
+    <string name="textview_title_save_for_gopay">Speichern für goPay Zahlungen</string>
+    <string name="textview_title_save_for_merchant">Speichern für %s Zahlungen</string>
+    <string name="tokenize">Bezahle</string>
     <string name="ucrop_label_edit_photo">Foto editieren</string>
     <string name="ucrop_label_original">Original</string>
     <string name="ucrop_menu_crop">Zuschneiden</string>
+    <string name="zxing_app_name">Barcode Scanner</string>
+    <string name="zxing_button_ok">OK</string>
+    <string name="zxing_msg_camera_framework_bug">Mit der Android-Kamera ist leider ein Fehler aufgetreten. Es könnte sein, dass Sie das Gerät neu starten müssen.</string>
+    <string name="zxing_msg_default_status">Positionieren Sie den Barcode innerhalb des Rechteckes.</string>
 </resources>

@@ -15,7 +15,7 @@
     <string msgid="1189761859438369441" name="abc_activity_chooser_view_see_all">"عرض الكل"</string>
     <string msgid="2165779757652331008" name="abc_activitychooserview_choose_application">"اختيار تطبيق"</string>
     <string msgid="4215997306490295099" name="abc_capital_off">"إيقاف"</string>
-    <string msgid="884982626291842264" name="abc_capital_on">"تفعيل"</string>
+    <string msgid="884982626291842264" name="abc_capital_on">"مفعّلة"</string>
     <string msgid="8833365367933412986" name="abc_menu_alt_shortcut_label">"Alt+"</string>
     <string msgid="2223301931652355242" name="abc_menu_ctrl_shortcut_label">"Ctrl+"</string>
     <string msgid="838001238306846836" name="abc_menu_delete_shortcut_label">"حذف"</string>
@@ -35,12 +35,34 @@
     <string msgid="8875138169939072951" name="abc_shareactionprovider_share_with">"مشاركة مع"</string>
     <string msgid="9055268688411532828" name="abc_shareactionprovider_share_with_application">"مشاركة مع <ns1:g id="APPLICATION_NAME">%s</ns1:g>"</string>
     <string msgid="1656852541809559762" name="abc_toolbar_collapse_description">"تصغير"</string>
-    <string name="app_name">Hawalena</string>
+    <string name="actionbar_title_address_on_card">العنوان الموجود في البطاقة</string>
+    <string name="alert_un_supported_card_message">نوع البطاقة غير مدعوم</string>
+    <string name="alert_un_supported_card_title">تنبيه</string>
+    <string name="app_name">DynamodbApp</string>
     <string name="arabic_a">Arabic</string>
     <string name="bottomsheet_action_expand_halfway">توسيع البطاقة السفلية</string>
+    <string name="bt_cid">الرمز الأمني</string>
+    <string name="bt_cvc">الرمز الأمني</string>
+    <string name="bt_cvn">الرمز الأمني</string>
+    <string name="bt_cvv">الرمز الأمني</string>
+    <string name="bt_cvv_invalid">%s غير صحيح </string>
+    <string name="bt_cvv_required">%s مطلوب</string>
+    <string name="bt_expiration_invalid">تاريخ انتهاء البطاقة غير صحيح</string>
+    <string name="bt_expiration_required">تاريخ انتهاء البطاقة مطلوب</string>
+    <string name="bt_form_hint_cvv">@string/bt_cvv</string>
+    <string name="bt_form_hint_expiration">تاريخ انتهاء البطاقة</string>
+    <string name="bt_month">شهر</string>
+    <string name="bt_year">سنة</string>
+    <string name="btn_title_confirm">تأكيد</string>
+    <string name="btn_title_save">حفظ</string>
+    <string name="business_icon_description">Business icon</string>
+    <string name="cancel">إلغاء</string>
+    <string name="card_saved_before">تم حفظ بطاقتك من قبل ، لا يمكنك حفظها مرتين!</string>
     <string name="character_counter_content_description">تمّ إدخال %1$d حرف من إجمالي %2$d.</string>
     <string name="character_counter_overflowed_content_description">تجاوز عدد الأحرف المسموح به %1$d من %2$d.</string>
     <string name="clear_text_end_icon_content_description">محو النص</string>
+    <string name="close">إغلاق</string>
+    <string name="code_expires_on" translatable="false">تنتهي صلاحية الكود في</string>
     <string gender="unknown" name="com_facebook_device_auth_instructions">تفضل بزيارة &lt;b>facebook.com/device&lt;/b> وإدخال الرمز الموضح أعلاه.</string>
     <string gender="unknown" name="com_facebook_image_download_unknown_error">حدث خطأ غير متوقع أثناء تنزيل صورة.</string>
     <string gender="unknown" name="com_facebook_internet_permission_error_message">يتطلب تسجيل دخول WebView الحصول إلى إذن INTERNET</string>
@@ -64,25 +86,44 @@
     <string gender="unknown" name="com_facebook_smart_login_confirmation_continue_as">متابعة باسم %1$s</string>
     <string gender="unknown" name="com_facebook_smart_login_confirmation_title">تأكيد تسجيل الدخول</string>
     <string gender="unknown" name="com_facebook_tooltip_default">أنت المتحكم في الأمر - يمكنك اختيار المعلومات التي تود مشاركتها مع التطبيقات.</string>
-    <string msgid="8585111718777012708" name="common_google_play_services_enable_button">"تفعيل"</string>
-    <string msgid="7045129128108380659" name="common_google_play_services_enable_text">"‏لن يعمل <ns1:g id="APP_NAME">%1$s</ns1:g> ما لم يتم تفعيل خدمات Google Play."</string>
-    <string msgid="3147157405986503375" name="common_google_play_services_enable_title">"‏تفعيل خدمات Google Play"</string>
-    <string msgid="9115728400623041681" name="common_google_play_services_install_button">"تثبيت"</string>
-    <string msgid="8179894293032530091" name="common_google_play_services_install_text">"‏لن يتم تشغيل <ns1:g id="APP_NAME">%1$s</ns1:g> بدون خدمات Google Play، والتي لا تتوفر على جهازك."</string>
-    <string msgid="7442193194585196676" name="common_google_play_services_install_title">"‏الحصول على خدمات Google Play"</string>
-    <string msgid="4293541511340436975" name="common_google_play_services_notification_channel_name">"‏مدى توفّر خدمات Google Play"</string>
-    <string msgid="180394615667698242" name="common_google_play_services_notification_ticker">"‏خطأ في خدمات Google Play"</string>
-    <string msgid="2518680582564677258" name="common_google_play_services_unknown_issue">"‏لدى <ns1:g id="APP_NAME">%1$s</ns1:g> مشكلة في خدمات Google Play. يُرجى إعادة المحاولة."</string>
-    <string msgid="5501187292256987189" name="common_google_play_services_unsupported_text">"‏لن يتم تشغيل <ns1:g id="APP_NAME">%1$s</ns1:g> بدون خدمات Google Play التي لا يوفرها جهازك."</string>
-    <string msgid="8172070149091615356" name="common_google_play_services_update_button">"تحديث"</string>
-    <string msgid="7773943415006962566" name="common_google_play_services_update_text">"‏لن يتم تشغيل <ns1:g id="APP_NAME">%1$s</ns1:g> ما لم يتم تحديث خدمات Google Play."</string>
-    <string msgid="8706675115216073244" name="common_google_play_services_update_title">"‏تحديث خدمات Google Play"</string>
-    <string msgid="7894275749778928941" name="common_google_play_services_updating_text">"‏لن يتم تشغيل <ns1:g id="APP_NAME">%1$s</ns1:g> بدون خدمات Google Play، والتي يتم تحديثها حاليًا."</string>
-    <string msgid="2804989272736383918" name="common_google_play_services_wear_update_text">"‏يجب توفر إصدار جديد من خدمات Google Play. سيتم تحديثها تلقائيًا قريبًا."</string>
-    <string msgid="5201977337835724196" name="common_open_on_phone">"فتح على الهاتف"</string>
-    <string msgid="3441753203274453993" name="common_signin_button_text">"تسجل الدخول"</string>
-    <string msgid="669893613918351210" name="common_signin_button_text_long">"‏تسجيل الدخول عبر Google"</string>
+    <string msgid="2523291102206661146" name="common_google_play_services_enable_button">تفعيل</string>
+    <string msgid="227660514972886228" name="common_google_play_services_enable_text">‏لن يعمل %1$s ما لم يتم تفعيل خدمات Google Play.</string>
+    <string msgid="5122002158466380389" name="common_google_play_services_enable_title">‏تفعيل خدمات Google Play</string>
+    <string msgid="7153882981874058840" name="common_google_play_services_install_button">تثبيت</string>
+    <string name="common_google_play_services_install_text">‏لن يتم تشغيل %1$s بدون خدمات Google Play، والتي لا تتوفر على جهازك.</string>
+    <string msgid="7215213145546190223" name="common_google_play_services_install_title">‏الحصول على خدمات Google Play</string>
+    <string name="common_google_play_services_notification_channel_name">‏مدى توفّر خدمات Google Play</string>
+    <string name="common_google_play_services_notification_ticker">‏خطأ في خدمات Google Play</string>
+    <string name="common_google_play_services_unknown_issue">‏لدى %1$s مشكلة في خدمات Google Play. يُرجى إعادة المحاولة.</string>
+    <string name="common_google_play_services_unsupported_text">‏لن يتم تشغيل %1$s بدون خدمات Google Play التي لا يوفرها جهازك.</string>
+    <string msgid="6556509956452265614" name="common_google_play_services_update_button">تحديث</string>
+    <string msgid="9053896323427875356" name="common_google_play_services_update_text">‏لن يتم تشغيل %1$s ما لم يتم تحديث خدمات Google Play.</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">‏تحديث خدمات Google Play</string>
+    <string name="common_google_play_services_updating_text">‏لن يتم تشغيل %1$s بدون خدمات Google Play، والتي يتم تحديثها حاليًا.</string>
+    <string name="common_google_play_services_wear_update_text">‏يجب توفر إصدار جديد من خدمات Google Play. سيتم تحديثها تلقائيًا قريبًا.</string>
+    <string name="common_open_on_phone">فتح على الهاتف</string>
+    <string name="common_signin_button_text">تسجل الدخول</string>
+    <string name="common_signin_button_text_long">‏تسجيل الدخول عبر Google</string>
     <string msgid="3260749812566568062" name="copy_toast_msg">"تم نسخ الرابط إلى الحافظة."</string>
+    <string name="delete_saved_card_button_Cancel">إلغاء</string>
+    <string name="delete_saved_card_button_Delete">حذف</string>
+    <string name="delete_saved_card_msg">هل أنت متأكد من حذف البطاقة </string>
+    <string name="delete_saved_card_title">حذف البطاقة</string>
+    <string name="device_has_aproblem_in_connectivity_manager">يواجه الجهاز مشكلة في مدير الاتصال بالانترنت </string>
+    <string name="dismiss">إلغاء</string>
+    <string name="edittext_hint_CVV">الرمز الأمني</string>
+    <string name="edittext_hint_address_on_card">العنوان الموجود في البطاقة</string>
+    <string name="edittext_hint_card_number">رقم البطاقة</string>
+    <string name="edittext_hint_city">المدينة</string>
+    <string name="edittext_hint_email">الايميل</string>
+    <string name="edittext_hint_expiration_date">سنه/ شهر</string>
+    <string name="edittext_hint_line1">Line 1</string>
+    <string name="edittext_hint_line2">Line 2</string>
+    <string name="edittext_hint_name">الاسم</string>
+    <string name="edittext_hint_name_on_card">الاسم الموجود في البطاقة</string>
+    <string name="edittext_hint_phone_number">رقم الهاتق</string>
+    <string name="edittext_hint_state">الدولة</string>
+    <string name="edittext_hint_zip_code">Zip code</string>
     <string name="ef_camera">كاميرا</string>
     <string name="ef_done">انهي</string>
     <string name="ef_error_create_image_file">حدث خطأ في تسجيل الصوره</string>
@@ -99,15 +140,32 @@
     <string name="ef_selected_with_limit">إخترت %1$d/%2$d</string>
     <string name="ef_title_folder">دليل</string>
     <string name="ef_title_select_image">أنقر لإختيار الصور</string>
+    <string name="email_sent" translatable="false">تم إرسال رسالة بريد إلكتروني لـ</string>
     <string name="english">English</string>
+    <string name="error_deleting_card_msg">لا يمكن حذف البطاقة في الوقت الحالي. يرجى المحاولة لاحقا.</string>
+    <string name="error_deleting_card_title">عذراً</string>
     <string name="error_icon_content_description">خطأ</string>
     <string name="exposed_dropdown_menu_content_description">عرض القائمة المنسدلة</string>
+    <string name="extra_fees_alert_confirm_message_cancel">إلغاء</string>
+    <string name="extra_fees_alert_confirm_message_confirm">تأكيد</string>
+    <string name="extra_fees_alert_confirm_message_title">تأكيد الرسوم الإضافية</string>
+    <string name="extra_fees_alert_message">سوف تتم إضافة  %s لهذه العملية، إجمالي المبلغ المطلوب  %s</string>
     <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"نسخ الرابط"</string>
     <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"فتح في المتصفح"</string>
     <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"مشاركة الرابط"</string>
-    <string name="fcm_fallback_notification_channel_label">متنوعة</string>
+    <string name="fawry_cash_location">ب موقع لفوري
+باستخدام الرابط التالي لإستكمال عملية الدفع
+  </string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="icon_content_description">رمز مربع الحوار</string>
+    <string name="internet_connection_is_not_available">اتصال الإنترنت غير متوفر</string>
+    <string name="internet_connectivity_message">اتصال الإنترنت غير متوفر</string>
+    <string name="internet_connectivity_title">خطأ في الشبكة</string>
     <string name="item_view_role_description">علامة تبويب</string>
+    <string name="key_sdkLanguage">key_sdkLanguage</string>
+    <string name="key_sdk_appearance_mode">key_sdk_appearance_mode</string>
+    <string name="key_sdk_transaction_currency">key_sdk_transaction_currency</string>
+    <string name="key_sdk_transaction_mode">key_sdk_transaction_mode</string>
     <string name="material_clock_toggle_content_description">يُرجى اختيار صباحًا أو مساءً.</string>
     <string name="material_hour_selection">تحديد الساعة</string>
     <string name="material_hour_suffix">الساعة %1$s</string>
@@ -120,7 +178,6 @@
     <string name="material_timepicker_pm">مساءً</string>
     <string name="material_timepicker_select_time">اختيار الوقت</string>
     <string name="material_timepicker_text_input_mode_description">يُرجى التبديل إلى وضع إدخال النص لإدخال الوقت.</string>
-    <string name="messenger_send_button_text">إرسال</string>
     <string name="mtrl_badge_numberless_content_description">إشعار جديد</string>
     <string name="mtrl_chip_close_icon_content_description">إزالة %1$s</string>
     <string name="mtrl_exceed_max_badge_number_content_description">يبلغ عدد الإشعارات الجديدة أكثر من %1$d.</string>
@@ -156,8 +213,53 @@
     <string name="mtrl_picker_toggle_to_year_selection">انقر للتبديل إلى اختيار عام</string>
     <string msgid="6301633601645100427" name="nav_app_bar_navigate_up_description">"التنقل إلى أعلى"</string>
     <string msgid="7456070600745802113" name="nav_app_bar_open_drawer_description">"فتح لائحة التنقل"</string>
+    <string name="no_result_found">لم يتم العثور على نتيجة</string>
+    <string name="ok">حسنا</string>
+    <string name="order_code">كودالطلب</string>
+    <string name="otp_cancel_dialog">لا</string>
+    <string name="otp_cancel_payment_message">هل تود إلغاء عملية الدفع؟</string>
+    <string name="otp_cancel_payment_title">إلغاء عملية الدفع</string>
+    <string name="otp_confirm_dialog">تأكيد</string>
     <string name="password_toggle_content_description">عرض كلمة المرور</string>
+    <string name="pay">ادفع</string>
+    <string name="payment_in_progress">عملية الدفع قيد التنفيذ</string>
+    <string name="payment_status_alert_declined">مرفوض</string>
+    <string name="payment_status_alert_failed">فشل</string>
+    <string name="payment_status_alert_invalid">غير صالحة</string>
+    <string name="payment_status_alert_successful">ناجح</string>
+    <string name="payment_status_alert_timedout">انتهي الوقت</string>
+    <string name="payment_status_alert_unknown">غير معروف</string>
+    <string name="retry">إعادة المحاولة</string>
+    <string name="save_card">حفظ البطاقة</string>
+    <string name="sdk_error">خطأ</string>
+    <string name="sdk_not_configure_correctly">خطأ فى اعدادات ال SDK</string>
+    <string name="search">بحث</string>
+    <string name="search_hint">بحث…</string>
     <string msgid="6264217191555673260" name="search_menu_title">"البحث"</string>
+    <string name="select_country">اختر البلد</string>
+    <string name="select_currency_title">اختر العملة</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="textview_disclaimer_go_pay_checkouts">By enabling goPay, your card details will be saved with Tap Payments in order for you to get faster and more secure checkouts in multiple apps and websites</string>
+    <string name="textview_disclaimer_otp_sent_number">يرجى إدخال رمز التأكيد الذي تم إرساله إلى </string>
+    <string name="textview_disclaimer_save_card">للدفع الآمن والسريع ، احفظ بطاقتك</string>
+    <string name="textview_disclaimer_save_card_header_title">ادفع</string>
+    <string name="textview_disclaimer_save_card_info">لن يتم استخدام البطاقات المحفوظة إلا بموافقتك ، ويمكنك إزالتها في أي وقت.</string>
+    <string name="textview_placeholder_last_four_digits">••••%s</string>
+    <string name="textview_title_address_on_card">العنوان الموجود في البطاقة</string>
+    <string name="textview_title_country">الدولة</string>
+    <string name="textview_title_others">أخرى</string>
+    <string name="textview_title_personal_info">Your Personal Info</string>
+    <string name="textview_title_recent">تم الحفظ مؤخرًا</string>
+    <string name="textview_title_recent_cancel">إلغاء</string>
+    <string name="textview_title_recent_edit">تعديل</string>
+    <string name="textview_title_resend_again">إعادة إرسال</string>
+    <string name="textview_title_save_for_gopay">Save for goPay Checkouts</string>
+    <string name="textview_title_save_for_merchant">Save for %s Checkouts</string>
     <string name="title_activity_home">Home</string>
+    <string name="tokenize">ادفع</string>
+    <string name="with_your_fawry_pay_reference">تتضمن معلومات عن عملية الدفع بواسطة فوري.</string>
+    <string name="zxing_app_name">ماسح الرمز الشريطي</string>
+    <string name="zxing_button_ok">موافق</string>
+    <string name="zxing_msg_camera_framework_bug">عفوا، حدثت مشكلة في كاميرا جهاز Android. قد تحتاج إلى إعادة تشغيل الجهاز.</string>
+    <string name="zxing_msg_default_status">قم بوضع الرمز الشريطي داخل حدود صورة الكاميرا ليتم مسحه.</string>
 </resources>

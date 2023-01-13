@@ -1,10 +1,22 @@
 [
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/activity_home.xml",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/layout/activity_home.xml"
+        "merged": "com.example.dynamodb.app-mergeDebugResources-118:/layout/fragment_whether_detailes.xml",
+        "source": "com.example.dynamodb.app-main-121:/layout/fragment_whether_detailes.xml"
     },
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/incremental/mergeDebugResources/stripped.dir/layout/fragment_home.xml",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/layout/fragment_home.xml"
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-mergeDebugResources-118:/layout/row_item.xml",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/layout/row_item.xml"
+    },
+    {
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-mergeDebugResources-118:/layout/fragment_home.xml",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/layout/fragment_home.xml"
+    },
+    {
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-mergeDebugResources-118:/layout/fragment_whether_detailes.xml",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/layout/fragment_whether_detailes.xml"
+    },
+    {
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-mergeDebugResources-118:/layout/activity_home.xml",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/layout/activity_home.xml"
     }
 ]

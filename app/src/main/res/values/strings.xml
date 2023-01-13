@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Hawalena</string>
+    <string name="app_name">DynamodbApp</string>
     <string name="english">English</string>
     <string name="arabic_a">Arabic</string>
     <string name="title_activity_home">Home</string>

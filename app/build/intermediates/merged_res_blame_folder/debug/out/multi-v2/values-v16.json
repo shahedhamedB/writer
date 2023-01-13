@@ -1,20 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-v16/values-v16.xml",
+            "outputFile": "com.example.dynamodb.app-mergeDebugResources-117:/values-v16/values-v16.xml",
             "map": [
                 {
-                    "source": "/Users/shahed/.gradle/caches/transforms-3/e1d584e5f3ef625e507d66856dc5f69d/transformed/core-1.8.0/res/values-v16/values-v16.xml",
-                    "from": {
-                        "startLines": "2",
-                        "startColumns": "4",
-                        "startOffsets": "55",
-                        "endColumns": "65",
-                        "endOffsets": "116"
-                    }
-                },
-                {
-                    "source": "/Users/shahed/.gradle/caches/transforms-3/51782a7463c1d17c01f85600576b4be9/transformed/appcompat-1.3.1/res/values-v16/values-v16.xml",
+                    "source": "/Users/shahed/.gradle/caches/transforms-3/ee428df32fecf4779582214b07e07e25/transformed/appcompat-1.4.1/res/values-v16/values-v16.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",
@@ -30,6 +20,35 @@
                         "endLines": "6",
                         "endColumns": "12",
                         "endOffsets": "289"
+                    }
+                },
+                {
+                    "source": "/Users/shahed/.gradle/caches/transforms-3/113c525dd977a217dbe5c914e417de1b/transformed/jetified-goSellSDK-AndroidX-3.13.2/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "8",
+                        "endColumns": "10",
+                        "endOffsets": "332"
+                    },
+                    "to": {
+                        "startLines": "7",
+                        "startColumns": "4",
+                        "startOffsets": "294",
+                        "endLines": "13",
+                        "endColumns": "10",
+                        "endOffsets": "571"
+                    }
+                },
+                {
+                    "source": "/Users/shahed/.gradle/caches/transforms-3/21b360dda44f81101a846184ef6004c8/transformed/core-1.8.0/res/values-v16/values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
                     }
                 }
             ]

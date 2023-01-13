@@ -1,114 +1,126 @@
 [
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher.png.flat",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/mipmap-mdpi/ic_launcher.png"
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/mipmap-anydpi-v26/ic_launcher_round.xml"
     },
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/merged_res/debug/navigation_home_nav.xml.flat",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/navigation/home_nav.xml"
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/mipmap-hdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/merged_res/debug/drawable_ic_gamerizrsplash.xml.flat",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/drawable/ic_gamerizrsplash.xml"
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/font_sfui_display_medium.ttf.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/font/sfui_display_medium.ttf"
     },
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_foreground.png.flat",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/mipmap-xhdpi/ic_launcher_foreground.png"
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/mipmap-anydpi-v26_ic_launcher.xml.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/mipmap-anydpi-v26/ic_launcher.xml"
     },
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/merged_res/debug/layout_activity_home.xml.flat",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/layout/activity_home.xml"
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/mipmap-xxhdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/merged_res/debug/font-ar_sfui_display_bold.otf.flat",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/font-ar/sfui_display_bold.otf"
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/mipmap-xxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/merged_res/debug/font-ar_sfui_display_regular.otf.flat",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/font-ar/sfui_display_regular.otf"
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/drawable_ic_gamerizrsplash.xml.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/drawable/ic_gamerizrsplash.xml"
     },
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/merged_res/debug/layout_fragment_home.xml.flat",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/layout/fragment_home.xml"
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/navigation_home_nav.xml.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/navigation/home_nav.xml"
     },
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/merged_res/debug/font_sfui_display_medium.ttf.flat",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/font/sfui_display_medium.ttf"
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/mipmap-xxhdpi/ic_launcher.png"
     },
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_foreground.png.flat",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/mipmap-xxhdpi/ic_launcher_foreground.png"
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_foreground.png.flat",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/mipmap-mdpi/ic_launcher_foreground.png"
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/layout_fragment_whether_detailes.xml.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/layout/fragment_whether_detailes.xml"
     },
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher_round.xml.flat",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/mipmap-anydpi-v26/ic_launcher_round.xml"
+        "merged": "com.example.dynamodb.app-merged_res-119:/layout_fragment_whether_detailes.xml.flat",
+        "source": "com.example.dynamodb.app-main-121:/layout/fragment_whether_detailes.xml"
     },
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_foreground.png.flat",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/mipmap-hdpi/ic_launcher_foreground.png"
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/layout_row_item.xml.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/layout/row_item.xml"
     },
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/merged_res/debug/font-ar_sfui_display_medium.otf.flat",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/font-ar/sfui_display_medium.otf"
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/mipmap-mdpi/ic_launcher.png"
     },
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher.png.flat",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/mipmap-xhdpi/ic_launcher.png"
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/font_sfui_display_regular.ttf.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/font/sfui_display_regular.ttf"
     },
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher_round.png.flat",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/mipmap-hdpi/ic_launcher_round.png"
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher_round.png.flat",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/mipmap-xxhdpi/ic_launcher_round.png"
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/mipmap-xhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/mipmap-xhdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/merged_res/debug/font_sfui_display_bold.ttf.flat",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/font/sfui_display_bold.ttf"
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/mipmap-mdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/merged_res/debug/mipmap-xhdpi_ic_launcher_round.png.flat",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/mipmap-xhdpi/ic_launcher_round.png"
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/font-ar_sfui_display_regular.otf.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/font-ar/sfui_display_regular.otf"
     },
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher.png.flat",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/menu_bottom_nav_menu.xml.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/menu/bottom_nav_menu.xml"
     },
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_round.png.flat",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/mipmap-xxxhdpi/ic_launcher_round.png"
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/layout_fragment_home.xml.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/layout/fragment_home.xml"
     },
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/merged_res/debug/mipmap-hdpi_ic_launcher.png.flat",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/mipmap-hdpi/ic_launcher.png"
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/mipmap-xxxhdpi/ic_launcher_foreground.png"
     },
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/merged_res/debug/mipmap-xxxhdpi_ic_launcher_foreground.png.flat",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/mipmap-xxxhdpi/ic_launcher_foreground.png"
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/mipmap-xhdpi/ic_launcher.png"
     },
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/merged_res/debug/mipmap-mdpi_ic_launcher_round.png.flat",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/mipmap-mdpi/ic_launcher_round.png"
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/layout_activity_home.xml.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/layout/activity_home.xml"
     },
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/merged_res/debug/mipmap-xxhdpi_ic_launcher.png.flat",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/mipmap-xxhdpi/ic_launcher.png"
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/font_sfui_display_bold.ttf.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/font/sfui_display_bold.ttf"
     },
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/merged_res/debug/menu_bottom_nav_menu.xml.flat",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/menu/bottom_nav_menu.xml"
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/mipmap-xhdpi/ic_launcher_round.png"
     },
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/merged_res/debug/font_sfui_display_regular.ttf.flat",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/font/sfui_display_regular.ttf"
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/mipmap-hdpi/ic_launcher.png"
     },
     {
-        "merged": "/Users/shahed/Documents/github/writerdynanodb/app/build/intermediates/merged_res/debug/mipmap-anydpi-v26_ic_launcher.xml.flat",
-        "source": "/Users/shahed/Documents/github/writerdynanodb/app/src/main/res/mipmap-anydpi-v26/ic_launcher.xml"
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/font-ar_sfui_display_bold.otf.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/font-ar/sfui_display_bold.otf"
+    },
+    {
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/mipmap-hdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/mipmap-hdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/mipmap-mdpi_ic_launcher_foreground.png.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/mipmap-mdpi/ic_launcher_foreground.png"
+    },
+    {
+        "merged": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-merged_res-119:/font-ar_sfui_display_medium.otf.flat",
+        "source": "/Users/shahed/.gradle/daemon/7.4/com.example.dynamodb.app-main-121:/font-ar/sfui_display_medium.otf"
     }
 ]
