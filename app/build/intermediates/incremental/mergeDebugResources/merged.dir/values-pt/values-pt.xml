@@ -33,14 +33,14 @@
     <string gender="unknown" name="com_facebook_internet_permission_error_title">Erro AndroidManifest</string>
     <string gender="unknown" name="com_facebook_like_button_liked">Curtiu</string>
     <string gender="unknown" name="com_facebook_like_button_not_liked">Curtir</string>
-    <string gender="unknown" name="com_facebook_loading">Carregando...</string>
+    <string gender="unknown" name="com_facebook_loading">Carregando…</string>
     <string gender="unknown" name="com_facebook_loginview_cancel_action">Cancelar</string>
     <string gender="unknown" name="com_facebook_loginview_log_in_button">Entrar</string>
     <string gender="unknown" name="com_facebook_loginview_log_in_button_continue">Continuar com o Facebook</string>
     <string gender="unknown" name="com_facebook_loginview_log_in_button_long">Entrar com o Facebook</string>
     <string gender="unknown" name="com_facebook_loginview_log_out_action">Sair</string>
     <string gender="unknown" name="com_facebook_loginview_log_out_button">Sair</string>
-    <string gender="unknown" name="com_facebook_loginview_logged_in_as">Conectado como: %1$s</string>
+    <string gender="unknown" name="com_facebook_loginview_logged_in_as">Entrou como %1$s</string>
     <string gender="unknown" name="com_facebook_loginview_logged_in_using_facebook">Conectado usando o Facebook</string>
     <string gender="unknown" name="com_facebook_send_button_text">Enviar</string>
     <string gender="unknown" name="com_facebook_share_button_text">Compartilhar</string>
@@ -54,9 +54,15 @@
     <string msgid="4566929209979330987" name="fallback_menu_item_copy_link">"Copiar link"</string>
     <string msgid="3413186855122069269" name="fallback_menu_item_open_in_browser">"Abrir no navegador"</string>
     <string msgid="7145444925855055364" name="fallback_menu_item_share_link">"Compartilhar link"</string>
-    <string name="messenger_send_button_text">Enviar</string>
     <string msgid="6301633601645100427" name="nav_app_bar_navigate_up_description">"Navegar para cima"</string>
     <string msgid="7456070600745802113" name="nav_app_bar_open_drawer_description">"Abrir gaveta de navegação"</string>
+    <string name="no_result_found">Sem resultados</string>
+    <string name="search_hint">Pesquisa…</string>
     <string msgid="6264217191555673260" name="search_menu_title">"Pesquisar"</string>
+    <string name="select_country">Selecione o pais</string>
     <string msgid="6277540029070332960" name="status_bar_notification_info_overflow">"999+"</string>
+    <string name="zxing_app_name">Barcode Scanner</string>
+    <string name="zxing_button_ok">OK</string>
+    <string name="zxing_msg_camera_framework_bug">Desculpe, a câmera do Android encontrou um problema. Poderá precisar de reiniciar o dispositivo.</string>
+    <string name="zxing_msg_default_status">Alinhar código de barras com o exemplo para ser lido.</string>
 </resources>

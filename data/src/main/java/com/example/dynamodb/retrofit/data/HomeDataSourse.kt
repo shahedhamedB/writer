@@ -7,4 +7,8 @@ class HomeDataSourse @Inject constructor(
     private val networkService: NetworkService
 ) : BaseDataSource() {
 
+    suspend fun getDynamodbWriter()=getResult {
+        networkService.getDynamodbWriter()
+    }
+
 }

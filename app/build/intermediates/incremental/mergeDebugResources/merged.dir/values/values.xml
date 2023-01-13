@@ -1,5 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:ns1="http://schemas.android.com/tools" xmlns:ns2="urn:oasis:names:tc:xliff:document:1.2">
+    <string-array name="WheelArrayDefault">
+        <item>AigeStudio</item>
+        <item>Aige</item>
+        <item>爱哥</item>
+        <item>الحب  اخي</item>
+        <item>jeg elsker</item>
+        <item>사랑해요 형</item>
+        <item>Amor de irmão</item>
+        <item>armastan</item>
+        <item>愛の兄</item>
+        <item>обичам те</item>
+        <item>любовь - братa</item>
+        <item>miłość bracie</item>
+        <item>Liebe</item>
+        <item>Lamour</item>
+        <item>rakastan sinua</item>
+        <item>láska..</item>
+        <item>dragostea.</item>
+        <item>jag älskar</item>
+        <item>ljubezen, brat.</item>
+        <item>愛哥</item>
+        <item>ชอบพี่</item>
+        <item>αγάπη μου</item>
+        <item>a szerelem.</item>
+        <item>Amore, fratello.</item>
+    </string-array>
+    <string-array name="WheelArrayWeek">
+        <item>Monday</item>
+        <item>Tuesday</item>
+        <item>Wednesday</item>
+        <item>Thursday</item>
+        <item>Friday</item>
+        <item>Saturday</item>
+        <item>Sunday</item>
+    </string-array>
     <attr format="enum" name="animateCircleAngleTo">
         <enum name="bestChoice" value="0"/>
         <enum name="closest" value="1"/>
@@ -8,12 +43,16 @@
         <enum name="constraint" value="4"/>
     </attr>
     <attr format="reference" name="animateRelativeTo"/>
+    <attr format="boolean" name="animateShadow"/>
+    <attr format="integer" name="animationDuration"/>
     <attr format="reference" name="appBarLayoutStyle"/>
     <attr format="enum" name="arcMode">
         <enum name="startVertical" value="0"/>
         <enum name="startHorizontal" value="1"/>
         <enum name="flip" value="2"/>
     </attr>
+    <attr format="color" name="background_color_to_ignore"/>
+    <attr format="boolean" name="background_transparent"/>
     <attr format="reference" name="badgeStyle"/>
     <attr format="boolean" name="barrierAllowsGoneWidgets"/>
     <attr format="enum" name="barrierDirection">
@@ -31,6 +70,12 @@
     <attr format="reference" name="bottomNavigationStyle"/>
     <attr format="reference" name="bottomSheetDialogTheme"/>
     <attr format="reference" name="bottomSheetStyle"/>
+    <attr format="color" name="bt_expiration_date_dialog_divider"/>
+    <attr format="color" name="bt_expiration_date_dialog_label"/>
+    <attr format="color" name="bt_expiration_date_scrollbar_thumb_vertical"/>
+    <attr format="color" name="bt_expiration_date_scrollbar_track_vertical"/>
+    <attr format="color" name="bt_expiration_date_sheet_background"/>
+    <attr format="boolean" name="calculateAsync"/>
     <attr format="reference" name="cardViewStyle"/>
     <attr format="boolean" name="chainUseRtl"/>
     <attr format="reference" name="checkedIcon"/>
@@ -312,6 +357,7 @@
         <enum name="skipped" value="3"/>
     </attr>
     <attr format="reference" name="linearProgressIndicatorStyle"/>
+    <attr format="reference" name="lottieAnimationViewStyle"/>
     <attr format="reference" name="materialButtonOutlinedStyle"/>
     <attr format="reference" name="materialButtonStyle"/>
     <attr format="reference" name="materialButtonToggleGroupStyle"/>
@@ -335,6 +381,54 @@
     <attr format="reference" name="materialThemeOverlay"/>
     <attr format="reference" name="materialTimePickerStyle"/>
     <attr format="reference" name="materialTimePickerTheme"/>
+    <attr format="color" name="md_background_color"/>
+    <attr format="reference" name="md_btn_negative_selector"/>
+    <attr format="reference" name="md_btn_neutral_selector"/>
+    <attr format="reference" name="md_btn_positive_selector"/>
+    <attr format="color" name="md_btn_ripple_color"/>
+    <attr format="reference" name="md_btn_stacked_selector"/>
+    <attr format="enum" name="md_btnstacked_gravity">
+    <enum name="start" value="0"/>
+    <enum name="center" value="1"/>
+    <enum name="end" value="2"/>
+  </attr>
+    <attr format="enum" name="md_buttons_gravity">
+    <enum name="start" value="0"/>
+    <enum name="center" value="1"/>
+    <enum name="end" value="2"/>
+  </attr>
+    <attr format="color" name="md_content_color"/>
+    <attr format="enum" name="md_content_gravity">
+    <enum name="start" value="0"/>
+    <enum name="center" value="1"/>
+    <enum name="end" value="2"/>
+  </attr>
+    <attr format="boolean" name="md_dark_theme"/>
+    <attr format="color" name="md_divider"/>
+    <attr format="color" name="md_divider_color"/>
+    <attr format="reference" name="md_icon"/>
+    <attr format="boolean" name="md_icon_limit_icon_to_default_size"/>
+    <attr format="dimension" name="md_icon_max_size"/>
+    <attr format="color" name="md_item_color"/>
+    <attr format="enum" name="md_items_gravity">
+    <enum name="start" value="0"/>
+    <enum name="center" value="1"/>
+    <enum name="end" value="2"/>
+  </attr>
+    <attr format="color" name="md_link_color"/>
+    <attr format="reference" name="md_list_selector"/>
+    <attr format="string" name="md_medium_font"/>
+    <attr format="color" name="md_negative_color"/>
+    <attr format="color" name="md_neutral_color"/>
+    <attr format="color" name="md_positive_color"/>
+    <attr format="string" name="md_regular_font"/>
+    <attr format="color" name="md_title_color"/>
+    <attr format="enum" name="md_title_gravity">
+    <enum name="start" value="0"/>
+    <enum name="center" value="1"/>
+    <enum name="end" value="2"/>
+  </attr>
+    <attr format="color" name="md_widget_color"/>
     <attr format="dimension" name="minTouchTargetSize"/>
     <attr format="integer" name="motionDurationLong1"/>
     <attr format="integer" name="motionDurationLong2"/>
@@ -397,10 +491,20 @@
     <attr format="color" name="rippleColor"/>
     <attr format="color|reference" name="scrimBackground"/>
     <attr format="boolean" name="selectionRequired"/>
+    <attr format="integer" name="shadow_alpha"/>
+    <attr format="string" name="shadow_angle"/>
+    <attr format="boolean" name="shadow_blur_enabled"/>
+    <attr format="float" name="shadow_blur_radius"/>
+    <attr format="color" name="shadow_endColor"/>
+    <attr format="string" name="shadow_length"/>
+    <attr format="color" name="shadow_startColor"/>
     <attr format="reference" name="shapeAppearanceLargeComponent"/>
     <attr format="reference" name="shapeAppearanceMediumComponent"/>
     <attr format="reference" name="shapeAppearanceSmallComponent"/>
+    <attr format="boolean" name="shouldClipChildren"/>
+    <attr format="boolean" name="shouldClipToPadding"/>
     <attr format="reference" name="showMotionSpec"/>
+    <attr format="boolean" name="showWhenAllReady"/>
     <attr format="boolean" name="singleSelection"/>
     <attr format="float" name="sizePercent"/>
     <attr format="reference" name="sliderStyle"/>
@@ -487,13 +591,19 @@
     <color name="abc_search_url_text_selected">@android:color/black</color>
     <color name="accent_material_dark">@color/material_deep_teal_200</color>
     <color name="accent_material_light">@color/material_deep_teal_500</color>
+    <color name="alabaster">#F7F7F7</color>
+    <color name="alto_gray">#DDDDDD</color>
+    <color name="aluminium">#A9ABB0</color>
     <color name="androidx_core_ripple_material_light">#1f000000</color>
     <color name="androidx_core_secondary_text_default_material_light">#8a000000</color>
+    <color name="azure_radiance">#0090FF</color>
+    <color name="azure_radiance_pressed">#0077FF</color>
     <color name="background_floating_material_dark">@color/material_grey_800</color>
     <color name="background_floating_material_light">@android:color/white</color>
     <color name="background_material_dark">@color/material_grey_850</color>
     <color name="background_material_light">@color/material_grey_50</color>
     <color name="black">#000000</color>
+    <color name="black1">#de000000</color>
     <color name="bright_foreground_disabled_material_dark">#80ffffff</color>
     <color name="bright_foreground_disabled_material_light">#80000000</color>
     <color name="bright_foreground_inverse_material_dark">@color/bright_foreground_material_light</color>
@@ -504,24 +614,33 @@
     <color name="browser_actions_divider_color">#1E000000</color>
     <color name="browser_actions_text_color">#DE000000</color>
     <color name="browser_actions_title_color">#646464</color>
+    <color name="bt_black">#001129</color>
+    <color name="bt_black_12">#1e000000</color>
+    <color name="bt_black_38">#61000000</color>
+    <color name="bt_black_54">#8a000000</color>
+    <color name="bt_black_87">#de000000</color>
+    <color name="bt_blue">#009bde</color>
+    <color name="bt_expiration_date_sheet_background_dark">#20272b</color>
+    <color name="bt_expiration_date_sheet_background_light">#eceff0</color>
+    <color name="bt_light_gray">#6d6d6d</color>
+    <color name="bt_white">#ffffff</color>
+    <color name="bt_white_12">#1effffff</color>
+    <color name="bt_white_38">#61ffffff</color>
+    <color name="bt_white_54">#8affffff</color>
+    <color name="bt_white_87">#deffffff</color>
     <color name="button_material_dark">#ff5a595b</color>
     <color name="button_material_light">#ffd6d7d7</color>
     <color name="cardview_dark_background">#FF424242</color>
     <color name="cardview_light_background">#FFFFFFFF</color>
     <color name="cardview_shadow_end_color">#03000000</color>
     <color name="cardview_shadow_start_color">#37000000</color>
+    <color name="colorAccent">#FF4081</color>
     <color name="colorPrimary">#FF000000</color>
-    <color name="com_facebook_blue">#3B5998</color>
-    <color name="com_facebook_button_background_color">#415dae</color>
-    <color name="com_facebook_button_background_color_disabled">#bdc1c9</color>
-    <color name="com_facebook_button_background_color_focused">#FFFFFe</color>
-    <color name="com_facebook_button_background_color_focused_disabled">#84878c</color>
-    <color name="com_facebook_button_background_color_pressed">#2f477a</color>
-    <color name="com_facebook_button_background_color_selected">#7c8fc8</color>
-    <color name="com_facebook_button_border_color_focused">#dedee6</color>
-    <color name="com_facebook_button_login_background_color">#4267b2</color>
-    <color name="com_facebook_button_login_silver_background_color">#f4f6f8</color>
-    <color name="com_facebook_button_login_silver_background_color_pressed">#e9eaf0</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="com_facebook_blue">#1877F2</color>
+    <color name="com_facebook_button_background_color">@color/com_facebook_blue</color>
+    <color name="com_facebook_button_background_color_disabled">#EBEDF0</color>
+    <color name="com_facebook_button_background_color_pressed">#186BDA</color>
     <color name="com_facebook_button_send_background_color">@color/com_facebook_messenger_blue</color>
     <color name="com_facebook_button_send_background_color_pressed">#006fff</color>
     <color name="com_facebook_device_auth_text">#90949C</color>
@@ -529,7 +648,9 @@
     <color name="com_facebook_likeboxcountview_text_color">#6a7180</color>
     <color name="com_facebook_likeview_text_color">#6a7180</color>
     <color name="com_facebook_messenger_blue">#0084ff</color>
-    <color name="com_facebook_share_button_text_color">#FFFFFF</color>
+    <color name="com_facebook_primary_button_disabled_text_color">#BCC3C9</color>
+    <color name="com_facebook_primary_button_pressed_text_color">#DADDE2</color>
+    <color name="com_facebook_primary_button_text_color">#FFFFFF</color>
     <color name="com_smart_login_code">#3C6499</color>
     <color name="common_google_signin_btn_text_dark_default">@android:color/white</color>
     <color name="common_google_signin_btn_text_dark_disabled">#1F000000</color>
@@ -539,6 +660,13 @@
     <color name="common_google_signin_btn_text_light_disabled">#1F000000</color>
     <color name="common_google_signin_btn_text_light_focused">#90000000</color>
     <color name="common_google_signin_btn_text_light_pressed">#DE000000</color>
+    <color name="dark_bg_color">#2F3032</color>
+    <color name="dark_gray">#595959</color>
+    <color name="dark_transparent">#24000000</color>
+    <color name="defaultBackgroundColor">@android:color/transparent</color>
+    <color name="defaultTextColor">@android:color/black</color>
+    <color name="delete_bg_color">#330288D1</color>
+    <color name="delete_color">#0288D1</color>
     <color name="design_bottom_navigation_shadow_color">#14000000</color>
     <color name="design_dark_default_color_background">#121212</color>
     <color name="design_dark_default_color_error">#CF6679</color>
@@ -589,16 +717,26 @@
     <color name="ef_grey">#9E9E9E</color>
     <color name="ef_teal">#009688</color>
     <color name="ef_white">#FFFFFF</color>
+    <color name="error_bg_color">#33D32F2F</color>
+    <color name="error_color">#D50000</color>
     <color name="error_color_material_dark">#ff7043</color>
     <color name="error_color_material_light">#ff5722</color>
     <color name="foreground_material_dark">@android:color/white</color>
     <color name="foreground_material_light">@android:color/black</color>
+    <color name="french_gray">#A8B5B5B5</color>
+    <color name="french_gray_new">#e6f7f7f7</color>
+    <color name="gallery">#EAEAEA</color>
     <color name="gray">#6E717B</color>
+    <color name="graymedium">#585858</color>
     <color name="grey">#a9a9a9</color>
+    <color name="greyish_brown" ns1:ignore="MissingDefaultResource">#535353</color>
     <color name="highlighted_text_material_dark">#6680cbc4</color>
     <color name="highlighted_text_material_light">#66009688</color>
     <color name="ic_launcher_background">#000000</color>
+    <color name="info_bg_color">#33273CBD</color>
+    <color name="info_color">#99273CBD</color>
     <color name="light_grey">#CCCCCC</color>
+    <color name="light_transparent">#16000000</color>
     <color name="material_blue_grey_800">#ff37474f</color>
     <color name="material_blue_grey_900">#ff263238</color>
     <color name="material_blue_grey_950">#ff21272b</color>
@@ -611,6 +749,15 @@
     <color name="material_grey_800">#ff424242</color>
     <color name="material_grey_850">#ff303030</color>
     <color name="material_grey_900">#ff212121</color>
+    <color name="md_btn_selected">#33969696</color>
+    <color name="md_btn_selected_dark">#40CBCBCB</color>
+    <color name="md_divider_black">#10000000</color>
+    <color name="md_divider_white">#10FFFFFF</color>
+    <color name="md_edittext_error">#DD2C00</color>
+    <color name="md_material_blue_600">#2196F3</color>
+    <color name="md_material_blue_800">#1565C0</color>
+    <color name="mercury">#E1E1E1</color>
+    <color name="mischka">#D2D5DB</color>
     <color name="mtrl_btn_text_color_disabled">#61000000</color>
     <color name="mtrl_btn_transparent_bg_color">#00ffffff</color>
     <color name="mtrl_scrim_color">#52000000</color>
@@ -622,6 +769,7 @@
     <color name="notification_action_color_filter">#ffffffff</color>
     <color name="notification_icon_bg_color">#ff9e9e9e</color>
     <color name="notification_material_background_media_default_color">#ff424242</color>
+    <color name="oslo_gray">#8D8F93</color>
     <color name="primary_dark_material_dark">@android:color/black</color>
     <color name="primary_dark_material_light">@color/material_grey_600</color>
     <color name="primary_material_dark">@color/material_grey_900</color>
@@ -641,7 +789,17 @@
     <color name="secondary_text_default_material_light">#8a000000</color>
     <color name="secondary_text_disabled_material_dark">#36ffffff</color>
     <color name="secondary_text_disabled_material_light">#24000000</color>
+    <color name="security_text_color">#C9C9C9</color>
+    <color name="separator">#0C000000</color>
+    <color name="shimmer_color">#a2878787</color>
+    <color name="silver">#BFBFBF</color>
+    <color name="silver_light">#C9C9C9</color>
+    <color name="skeleton_mask">#E0E0E0</color>
+    <color name="skeleton_shimmer">#d5d5d5</color>
     <color name="statbar">#9AA1B1</color>
+    <color name="success_bg_color">#3317B978</color>
+    <color name="success_color">#17B978</color>
+    <color name="success_title_color">#17B978</color>
     <color name="switch_thumb_disabled_material_dark">#ff616161</color>
     <color name="switch_thumb_disabled_material_light">#ffbdbdbd</color>
     <color name="switch_thumb_normal_material_dark">#ffbdbdbd</color>
@@ -651,6 +809,7 @@
     <color name="tooltip_background_dark">#e6616161</color>
     <color name="tooltip_background_light">#e6FFFFFF</color>
     <color name="transparent">#00000000</color>
+    <color name="transparent_red">#0DCC0000</color>
     <color name="ucrop_color_crop_background">#000</color>
     <color name="ucrop_color_default_crop_frame">#ffffff</color>
     <color name="ucrop_color_default_crop_grid">#80ffffff</color>
@@ -664,9 +823,31 @@
     <color name="ucrop_color_widget_active">#FF6E40</color>
     <color name="ucrop_color_widget_background">#fff</color>
     <color name="ucrop_color_widget_text">#000</color>
+    <color name="vibrant_green">#2ACE00</color>
+    <color name="vibrant_green_pressed">#1F9A00</color>
+    <color name="viewfinder_border">#ffafed44</color>
+    <color name="viewfinder_laser">#ffcc0000</color>
+    <color name="viewfinder_mask">#60000000</color>
+    <color name="warning_bg_color">#33FBC02D</color>
+    <color name="warning_color">#FBC02D</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="zxing_custom_possible_result_points">#903A89CF</color>
+    <color name="zxing_custom_result_view">#b0000000</color>
+    <color name="zxing_custom_viewfinder_laser">#1976D2</color>
+    <color name="zxing_custom_viewfinder_mask">#60000000</color>
+    <color name="zxing_possible_result_points">#c0ffbd21</color>
+    <color name="zxing_result_view">#b0000000</color>
+    <color name="zxing_status_text">#ffffffff</color>
+    <color name="zxing_transparent">#00000000</color>
+    <color name="zxing_viewfinder_laser">#ffcc0000</color>
+    <color name="zxing_viewfinder_mask">#60000000</color>
+    <dimen name="WheelIndicatorSize">2dp</dimen>
+    <dimen name="WheelItemSpace">12dp</dimen>
+    <dimen name="WheelItemTextSize">24sp</dimen>
+    <dimen name="WheelMargins">8dp</dimen>
     <dimen name="_0dp">0dp</dimen>
     <dimen name="_100sdp">100.00dp</dimen>
+    <dimen name="_100ssp">100.00sp</dimen>
     <dimen name="_101sdp">101.00dp</dimen>
     <dimen name="_102sdp">102.00dp</dimen>
     <dimen name="_103sdp">103.00dp</dimen>
@@ -677,6 +858,7 @@
     <dimen name="_108sdp">108.00dp</dimen>
     <dimen name="_109sdp">109.00dp</dimen>
     <dimen name="_10sdp">10.00dp</dimen>
+    <dimen name="_10ssp">10.00sp</dimen>
     <dimen name="_110sdp">110.00dp</dimen>
     <dimen name="_111sdp">111.00dp</dimen>
     <dimen name="_112sdp">112.00dp</dimen>
@@ -688,6 +870,7 @@
     <dimen name="_118sdp">118.00dp</dimen>
     <dimen name="_119sdp">119.00dp</dimen>
     <dimen name="_11sdp">11.00dp</dimen>
+    <dimen name="_11ssp">11.00sp</dimen>
     <dimen name="_120sdp">120.00dp</dimen>
     <dimen name="_121sdp">121.00dp</dimen>
     <dimen name="_122sdp">122.00dp</dimen>
@@ -699,6 +882,7 @@
     <dimen name="_128sdp">128.00dp</dimen>
     <dimen name="_129sdp">129.00dp</dimen>
     <dimen name="_12sdp">12.00dp</dimen>
+    <dimen name="_12ssp">12.00sp</dimen>
     <dimen name="_130sdp">130.00dp</dimen>
     <dimen name="_131sdp">131.00dp</dimen>
     <dimen name="_132sdp">132.00dp</dimen>
@@ -710,6 +894,7 @@
     <dimen name="_138sdp">138.00dp</dimen>
     <dimen name="_139sdp">139.00dp</dimen>
     <dimen name="_13sdp">13.00dp</dimen>
+    <dimen name="_13ssp">13.00sp</dimen>
     <dimen name="_140sdp">140.00dp</dimen>
     <dimen name="_141sdp">141.00dp</dimen>
     <dimen name="_142sdp">142.00dp</dimen>
@@ -721,6 +906,7 @@
     <dimen name="_148sdp">148.00dp</dimen>
     <dimen name="_149sdp">149.00dp</dimen>
     <dimen name="_14sdp">14.00dp</dimen>
+    <dimen name="_14ssp">14.00sp</dimen>
     <dimen name="_150sdp">150.00dp</dimen>
     <dimen name="_151sdp">151.00dp</dimen>
     <dimen name="_152sdp">152.00dp</dimen>
@@ -732,6 +918,7 @@
     <dimen name="_158sdp">158.00dp</dimen>
     <dimen name="_159sdp">159.00dp</dimen>
     <dimen name="_15sdp">15.00dp</dimen>
+    <dimen name="_15ssp">15.00sp</dimen>
     <dimen name="_160sdp">160.00dp</dimen>
     <dimen name="_161sdp">161.00dp</dimen>
     <dimen name="_162sdp">162.00dp</dimen>
@@ -743,6 +930,7 @@
     <dimen name="_168sdp">168.00dp</dimen>
     <dimen name="_169sdp">169.00dp</dimen>
     <dimen name="_16sdp">16.00dp</dimen>
+    <dimen name="_16ssp">16.00sp</dimen>
     <dimen name="_170sdp">170.00dp</dimen>
     <dimen name="_171sdp">171.00dp</dimen>
     <dimen name="_172sdp">172.00dp</dimen>
@@ -754,6 +942,7 @@
     <dimen name="_178sdp">178.00dp</dimen>
     <dimen name="_179sdp">179.00dp</dimen>
     <dimen name="_17sdp">17.00dp</dimen>
+    <dimen name="_17ssp">17.00sp</dimen>
     <dimen name="_180sdp">180.00dp</dimen>
     <dimen name="_181sdp">181.00dp</dimen>
     <dimen name="_182sdp">182.00dp</dimen>
@@ -765,6 +954,7 @@
     <dimen name="_188sdp">188.00dp</dimen>
     <dimen name="_189sdp">189.00dp</dimen>
     <dimen name="_18sdp">18.00dp</dimen>
+    <dimen name="_18ssp">18.00sp</dimen>
     <dimen name="_190sdp">190.00dp</dimen>
     <dimen name="_191sdp">191.00dp</dimen>
     <dimen name="_192sdp">192.00dp</dimen>
@@ -776,7 +966,9 @@
     <dimen name="_198sdp">198.00dp</dimen>
     <dimen name="_199sdp">199.00dp</dimen>
     <dimen name="_19sdp">19.00dp</dimen>
+    <dimen name="_19ssp">19.00sp</dimen>
     <dimen name="_1sdp">1.00dp</dimen>
+    <dimen name="_1ssp">1.00sp</dimen>
     <dimen name="_200sdp">200.00dp</dimen>
     <dimen name="_201sdp">201.00dp</dimen>
     <dimen name="_202sdp">202.00dp</dimen>
@@ -788,6 +980,7 @@
     <dimen name="_208sdp">208.00dp</dimen>
     <dimen name="_209sdp">209.00dp</dimen>
     <dimen name="_20sdp">20.00dp</dimen>
+    <dimen name="_20ssp">20.00sp</dimen>
     <dimen name="_210sdp">210.00dp</dimen>
     <dimen name="_211sdp">211.00dp</dimen>
     <dimen name="_212sdp">212.00dp</dimen>
@@ -799,6 +992,7 @@
     <dimen name="_218sdp">218.00dp</dimen>
     <dimen name="_219sdp">219.00dp</dimen>
     <dimen name="_21sdp">21.00dp</dimen>
+    <dimen name="_21ssp">21.00sp</dimen>
     <dimen name="_220sdp">220.00dp</dimen>
     <dimen name="_221sdp">221.00dp</dimen>
     <dimen name="_222sdp">222.00dp</dimen>
@@ -810,6 +1004,7 @@
     <dimen name="_228sdp">228.00dp</dimen>
     <dimen name="_229sdp">229.00dp</dimen>
     <dimen name="_22sdp">22.00dp</dimen>
+    <dimen name="_22ssp">22.00sp</dimen>
     <dimen name="_230sdp">230.00dp</dimen>
     <dimen name="_231sdp">231.00dp</dimen>
     <dimen name="_232sdp">232.00dp</dimen>
@@ -821,6 +1016,7 @@
     <dimen name="_238sdp">238.00dp</dimen>
     <dimen name="_239sdp">239.00dp</dimen>
     <dimen name="_23sdp">23.00dp</dimen>
+    <dimen name="_23ssp">23.00sp</dimen>
     <dimen name="_240sdp">240.00dp</dimen>
     <dimen name="_241sdp">241.00dp</dimen>
     <dimen name="_242sdp">242.00dp</dimen>
@@ -832,6 +1028,7 @@
     <dimen name="_248sdp">248.00dp</dimen>
     <dimen name="_249sdp">249.00dp</dimen>
     <dimen name="_24sdp">24.00dp</dimen>
+    <dimen name="_24ssp">24.00sp</dimen>
     <dimen name="_250sdp">250.00dp</dimen>
     <dimen name="_251sdp">251.00dp</dimen>
     <dimen name="_252sdp">252.00dp</dimen>
@@ -843,6 +1040,7 @@
     <dimen name="_258sdp">258.00dp</dimen>
     <dimen name="_259sdp">259.00dp</dimen>
     <dimen name="_25sdp">25.00dp</dimen>
+    <dimen name="_25ssp">25.00sp</dimen>
     <dimen name="_260sdp">260.00dp</dimen>
     <dimen name="_261sdp">261.00dp</dimen>
     <dimen name="_262sdp">262.00dp</dimen>
@@ -854,6 +1052,7 @@
     <dimen name="_268sdp">268.00dp</dimen>
     <dimen name="_269sdp">269.00dp</dimen>
     <dimen name="_26sdp">26.00dp</dimen>
+    <dimen name="_26ssp">26.00sp</dimen>
     <dimen name="_270sdp">270.00dp</dimen>
     <dimen name="_271sdp">271.00dp</dimen>
     <dimen name="_272sdp">272.00dp</dimen>
@@ -865,6 +1064,7 @@
     <dimen name="_278sdp">278.00dp</dimen>
     <dimen name="_279sdp">279.00dp</dimen>
     <dimen name="_27sdp">27.00dp</dimen>
+    <dimen name="_27ssp">27.00sp</dimen>
     <dimen name="_280sdp">280.00dp</dimen>
     <dimen name="_281sdp">281.00dp</dimen>
     <dimen name="_282sdp">282.00dp</dimen>
@@ -876,6 +1076,7 @@
     <dimen name="_288sdp">288.00dp</dimen>
     <dimen name="_289sdp">289.00dp</dimen>
     <dimen name="_28sdp">28.00dp</dimen>
+    <dimen name="_28ssp">28.00sp</dimen>
     <dimen name="_290sdp">290.00dp</dimen>
     <dimen name="_291sdp">291.00dp</dimen>
     <dimen name="_292sdp">292.00dp</dimen>
@@ -887,7 +1088,9 @@
     <dimen name="_298sdp">298.00dp</dimen>
     <dimen name="_299sdp">299.00dp</dimen>
     <dimen name="_29sdp">29.00dp</dimen>
+    <dimen name="_29ssp">29.00sp</dimen>
     <dimen name="_2sdp">2.00dp</dimen>
+    <dimen name="_2ssp">2.00sp</dimen>
     <dimen name="_300sdp">300.00dp</dimen>
     <dimen name="_301sdp">301.00dp</dimen>
     <dimen name="_302sdp">302.00dp</dimen>
@@ -899,6 +1102,7 @@
     <dimen name="_308sdp">308.00dp</dimen>
     <dimen name="_309sdp">309.00dp</dimen>
     <dimen name="_30sdp">30.00dp</dimen>
+    <dimen name="_30ssp">30.00sp</dimen>
     <dimen name="_310sdp">310.00dp</dimen>
     <dimen name="_311sdp">311.00dp</dimen>
     <dimen name="_312sdp">312.00dp</dimen>
@@ -910,6 +1114,7 @@
     <dimen name="_318sdp">318.00dp</dimen>
     <dimen name="_319sdp">319.00dp</dimen>
     <dimen name="_31sdp">31.00dp</dimen>
+    <dimen name="_31ssp">31.00sp</dimen>
     <dimen name="_320sdp">320.00dp</dimen>
     <dimen name="_321sdp">321.00dp</dimen>
     <dimen name="_322sdp">322.00dp</dimen>
@@ -921,6 +1126,7 @@
     <dimen name="_328sdp">328.00dp</dimen>
     <dimen name="_329sdp">329.00dp</dimen>
     <dimen name="_32sdp">32.00dp</dimen>
+    <dimen name="_32ssp">32.00sp</dimen>
     <dimen name="_330sdp">330.00dp</dimen>
     <dimen name="_331sdp">331.00dp</dimen>
     <dimen name="_332sdp">332.00dp</dimen>
@@ -932,6 +1138,7 @@
     <dimen name="_338sdp">338.00dp</dimen>
     <dimen name="_339sdp">339.00dp</dimen>
     <dimen name="_33sdp">33.00dp</dimen>
+    <dimen name="_33ssp">33.00sp</dimen>
     <dimen name="_340sdp">340.00dp</dimen>
     <dimen name="_341sdp">341.00dp</dimen>
     <dimen name="_342sdp">342.00dp</dimen>
@@ -943,6 +1150,7 @@
     <dimen name="_348sdp">348.00dp</dimen>
     <dimen name="_349sdp">349.00dp</dimen>
     <dimen name="_34sdp">34.00dp</dimen>
+    <dimen name="_34ssp">34.00sp</dimen>
     <dimen name="_350sdp">350.00dp</dimen>
     <dimen name="_351sdp">351.00dp</dimen>
     <dimen name="_352sdp">352.00dp</dimen>
@@ -954,6 +1162,7 @@
     <dimen name="_358sdp">358.00dp</dimen>
     <dimen name="_359sdp">359.00dp</dimen>
     <dimen name="_35sdp">35.00dp</dimen>
+    <dimen name="_35ssp">35.00sp</dimen>
     <dimen name="_360sdp">360.00dp</dimen>
     <dimen name="_361sdp">361.00dp</dimen>
     <dimen name="_362sdp">362.00dp</dimen>
@@ -965,6 +1174,7 @@
     <dimen name="_368sdp">368.00dp</dimen>
     <dimen name="_369sdp">369.00dp</dimen>
     <dimen name="_36sdp">36.00dp</dimen>
+    <dimen name="_36ssp">36.00sp</dimen>
     <dimen name="_370sdp">370.00dp</dimen>
     <dimen name="_371sdp">371.00dp</dimen>
     <dimen name="_372sdp">372.00dp</dimen>
@@ -976,6 +1186,7 @@
     <dimen name="_378sdp">378.00dp</dimen>
     <dimen name="_379sdp">379.00dp</dimen>
     <dimen name="_37sdp">37.00dp</dimen>
+    <dimen name="_37ssp">37.00sp</dimen>
     <dimen name="_380sdp">380.00dp</dimen>
     <dimen name="_381sdp">381.00dp</dimen>
     <dimen name="_382sdp">382.00dp</dimen>
@@ -987,6 +1198,7 @@
     <dimen name="_388sdp">388.00dp</dimen>
     <dimen name="_389sdp">389.00dp</dimen>
     <dimen name="_38sdp">38.00dp</dimen>
+    <dimen name="_38ssp">38.00sp</dimen>
     <dimen name="_390sdp">390.00dp</dimen>
     <dimen name="_391sdp">391.00dp</dimen>
     <dimen name="_392sdp">392.00dp</dimen>
@@ -998,7 +1210,9 @@
     <dimen name="_398sdp">398.00dp</dimen>
     <dimen name="_399sdp">399.00dp</dimen>
     <dimen name="_39sdp">39.00dp</dimen>
+    <dimen name="_39ssp">39.00sp</dimen>
     <dimen name="_3sdp">3.00dp</dimen>
+    <dimen name="_3ssp">3.00sp</dimen>
     <dimen name="_400sdp">400.00dp</dimen>
     <dimen name="_401sdp">401.00dp</dimen>
     <dimen name="_402sdp">402.00dp</dimen>
@@ -1010,6 +1224,7 @@
     <dimen name="_408sdp">408.00dp</dimen>
     <dimen name="_409sdp">409.00dp</dimen>
     <dimen name="_40sdp">40.00dp</dimen>
+    <dimen name="_40ssp">40.00sp</dimen>
     <dimen name="_410sdp">410.00dp</dimen>
     <dimen name="_411sdp">411.00dp</dimen>
     <dimen name="_412sdp">412.00dp</dimen>
@@ -1021,6 +1236,7 @@
     <dimen name="_418sdp">418.00dp</dimen>
     <dimen name="_419sdp">419.00dp</dimen>
     <dimen name="_41sdp">41.00dp</dimen>
+    <dimen name="_41ssp">41.00sp</dimen>
     <dimen name="_420sdp">420.00dp</dimen>
     <dimen name="_421sdp">421.00dp</dimen>
     <dimen name="_422sdp">422.00dp</dimen>
@@ -1032,6 +1248,7 @@
     <dimen name="_428sdp">428.00dp</dimen>
     <dimen name="_429sdp">429.00dp</dimen>
     <dimen name="_42sdp">42.00dp</dimen>
+    <dimen name="_42ssp">42.00sp</dimen>
     <dimen name="_430sdp">430.00dp</dimen>
     <dimen name="_431sdp">431.00dp</dimen>
     <dimen name="_432sdp">432.00dp</dimen>
@@ -1043,6 +1260,7 @@
     <dimen name="_438sdp">438.00dp</dimen>
     <dimen name="_439sdp">439.00dp</dimen>
     <dimen name="_43sdp">43.00dp</dimen>
+    <dimen name="_43ssp">43.00sp</dimen>
     <dimen name="_440sdp">440.00dp</dimen>
     <dimen name="_441sdp">441.00dp</dimen>
     <dimen name="_442sdp">442.00dp</dimen>
@@ -1054,6 +1272,7 @@
     <dimen name="_448sdp">448.00dp</dimen>
     <dimen name="_449sdp">449.00dp</dimen>
     <dimen name="_44sdp">44.00dp</dimen>
+    <dimen name="_44ssp">44.00sp</dimen>
     <dimen name="_450sdp">450.00dp</dimen>
     <dimen name="_451sdp">451.00dp</dimen>
     <dimen name="_452sdp">452.00dp</dimen>
@@ -1065,6 +1284,7 @@
     <dimen name="_458sdp">458.00dp</dimen>
     <dimen name="_459sdp">459.00dp</dimen>
     <dimen name="_45sdp">45.00dp</dimen>
+    <dimen name="_45ssp">45.00sp</dimen>
     <dimen name="_460sdp">460.00dp</dimen>
     <dimen name="_461sdp">461.00dp</dimen>
     <dimen name="_462sdp">462.00dp</dimen>
@@ -1076,6 +1296,7 @@
     <dimen name="_468sdp">468.00dp</dimen>
     <dimen name="_469sdp">469.00dp</dimen>
     <dimen name="_46sdp">46.00dp</dimen>
+    <dimen name="_46ssp">46.00sp</dimen>
     <dimen name="_470sdp">470.00dp</dimen>
     <dimen name="_471sdp">471.00dp</dimen>
     <dimen name="_472sdp">472.00dp</dimen>
@@ -1087,6 +1308,7 @@
     <dimen name="_478sdp">478.00dp</dimen>
     <dimen name="_479sdp">479.00dp</dimen>
     <dimen name="_47sdp">47.00dp</dimen>
+    <dimen name="_47ssp">47.00sp</dimen>
     <dimen name="_480sdp">480.00dp</dimen>
     <dimen name="_481sdp">481.00dp</dimen>
     <dimen name="_482sdp">482.00dp</dimen>
@@ -1098,6 +1320,7 @@
     <dimen name="_488sdp">488.00dp</dimen>
     <dimen name="_489sdp">489.00dp</dimen>
     <dimen name="_48sdp">48.00dp</dimen>
+    <dimen name="_48ssp">48.00sp</dimen>
     <dimen name="_490sdp">490.00dp</dimen>
     <dimen name="_491sdp">491.00dp</dimen>
     <dimen name="_492sdp">492.00dp</dimen>
@@ -1109,7 +1332,9 @@
     <dimen name="_498sdp">498.00dp</dimen>
     <dimen name="_499sdp">499.00dp</dimen>
     <dimen name="_49sdp">49.00dp</dimen>
+    <dimen name="_49ssp">49.00sp</dimen>
     <dimen name="_4sdp">4.00dp</dimen>
+    <dimen name="_4ssp">4.00sp</dimen>
     <dimen name="_500sdp">500.00dp</dimen>
     <dimen name="_501sdp">501.00dp</dimen>
     <dimen name="_502sdp">502.00dp</dimen>
@@ -1121,6 +1346,7 @@
     <dimen name="_508sdp">508.00dp</dimen>
     <dimen name="_509sdp">509.00dp</dimen>
     <dimen name="_50sdp">50.00dp</dimen>
+    <dimen name="_50ssp">50.00sp</dimen>
     <dimen name="_510sdp">510.00dp</dimen>
     <dimen name="_511sdp">511.00dp</dimen>
     <dimen name="_512sdp">512.00dp</dimen>
@@ -1132,6 +1358,7 @@
     <dimen name="_518sdp">518.00dp</dimen>
     <dimen name="_519sdp">519.00dp</dimen>
     <dimen name="_51sdp">51.00dp</dimen>
+    <dimen name="_51ssp">51.00sp</dimen>
     <dimen name="_520sdp">520.00dp</dimen>
     <dimen name="_521sdp">521.00dp</dimen>
     <dimen name="_522sdp">522.00dp</dimen>
@@ -1143,6 +1370,7 @@
     <dimen name="_528sdp">528.00dp</dimen>
     <dimen name="_529sdp">529.00dp</dimen>
     <dimen name="_52sdp">52.00dp</dimen>
+    <dimen name="_52ssp">52.00sp</dimen>
     <dimen name="_530sdp">530.00dp</dimen>
     <dimen name="_531sdp">531.00dp</dimen>
     <dimen name="_532sdp">532.00dp</dimen>
@@ -1154,6 +1382,7 @@
     <dimen name="_538sdp">538.00dp</dimen>
     <dimen name="_539sdp">539.00dp</dimen>
     <dimen name="_53sdp">53.00dp</dimen>
+    <dimen name="_53ssp">53.00sp</dimen>
     <dimen name="_540sdp">540.00dp</dimen>
     <dimen name="_541sdp">541.00dp</dimen>
     <dimen name="_542sdp">542.00dp</dimen>
@@ -1165,6 +1394,7 @@
     <dimen name="_548sdp">548.00dp</dimen>
     <dimen name="_549sdp">549.00dp</dimen>
     <dimen name="_54sdp">54.00dp</dimen>
+    <dimen name="_54ssp">54.00sp</dimen>
     <dimen name="_550sdp">550.00dp</dimen>
     <dimen name="_551sdp">551.00dp</dimen>
     <dimen name="_552sdp">552.00dp</dimen>
@@ -1176,6 +1406,7 @@
     <dimen name="_558sdp">558.00dp</dimen>
     <dimen name="_559sdp">559.00dp</dimen>
     <dimen name="_55sdp">55.00dp</dimen>
+    <dimen name="_55ssp">55.00sp</dimen>
     <dimen name="_560sdp">560.00dp</dimen>
     <dimen name="_561sdp">561.00dp</dimen>
     <dimen name="_562sdp">562.00dp</dimen>
@@ -1187,6 +1418,7 @@
     <dimen name="_568sdp">568.00dp</dimen>
     <dimen name="_569sdp">569.00dp</dimen>
     <dimen name="_56sdp">56.00dp</dimen>
+    <dimen name="_56ssp">56.00sp</dimen>
     <dimen name="_570sdp">570.00dp</dimen>
     <dimen name="_571sdp">571.00dp</dimen>
     <dimen name="_572sdp">572.00dp</dimen>
@@ -1198,6 +1430,7 @@
     <dimen name="_578sdp">578.00dp</dimen>
     <dimen name="_579sdp">579.00dp</dimen>
     <dimen name="_57sdp">57.00dp</dimen>
+    <dimen name="_57ssp">57.00sp</dimen>
     <dimen name="_580sdp">580.00dp</dimen>
     <dimen name="_581sdp">581.00dp</dimen>
     <dimen name="_582sdp">582.00dp</dimen>
@@ -1209,6 +1442,7 @@
     <dimen name="_588sdp">588.00dp</dimen>
     <dimen name="_589sdp">589.00dp</dimen>
     <dimen name="_58sdp">58.00dp</dimen>
+    <dimen name="_58ssp">58.00sp</dimen>
     <dimen name="_590sdp">590.00dp</dimen>
     <dimen name="_591sdp">591.00dp</dimen>
     <dimen name="_592sdp">592.00dp</dimen>
@@ -1220,52 +1454,98 @@
     <dimen name="_598sdp">598.00dp</dimen>
     <dimen name="_599sdp">599.00dp</dimen>
     <dimen name="_59sdp">59.00dp</dimen>
+    <dimen name="_59ssp">59.00sp</dimen>
     <dimen name="_5sdp">5.00dp</dimen>
+    <dimen name="_5ssp">5.00sp</dimen>
     <dimen name="_600sdp">600.00dp</dimen>
     <dimen name="_60sdp">60.00dp</dimen>
+    <dimen name="_60ssp">60.00sp</dimen>
     <dimen name="_61sdp">61.00dp</dimen>
+    <dimen name="_61ssp">61.00sp</dimen>
     <dimen name="_62sdp">62.00dp</dimen>
+    <dimen name="_62ssp">62.00sp</dimen>
     <dimen name="_63sdp">63.00dp</dimen>
+    <dimen name="_63ssp">63.00sp</dimen>
     <dimen name="_64sdp">64.00dp</dimen>
+    <dimen name="_64ssp">64.00sp</dimen>
     <dimen name="_65sdp">65.00dp</dimen>
+    <dimen name="_65ssp">65.00sp</dimen>
     <dimen name="_66sdp">66.00dp</dimen>
+    <dimen name="_66ssp">66.00sp</dimen>
     <dimen name="_67sdp">67.00dp</dimen>
+    <dimen name="_67ssp">67.00sp</dimen>
     <dimen name="_68sdp">68.00dp</dimen>
+    <dimen name="_68ssp">68.00sp</dimen>
     <dimen name="_69sdp">69.00dp</dimen>
+    <dimen name="_69ssp">69.00sp</dimen>
     <dimen name="_6sdp">6.00dp</dimen>
+    <dimen name="_6ssp">6.00sp</dimen>
     <dimen name="_70sdp">70.00dp</dimen>
+    <dimen name="_70ssp">70.00sp</dimen>
     <dimen name="_71sdp">71.00dp</dimen>
+    <dimen name="_71ssp">71.00sp</dimen>
     <dimen name="_72sdp">72.00dp</dimen>
+    <dimen name="_72ssp">72.00sp</dimen>
     <dimen name="_73sdp">73.00dp</dimen>
+    <dimen name="_73ssp">73.00sp</dimen>
     <dimen name="_74sdp">74.00dp</dimen>
+    <dimen name="_74ssp">74.00sp</dimen>
     <dimen name="_75sdp">75.00dp</dimen>
+    <dimen name="_75ssp">75.00sp</dimen>
     <dimen name="_76sdp">76.00dp</dimen>
+    <dimen name="_76ssp">76.00sp</dimen>
     <dimen name="_77sdp">77.00dp</dimen>
+    <dimen name="_77ssp">77.00sp</dimen>
     <dimen name="_78sdp">78.00dp</dimen>
+    <dimen name="_78ssp">78.00sp</dimen>
     <dimen name="_79sdp">79.00dp</dimen>
+    <dimen name="_79ssp">79.00sp</dimen>
     <dimen name="_7sdp">7.00dp</dimen>
+    <dimen name="_7ssp">7.00sp</dimen>
     <dimen name="_80sdp">80.00dp</dimen>
+    <dimen name="_80ssp">80.00sp</dimen>
     <dimen name="_81sdp">81.00dp</dimen>
+    <dimen name="_81ssp">81.00sp</dimen>
     <dimen name="_82sdp">82.00dp</dimen>
+    <dimen name="_82ssp">82.00sp</dimen>
     <dimen name="_83sdp">83.00dp</dimen>
+    <dimen name="_83ssp">83.00sp</dimen>
     <dimen name="_84sdp">84.00dp</dimen>
+    <dimen name="_84ssp">84.00sp</dimen>
     <dimen name="_85sdp">85.00dp</dimen>
+    <dimen name="_85ssp">85.00sp</dimen>
     <dimen name="_86sdp">86.00dp</dimen>
+    <dimen name="_86ssp">86.00sp</dimen>
     <dimen name="_87sdp">87.00dp</dimen>
+    <dimen name="_87ssp">87.00sp</dimen>
     <dimen name="_88sdp">88.00dp</dimen>
+    <dimen name="_88ssp">88.00sp</dimen>
     <dimen name="_89sdp">89.00dp</dimen>
+    <dimen name="_89ssp">89.00sp</dimen>
     <dimen name="_8sdp">8.00dp</dimen>
+    <dimen name="_8ssp">8.00sp</dimen>
     <dimen name="_90sdp">90.00dp</dimen>
+    <dimen name="_90ssp">90.00sp</dimen>
     <dimen name="_91sdp">91.00dp</dimen>
+    <dimen name="_91ssp">91.00sp</dimen>
     <dimen name="_92sdp">92.00dp</dimen>
+    <dimen name="_92ssp">92.00sp</dimen>
     <dimen name="_93sdp">93.00dp</dimen>
+    <dimen name="_93ssp">93.00sp</dimen>
     <dimen name="_94sdp">94.00dp</dimen>
+    <dimen name="_94ssp">94.00sp</dimen>
     <dimen name="_95sdp">95.00dp</dimen>
+    <dimen name="_95ssp">95.00sp</dimen>
     <dimen name="_96sdp">96.00dp</dimen>
+    <dimen name="_96ssp">96.00sp</dimen>
     <dimen name="_97sdp">97.00dp</dimen>
+    <dimen name="_97ssp">97.00sp</dimen>
     <dimen name="_98sdp">98.00dp</dimen>
+    <dimen name="_98ssp">98.00sp</dimen>
     <dimen name="_99sdp">99.00dp</dimen>
+    <dimen name="_99ssp">99.00sp</dimen>
     <dimen name="_9sdp">9.00dp</dimen>
+    <dimen name="_9ssp">9.00sp</dimen>
     <dimen name="_minus10sdp">-10.00dp</dimen>
     <dimen name="_minus11sdp">-11.00dp</dimen>
     <dimen name="_minus12sdp">-12.00dp</dimen>
@@ -1407,20 +1687,43 @@
     <dimen name="abc_text_size_subtitle_material_toolbar">16dp</dimen>
     <dimen name="abc_text_size_title_material">20sp</dimen>
     <dimen name="abc_text_size_title_material_toolbar">20dp</dimen>
+    <dimen name="action_bar_back_button_container_width">30dp</dimen>
+    <dimen name="action_bar_back_button_width">12dp</dimen>
+    <dimen name="action_bar_default_height">20dp</dimen>
+    <dimen name="action_bar_img_width">30dp</dimen>
     <dimen name="action_bar_size">16dp</dimen>
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="appcompat_dialog_background_inset">16dp</dimen>
     <dimen name="big_font_size">32sp</dimen>
     <dimen name="browser_actions_context_menu_max_width">500dp</dimen>
     <dimen name="browser_actions_context_menu_min_padding">20dp</dimen>
+    <dimen name="bt_edit_text_icon_padding">24dp</dimen>
+    <dimen name="bt_expiration_date_item_selected_background_radius">2dp</dimen>
+    <dimen name="bt_expiration_date_item_text_size">13sp</dimen>
+    <dimen name="bt_expiration_date_sheet_height">260dp</dimen>
+    <dimen name="bt_expiration_date_sheet_label_padding_bottom">8dp</dimen>
+    <dimen name="bt_expiration_date_sheet_label_padding_top">8dp</dimen>
+    <dimen name="bt_expiration_date_sheet_left_right_margin">8dp</dimen>
+    <dimen name="bt_expiration_date_sheet_top_bottom_margin">8dp</dimen>
+    <dimen name="bt_input_text_size">16sp</dimen>
+    <dimen name="bt_margin">8dp</dimen>
+    <dimen name="bt_mobile_number_explanation_padding">53dp</dimen>
+    <dimen name="bt_no_edit_text_icon_padding">49dp</dimen>
     <dimen name="button_height">27pt</dimen>
     <dimen name="button_text_size">17sp</dimen>
+    <dimen name="cancel_icon_container_width">48</dimen>
+    <dimen name="cancel_icon_height">10dp</dimen>
+    <dimen name="cancel_icon_width">10dp</dimen>
+    <dimen name="cancel_payment_width">48dp</dimen>
     <dimen name="cardview_compat_inset_shadow">1dp</dimen>
     <dimen name="cardview_default_elevation">2dp</dimen>
     <dimen name="cardview_default_radius">2dp</dimen>
+    <dimen name="circular_progress_border">4dp</dimen>
     <dimen name="clock_face_margin_start">64dp</dimen>
     <dimen name="com_facebook_auth_dialog_corner_radius">2dp</dimen>
     <dimen name="com_facebook_auth_dialog_corner_radius_oversized">4dp</dimen>
-    <dimen name="com_facebook_button_corner_radius">2dp</dimen>
+    <dimen name="com_facebook_button_corner_radius">4dp</dimen>
     <dimen name="com_facebook_button_login_corner_radius">3dp</dimen>
     <dimen name="com_facebook_likeboxcountview_border_radius">3dp</dimen>
     <dimen name="com_facebook_likeboxcountview_border_width">1dp</dimen>
@@ -1434,13 +1737,6 @@
     <dimen name="com_facebook_profilepictureview_preset_size_large">180dp</dimen>
     <dimen name="com_facebook_profilepictureview_preset_size_normal">100dp</dimen>
     <dimen name="com_facebook_profilepictureview_preset_size_small">50dp</dimen>
-    <dimen name="com_facebook_share_button_compound_drawable_padding">12dp</dimen>
-    <dimen name="com_facebook_share_button_padding_bottom">12dp</dimen>
-    <dimen name="com_facebook_share_button_padding_left">12dp</dimen>
-    <dimen name="com_facebook_share_button_padding_right">16dp</dimen>
-    <dimen name="com_facebook_share_button_padding_top">12dp</dimen>
-    <dimen name="com_facebook_share_button_text_size">16.0sp</dimen>
-    <dimen name="com_facebook_tooltip_horizontal_padding">10dp</dimen>
     <dimen name="compat_button_inset_horizontal_material">4dp</dimen>
     <dimen name="compat_button_inset_vertical_material">6dp</dimen>
     <dimen name="compat_button_padding_horizontal_material">8dp</dimen>
@@ -1448,8 +1744,10 @@
     <dimen name="compat_control_corner_material">2dp</dimen>
     <dimen name="compat_notification_large_icon_max_height">320dp</dimen>
     <dimen name="compat_notification_large_icon_max_width">320dp</dimen>
+    <dimen name="corner_radius_small">8dp</dimen>
     <dimen name="def_drawer_elevation">10dp</dimen>
     <dimen name="default_dimension">100dp</dimen>
+    <dimen name="default_padding">16dp</dimen>
     <dimen name="design_appbar_elevation">4dp</dimen>
     <dimen name="design_bottom_navigation_active_item_max_width">168dp</dimen>
     <dimen name="design_bottom_navigation_active_item_min_width">96dp</dimen>
@@ -1500,6 +1798,8 @@
     <item format="float" name="disabledAlpha" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_dark" type="dimen">0.30</item>
     <item format="float" name="disabled_alpha_material_light" type="dimen">0.26</item>
+    <dimen name="edit_text_default_padding">-4dp</dimen>
+    <dimen name="edit_text_height_basic">48dp</dimen>
     <dimen name="ef_font_medium">16sp</dimen>
     <dimen name="ef_font_small">12sp</dimen>
     <dimen name="ef_height_snackbar">80dp</dimen>
@@ -1519,6 +1819,15 @@
     <dimen name="fastscroll_margin">0dp</dimen>
     <dimen name="fastscroll_minimum_range">50dp</dimen>
     <dimen name="filter_spinner_width">345dp</dimen>
+    <dimen name="font_size_11sp">11sp</dimen>
+    <dimen name="font_size_12sp">12sp</dimen>
+    <dimen name="font_size_13sp">13sp</dimen>
+    <dimen name="font_size_14sp">14sp</dimen>
+    <dimen name="font_size_15sp">15sp</dimen>
+    <dimen name="font_size_16sp">16sp</dimen>
+    <dimen name="font_size_17sp">17sp</dimen>
+    <dimen name="font_size_20sp">20sp</dimen>
+    <dimen name="google_1x">8dp</dimen>
     <item format="float" name="highlight_alpha_material_colored" type="dimen">0.26</item>
     <item format="float" name="highlight_alpha_material_dark" type="dimen">0.20</item>
     <item format="float" name="highlight_alpha_material_light" type="dimen">0.12</item>
@@ -1526,10 +1835,36 @@
     <item format="float" name="hint_alpha_material_light" type="dimen">0.38</item>
     <item format="float" name="hint_pressed_alpha_material_dark" type="dimen">0.70</item>
     <item format="float" name="hint_pressed_alpha_material_light" type="dimen">0.54</item>
+    <dimen name="icon_height_basic">40dp</dimen>
+    <dimen name="icon_height_small">26dp</dimen>
+    <dimen name="icon_width_basic">40dp</dimen>
+    <dimen name="icon_width_small">26dp</dimen>
+    <dimen name="item_recent_container_height_basic">110dp</dimen>
+    <dimen name="item_recent_container_width_basic">100dp</dimen>
+    <dimen name="item_recent_height_basic">100dp</dimen>
+    <dimen name="item_recent_width_basic">100dp</dimen>
     <dimen name="item_touch_helper_max_drag_scroll_per_frame">20dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_max_velocity">800dp</dimen>
     <dimen name="item_touch_helper_swipe_escape_velocity">120dp</dimen>
     <dimen name="light">100</dimen>
+    <dimen name="margin_basic_0dp">0dp</dimen>
+    <dimen name="margin_basic_10dp">10dp</dimen>
+    <dimen name="margin_basic_11dp">11dp</dimen>
+    <dimen name="margin_basic_13dp">16dp</dimen>
+    <dimen name="margin_basic_14dp">14dp</dimen>
+    <dimen name="margin_basic_15dp">15dp</dimen>
+    <dimen name="margin_basic_16dp">16dp</dimen>
+    <dimen name="margin_basic_19dp">19dp</dimen>
+    <dimen name="margin_basic_20dp">20dp</dimen>
+    <dimen name="margin_basic_23dp">23dp</dimen>
+    <dimen name="margin_basic_24dp">24dp</dimen>
+    <dimen name="margin_basic_25dp">25dp</dimen>
+    <dimen name="margin_basic_29dp">29dp</dimen>
+    <dimen name="margin_basic_3dp">3dp</dimen>
+    <dimen name="margin_basic_4dp">4dp</dimen>
+    <dimen name="margin_basic_6dp">4dp</dimen>
+    <dimen name="margin_basic_8dp">8dp</dimen>
+    <dimen name="margin_basic_9dp">9dp</dimen>
     <dimen name="material_bottom_sheet_max_width">640dp</dimen>
     <dimen name="material_clock_display_padding">24dp</dimen>
     <dimen name="material_clock_face_margin_top">44dp</dimen>
@@ -1565,6 +1900,42 @@
     <dimen name="material_time_picker_minimum_screen_height">560dp</dimen>
     <dimen name="material_time_picker_minimum_screen_width">340dp</dimen>
     <dimen name="material_timepicker_dialog_buttons_margin_top">24dp</dimen>
+    <dimen name="md_action_corner_radius">2dp</dimen>
+    <dimen name="md_bg_corner_radius">2dp</dimen>
+    <dimen name="md_button_frame_vertical_padding">8dp</dimen>
+    <dimen name="md_button_height">48dp</dimen>
+    <dimen name="md_button_inset_horizontal">4dp</dimen>
+    <dimen name="md_button_inset_vertical">6dp</dimen>
+    <dimen name="md_button_min_width">72dp</dimen>
+    <dimen name="md_button_padding_frame_side">12dp</dimen>
+    <dimen name="md_button_padding_horizontal">8dp</dimen>
+    <dimen name="md_button_padding_horizontal_internalexternal">32dp</dimen>
+    <dimen name="md_button_padding_vertical">4dp</dimen>
+    <dimen name="md_button_textpadding_horizontal">1dp</dimen>
+    <dimen name="md_button_textsize">14sp</dimen>
+    <dimen name="md_content_padding_bottom">8dp</dimen>
+    <dimen name="md_content_padding_top">8dp</dimen>
+    <dimen name="md_content_textsize">16sp</dimen>
+    <dimen name="md_dialog_frame_margin">24dp</dimen>
+    <dimen name="md_dialog_horizontal_margin">28dp</dimen>
+    <dimen name="md_dialog_max_width">356dp</dimen>
+    <dimen name="md_dialog_vertical_margin">52dp</dimen>
+    <dimen name="md_divider_height">1dp</dimen>
+    <dimen name="md_icon_margin">16dp</dimen>
+    <dimen name="md_icon_max_size">48dp</dimen>
+    <dimen name="md_listitem_control_margin">6dp</dimen>
+    <dimen name="md_listitem_height">48dp</dimen>
+    <dimen name="md_listitem_margin_left">24dp</dimen>
+    <dimen name="md_listitem_textsize">16sp</dimen>
+    <dimen name="md_listitem_vertical_margin">12dp</dimen>
+    <dimen name="md_listitem_vertical_margin_choice">8dp</dimen>
+    <dimen name="md_neutral_button_margin">12dp</dimen>
+    <dimen name="md_notitle_vertical_padding">16dp</dimen>
+    <dimen name="md_notitle_vertical_padding_more">20dp</dimen>
+    <dimen name="md_simplelistitem_padding_top">8dp</dimen>
+    <dimen name="md_title_frame_margin_bottom">12dp</dimen>
+    <dimen name="md_title_frame_margin_bottom_less">6dp</dimen>
+    <dimen name="md_title_textsize">20sp</dimen>
     <dimen name="medium">100</dimen>
     <dimen name="mtrl_alert_dialog_background_inset_bottom">80dp</dimen>
     <dimen name="mtrl_alert_dialog_background_inset_end">24dp</dimen>
@@ -1777,8 +2148,17 @@
     <dimen name="notification_subtext_size">13sp</dimen>
     <dimen name="notification_top_pad">10dp</dimen>
     <dimen name="notification_top_pad_large_text">5dp</dimen>
+    <dimen name="pay_btn_corners_radius">50dp</dimen>
+    <dimen name="pay_btn_margin_vertical">10dp</dimen>
+    <dimen name="pay_btn_min_height">44dp</dimen>
+    <dimen name="pay_btn_padding_horizontal">10dp</dimen>
+    <dimen name="pay_btn_padding_vertical">5dp</dimen>
+    <dimen name="pay_btn_text_size">14sp</dimen>
     <dimen name="rectangle_height">117dp</dimen>
+    <dimen name="recycler_view_bottom_offset">29dp</dimen>
+    <dimen name="save_btn_corners_radius">0dp</dimen>
     <dimen name="semi_bold">100</dimen>
+    <dimen name="separator_width_basic">1dp</dimen>
     <dimen name="subtitle_corner_radius">2dp</dimen>
     <dimen name="subtitle_outline_width">2dp</dimen>
     <dimen name="subtitle_shadow_offset">2dp</dimen>
@@ -1796,6 +2176,10 @@
     <dimen name="test_navigation_bar_shadow_height">1dp</dimen>
     <dimen name="test_navigation_bar_text_size">12sp</dimen>
     <dimen name="thin">100</dimen>
+    <dimen name="title_lineSpacingExtra">7sp</dimen>
+    <dimen name="title_lineSpacingExtra_0">0sp</dimen>
+    <dimen name="title_lineSpacingExtra_11">11sp</dimen>
+    <dimen name="toolbar_height_basic">56dp</dimen>
     <dimen name="tooltip_corner_radius">2dp</dimen>
     <dimen name="tooltip_horizontal_padding">16dp</dimen>
     <dimen name="tooltip_margin">8dp</dimen>
@@ -1876,6 +2260,7 @@
     <item name="item_touch_helper_previous_elevation" type="id"/>
     <item name="line1" type="id"/>
     <item name="line3" type="id"/>
+    <item name="lottie_layer_name" type="id"/>
     <item name="material_clock_face" type="id"/>
     <item name="material_value_index" type="id"/>
     <item name="motion_base" type="id"/>
@@ -1891,7 +2276,12 @@
     <item name="navigation_bar_item_labels_group" type="id"/>
     <item name="navigation_bar_item_large_label_view" type="id"/>
     <item name="navigation_bar_item_small_label_view" type="id"/>
+    <item name="onAttachStateChangeListener" type="id"/>
+    <item name="onDateChanged" type="id"/>
     <item name="parent_matrix" type="id"/>
+    <item name="pay_button_id" type="id"/>
+    <item name="pay_layout_id" type="id"/>
+    <item name="pay_security_icon_id" type="id"/>
     <item name="progress_circular" type="id"/>
     <item name="progress_horizontal" type="id"/>
     <item name="row_index_key" type="id"/>
@@ -1917,6 +2307,7 @@
     <item name="tag_window_insets_animation_callback" type="id"/>
     <item name="text" type="id"/>
     <item name="text2" type="id"/>
+    <item name="textWatcher" type="id"/>
     <item name="text_input_error_icon" type="id"/>
     <item name="textinput_counter" type="id"/>
     <item name="textinput_error" type="id"/>
@@ -1938,6 +2329,15 @@
     <id name="view_tree_saved_state_registry_owner"/>
     <id name="view_tree_view_model_store_owner"/>
     <item name="visible_removing_fragment_view_tag" type="id"/>
+    <item name="zxing_back_button" type="id"/>
+    <item name="zxing_camera_closed" type="id"/>
+    <item name="zxing_camera_error" type="id"/>
+    <item name="zxing_decode" type="id"/>
+    <item name="zxing_decode_failed" type="id"/>
+    <item name="zxing_decode_succeeded" type="id"/>
+    <item name="zxing_possible_result_points" type="id"/>
+    <item name="zxing_preview_failed" type="id"/>
+    <item name="zxing_prewiew_size_ready" type="id"/>
     <integer name="abc_config_activityDefaultDur">220</integer>
     <integer name="abc_config_activityShortDur">150</integer>
     <integer name="app_bar_elevation_anim_duration">150</integer>
@@ -1967,12 +2367,18 @@
     <integer name="mtrl_chip_anim_duration">100</integer>
     <integer name="mtrl_tab_indicator_anim_duration_ms">250</integer>
     <integer name="show_password_duration">200</integer>
+    <integer name="slide_animation_duration">300</integer>
     <integer name="status_bar_notification_info_maxnum">999</integer>
     <integer name="ucrop_progress_loading_anim_time">1500</integer>
+    <integer name="viewfinder_border_length">60</integer>
+    <integer name="viewfinder_border_width">4</integer>
     <plurals description="Plural form content description for number of new notifications [CHAR_LIMIT=NONE]" name="mtrl_badge_content_description">
     <item quantity="one"><ns2:g id="count">%d</ns2:g> new notification</item>
     <item quantity="other"><ns2:g id="count">%d</ns2:g> new notifications</item>
   </plurals>
+    <string name="Day">D</string>
+    <string name="Month">M</string>
+    <string name="Year">Y</string>
     <string name="abc_action_bar_home_description">Navigate home</string>
     <string name="abc_action_bar_up_description">Navigate up</string>
     <string name="abc_action_menu_overflow_description">More options</string>
@@ -2001,16 +2407,41 @@
     <string name="abc_shareactionprovider_share_with_application">Share with <ns2:g example="Mail" id="application_name">%s</ns2:g></string>
     <string name="abc_toolbar_collapse_description">Collapse</string>
     <string name="action_cancel">Cancel</string>
-    <string name="app_name">Hawalena</string>
+    <string name="actionbar_title_address_on_card">Address on card</string>
+    <string name="alert_un_supported_card_message" translatable="false">This card is not supported</string>
+    <string name="alert_un_supported_card_title" translatable="false">Attention</string>
+    <string name="androidx_startup" translatable="false">androidx.startup</string>
+    <string name="app_name">DynamodbApp</string>
+    <string name="app_version" translatable="false">null</string>
     <string name="appbar_scrolling_view_behavior" translatable="false">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
     <string name="arabic_a">Arabic</string>
     <string name="bottom_sheet_behavior" translatable="false">com.google.android.material.bottomsheet.BottomSheetBehavior</string>
     <string description="A description of an action that a user of an accessibility service can perform to expand a bottomsheet halfway to its full height. [CHAR LIMIT=25]" name="bottomsheet_action_expand_halfway">Expand halfway</string>
+    <string name="bt_cid">CID</string>
+    <string name="bt_cvc">CVC</string>
+    <string name="bt_cvn">CVN</string>
+    <string name="bt_cvv">CVV</string>
+    <string name="bt_cvv_invalid">%s is invalid</string>
+    <string name="bt_cvv_required">%s is required</string>
+    <string name="bt_expiration_invalid">Expiration date is invalid</string>
+    <string name="bt_expiration_required">Expiration date is required</string>
+    <string name="bt_form_hint_cvv">@string/bt_cvv</string>
+    <string name="bt_form_hint_expiration">Expiration Date</string>
+    <string name="bt_month">Month</string>
+    <string name="bt_year">Year</string>
+    <string name="btn_title_confirm">Confirm</string>
+    <string name="btn_title_save">Save</string>
+    <string name="business_icon_description">Business icon</string>
+    <string name="cancel">Cancel</string>
+    <string name="card_saved_before">Your card has been saved before, you can not save it twice!</string>
     <string name="character_counter_content_description">Characters entered %1$d of %2$d</string>
     <string name="character_counter_overflowed_content_description">Character limit exceeded %1$d of %2$d</string>
     <string name="character_counter_pattern" translatable="false">%1$d/%2$d</string>
     <string name="chip_text">Chip text</string>
     <string name="clear_text_end_icon_content_description">Clear text</string>
+    <string name="close">Close</string>
+    <string name="code_expires_on" translatable="false">Code Expires on</string>
+    <string name="com.crashlytics.android.build_id" ns1:ignore="UnusedResources,TypographyDashes" translatable="false">3c4f4610-b1b5-45b0-9c5e-92542cb185e6</string>
     <string name="com_facebook_device_auth_instructions">Visit &lt;b>facebook.com/device&lt;/b> and enter the code shown above.</string>
     <string name="com_facebook_image_download_unknown_error">Unexpected error while downloading an image.</string>
     <string name="com_facebook_internet_permission_error_message">WebView login requires INTERNET permission</string>
@@ -2053,6 +2484,763 @@
     <string name="common_signin_button_text">Sign in</string>
     <string name="common_signin_button_text_long">Sign in with Google</string>
     <string name="copy_toast_msg">Link copied to clipboard</string>
+    <string name="country_afghanistan_code" translatable="false">af</string>
+    <string name="country_afghanistan_name">Afghanistan</string>
+    <string name="country_afghanistan_number" translatable="false">93</string>
+    <string name="country_aland_islands_code" translatable="false">ax</string>
+    <string name="country_aland_islands_name">Åland Islands</string>
+    <string name="country_aland_islands_number" translatable="false">358</string>
+    <string name="country_albania_code" translatable="false">al</string>
+    <string name="country_albania_name">Albania</string>
+    <string name="country_albania_number" translatable="false">355</string>
+    <string name="country_algeria_code" translatable="false">dz</string>
+    <string name="country_algeria_name">Algeria</string>
+    <string name="country_algeria_number" translatable="false">213</string>
+    <string name="country_american_samoa_code" translatable="false">as</string>
+    <string name="country_american_samoa_name">American Samoa</string>
+    <string name="country_american_samoa_number" translatable="false">1684</string>
+    <string name="country_andorra_code" translatable="false">ad</string>
+    <string name="country_andorra_name">Andorra</string>
+    <string name="country_andorra_number" translatable="false">376</string>
+    <string name="country_angola_code" translatable="false">ao</string>
+    <string name="country_angola_name">Angola</string>
+    <string name="country_angola_number" translatable="false">244</string>
+    <string name="country_anguilla_code" translatable="false">ai</string>
+    <string name="country_anguilla_name">Anguilla</string>
+    <string name="country_anguilla_number" translatable="false">1264</string>
+    <string name="country_antarctica_code" translatable="false">aq</string>
+    <string name="country_antarctica_name">Antarctica</string>
+    <string name="country_antarctica_number" translatable="false">672</string>
+    <string name="country_antigua_and_barbuda_code" translatable="false">ag</string>
+    <string name="country_antigua_and_barbuda_name">Antigua and Barbuda</string>
+    <string name="country_antigua_and_barbuda_number" translatable="false">1268</string>
+    <string name="country_argentina_code" translatable="false">ar</string>
+    <string name="country_argentina_name">Argentina</string>
+    <string name="country_argentina_number" translatable="false">54</string>
+    <string name="country_armenia_code" translatable="false">am</string>
+    <string name="country_armenia_name">Armenia</string>
+    <string name="country_armenia_number" translatable="false">374</string>
+    <string name="country_aruba_code" translatable="false">aw</string>
+    <string name="country_aruba_name">Aruba</string>
+    <string name="country_aruba_number" translatable="false">297</string>
+    <string name="country_australia_code" translatable="false">au</string>
+    <string name="country_australia_name">Australia</string>
+    <string name="country_australia_number" translatable="false">61</string>
+    <string name="country_austria_code" translatable="false">at</string>
+    <string name="country_austria_name">Austria</string>
+    <string name="country_austria_number" translatable="false">43</string>
+    <string name="country_azerbaijan_code" translatable="false">az</string>
+    <string name="country_azerbaijan_name">Azerbaijan</string>
+    <string name="country_azerbaijan_number" translatable="false">994</string>
+    <string name="country_bahamas_code" translatable="false">bs</string>
+    <string name="country_bahamas_name">Bahamas</string>
+    <string name="country_bahamas_number" translatable="false">1242</string>
+    <string name="country_bahrain_code" translatable="false">bh</string>
+    <string name="country_bahrain_name">Bahrain</string>
+    <string name="country_bahrain_number" translatable="false">973</string>
+    <string name="country_bangladesh_code" translatable="false">bd</string>
+    <string name="country_bangladesh_name">Bangladesh</string>
+    <string name="country_bangladesh_number" translatable="false">880</string>
+    <string name="country_barbados_code" translatable="false">bb</string>
+    <string name="country_barbados_name">Barbados</string>
+    <string name="country_barbados_number" translatable="false">1246</string>
+    <string name="country_belarus_code" translatable="false">by</string>
+    <string name="country_belarus_name">Belarus</string>
+    <string name="country_belarus_number" translatable="false">375</string>
+    <string name="country_belgium_code" translatable="false">be</string>
+    <string name="country_belgium_name">Belgium</string>
+    <string name="country_belgium_number" translatable="false">32</string>
+    <string name="country_belize_code" translatable="false">bz</string>
+    <string name="country_belize_name">Belize</string>
+    <string name="country_belize_number" translatable="false">501</string>
+    <string name="country_benin_code" translatable="false">bj</string>
+    <string name="country_benin_name">Benin</string>
+    <string name="country_benin_number" translatable="false">229</string>
+    <string name="country_bermuda_code" translatable="false">bm</string>
+    <string name="country_bermuda_name">Bermuda</string>
+    <string name="country_bermuda_number" translatable="false">1441</string>
+    <string name="country_bhutan_code" translatable="false">bt</string>
+    <string name="country_bhutan_name">Bhutan</string>
+    <string name="country_bhutan_number" translatable="false">975</string>
+    <string name="country_bolivia_code" translatable="false">bo</string>
+    <string name="country_bolivia_name">Bolivia</string>
+    <string name="country_bolivia_number" translatable="false">591</string>
+    <string name="country_bosnia_and_herzegovina_code" translatable="false">ba</string>
+    <string name="country_bosnia_and_herzegovina_name">Bosnia And Herzegovina</string>
+    <string name="country_bosnia_and_herzegovina_number" translatable="false">387</string>
+    <string name="country_botswana_code" translatable="false">bw</string>
+    <string name="country_botswana_name">Botswana</string>
+    <string name="country_botswana_number" translatable="false">267</string>
+    <string name="country_brazil_code" translatable="false">br</string>
+    <string name="country_brazil_name">Brazil</string>
+    <string name="country_brazil_number" translatable="false">55</string>
+    <string name="country_british_indian_ocean_territory_code" translatable="false">io</string>
+    <string name="country_british_indian_ocean_territory_name">British Indian Ocean Territory</string>
+    <string name="country_british_indian_ocean_territory_number" translatable="false">246</string>
+    <string name="country_british_virgin_islands_code" translatable="false">vg</string>
+    <string name="country_british_virgin_islands_name">British Virgin Islands</string>
+    <string name="country_british_virgin_islands_number" translatable="false">1284</string>
+    <string name="country_brunei_darussalam_code" translatable="false">bn</string>
+    <string name="country_brunei_darussalam_name">Brunei Darussalam</string>
+    <string name="country_brunei_darussalam_number" translatable="false">673</string>
+    <string name="country_bulgaria_code" translatable="false">bg</string>
+    <string name="country_bulgaria_name">Bulgaria</string>
+    <string name="country_bulgaria_number" translatable="false">359</string>
+    <string name="country_burkina_faso_code" translatable="false">bf</string>
+    <string name="country_burkina_faso_name">Burkina Faso</string>
+    <string name="country_burkina_faso_number" translatable="false">226</string>
+    <string name="country_burundi_code" translatable="false">bi</string>
+    <string name="country_burundi_name">Burundi</string>
+    <string name="country_burundi_number" translatable="false">257</string>
+    <string name="country_cambodia_code" translatable="false">kh</string>
+    <string name="country_cambodia_name">Cambodia</string>
+    <string name="country_cambodia_number" translatable="false">855</string>
+    <string name="country_cameroon_code" translatable="false">cm</string>
+    <string name="country_cameroon_name">Cameroon</string>
+    <string name="country_cameroon_number" translatable="false">237</string>
+    <string name="country_canada_code" translatable="false">ca</string>
+    <string name="country_canada_name">Canada</string>
+    <string name="country_canada_number" translatable="false">1</string>
+    <string name="country_cape_verde_code" translatable="false">cv</string>
+    <string name="country_cape_verde_name">Cape Verde</string>
+    <string name="country_cape_verde_number" translatable="false">238</string>
+    <string name="country_cayman_islands_code" translatable="false">ky</string>
+    <string name="country_cayman_islands_name">Cayman Islands</string>
+    <string name="country_cayman_islands_number" translatable="false">1345</string>
+    <string name="country_central_african_republic_code" translatable="false">cf</string>
+    <string name="country_central_african_republic_name">Central African Republic</string>
+    <string name="country_central_african_republic_number" translatable="false">236</string>
+    <string name="country_chad_code" translatable="false">td</string>
+    <string name="country_chad_name">Chad</string>
+    <string name="country_chad_number" translatable="false">235</string>
+    <string name="country_chile_code" translatable="false">cl</string>
+    <string name="country_chile_name">Chile</string>
+    <string name="country_chile_number" translatable="false">56</string>
+    <string name="country_china_code" translatable="false">cn</string>
+    <string name="country_china_name">China</string>
+    <string name="country_china_number" translatable="false">86</string>
+    <string name="country_christmas_island_code" translatable="false">cx</string>
+    <string name="country_christmas_island_name">Christmas Island</string>
+    <string name="country_christmas_island_number" translatable="false">61</string>
+    <string name="country_cocos_keeling_islands_code" translatable="false">cc</string>
+    <string name="country_cocos_keeling_islands_name">Cocos (keeling) Islands</string>
+    <string name="country_cocos_keeling_islands_number" translatable="false">61</string>
+    <string name="country_code_and_phone_code" translatable="false">(%1$s) +%2$s</string>
+    <string name="country_colombia_code" translatable="false">co</string>
+    <string name="country_colombia_name">Colombia</string>
+    <string name="country_colombia_number" translatable="false">57</string>
+    <string name="country_comoros_code" translatable="false">km</string>
+    <string name="country_comoros_name">Comoros</string>
+    <string name="country_comoros_number" translatable="false">269</string>
+    <string name="country_congo_code" translatable="false">cg</string>
+    <string name="country_congo_name">Republic of the Congo</string>
+    <string name="country_congo_number" translatable="false">242</string>
+    <string name="country_cook_islands_code" translatable="false">ck</string>
+    <string name="country_cook_islands_name">Cook Islands</string>
+    <string name="country_cook_islands_number" translatable="false">682</string>
+    <string name="country_costa_rica_code" translatable="false">cr</string>
+    <string name="country_costa_rica_name">Costa Rica</string>
+    <string name="country_costa_rica_number" translatable="false">506</string>
+    <string name="country_cote_d_ivoire_code" translatable="false">ci</string>
+    <string name="country_cote_d_ivoire_name">Côte D\'ivoire</string>
+    <string name="country_cote_d_ivoire_number" translatable="false">225</string>
+    <string name="country_croatia_code" translatable="false">hr</string>
+    <string name="country_croatia_name">Croatia</string>
+    <string name="country_croatia_number" translatable="false">385</string>
+    <string name="country_cuba_code" translatable="false">cu</string>
+    <string name="country_cuba_name">Cuba</string>
+    <string name="country_cuba_number" translatable="false">53</string>
+    <string name="country_curacao_code" translatable="false">cw</string>
+    <string name="country_curacao_name">Curacao</string>
+    <string name="country_curacao_number" translatable="false">599</string>
+    <string name="country_cyprus_code" translatable="false">cy</string>
+    <string name="country_cyprus_name">Cyprus</string>
+    <string name="country_cyprus_number" translatable="false">357</string>
+    <string name="country_czech_republic_code" translatable="false">cz</string>
+    <string name="country_czech_republic_name">Czech Republic</string>
+    <string name="country_czech_republic_number" translatable="false">420</string>
+    <string name="country_denmark_code" translatable="false">dk</string>
+    <string name="country_denmark_name">Denmark</string>
+    <string name="country_denmark_number" translatable="false">45</string>
+    <string name="country_djibouti_code" translatable="false">dj</string>
+    <string name="country_djibouti_name">Djibouti</string>
+    <string name="country_djibouti_number" translatable="false">253</string>
+    <string name="country_dominica_code" translatable="false">dm</string>
+    <string name="country_dominica_name">Dominica</string>
+    <string name="country_dominica_number" translatable="false">1767</string>
+    <string name="country_dominican_republic_code" translatable="false">do</string>
+    <string name="country_dominican_republic_name">Dominican Republic</string>
+    <string name="country_dominican_republic_number" translatable="false">1</string>
+    <string name="country_ecuador_code" translatable="false">ec</string>
+    <string name="country_ecuador_name">Ecuador</string>
+    <string name="country_ecuador_number" translatable="false">593</string>
+    <string name="country_egypt_code" translatable="false">eg</string>
+    <string name="country_egypt_name">Egypt</string>
+    <string name="country_egypt_number" translatable="false">20</string>
+    <string name="country_el_salvador_code" translatable="false">sv</string>
+    <string name="country_el_salvador_name">El Salvador</string>
+    <string name="country_el_salvador_number" translatable="false">503</string>
+    <string name="country_equatorial_guinea_code" translatable="false">gq</string>
+    <string name="country_equatorial_guinea_name">Equatorial Guinea</string>
+    <string name="country_equatorial_guinea_number" translatable="false">240</string>
+    <string name="country_eritrea_code" translatable="false">er</string>
+    <string name="country_eritrea_name">Eritrea</string>
+    <string name="country_eritrea_number" translatable="false">291</string>
+    <string name="country_estonia_code" translatable="false">ee</string>
+    <string name="country_estonia_name">Estonia</string>
+    <string name="country_estonia_number" translatable="false">372</string>
+    <string name="country_ethiopia_code" translatable="false">et</string>
+    <string name="country_ethiopia_name">Ethiopia</string>
+    <string name="country_ethiopia_number" translatable="false">251</string>
+    <string name="country_falkland_islands_malvinas_code" translatable="false">fk</string>
+    <string name="country_falkland_islands_malvinas_name">Falkland Islands (malvinas)</string>
+    <string name="country_falkland_islands_malvinas_number" translatable="false">500</string>
+    <string name="country_faroe_islands_code" translatable="false">fo</string>
+    <string name="country_faroe_islands_name">Faroe Islands</string>
+    <string name="country_faroe_islands_number" translatable="false">298</string>
+    <string name="country_fiji_code" translatable="false">fj</string>
+    <string name="country_fiji_name">Fiji</string>
+    <string name="country_fiji_number" translatable="false">679</string>
+    <string name="country_finland_code" translatable="false">fi</string>
+    <string name="country_finland_name">Finland</string>
+    <string name="country_finland_number" translatable="false">358</string>
+    <string name="country_france_code" translatable="false">fr</string>
+    <string name="country_france_name">France</string>
+    <string name="country_france_number" translatable="false">33</string>
+    <string name="country_french_guyana_code" translatable="false">gf</string>
+    <string name="country_french_guyana_name">French Guiana</string>
+    <string name="country_french_guyana_number" translatable="false">594</string>
+    <string name="country_french_polynesia_code" translatable="false">pf</string>
+    <string name="country_french_polynesia_name">French Polynesia</string>
+    <string name="country_french_polynesia_number" translatable="false">689</string>
+    <string name="country_full_name_and_name_code" translatable="false">%1$s (%2$s)</string>
+    <string name="country_full_name_and_phone_code" translatable="false">%1$s +%2$s</string>
+    <string name="country_full_name_name_code_and_phone_code" translatable="false">%1$s (%2$s) +%3$s</string>
+    <string name="country_gabon_code" translatable="false">ga</string>
+    <string name="country_gabon_name">Gabon</string>
+    <string name="country_gabon_number" translatable="false">241</string>
+    <string name="country_gambia_code" translatable="false">gm</string>
+    <string name="country_gambia_name">Gambia</string>
+    <string name="country_gambia_number" translatable="false">220</string>
+    <string name="country_georgia_code" translatable="false">ge</string>
+    <string name="country_georgia_name">Georgia</string>
+    <string name="country_georgia_number" translatable="false">995</string>
+    <string name="country_germany_code" translatable="false">de</string>
+    <string name="country_germany_name">Germany</string>
+    <string name="country_germany_number" translatable="false">49</string>
+    <string name="country_ghana_code" translatable="false">gh</string>
+    <string name="country_ghana_name">Ghana</string>
+    <string name="country_ghana_number" translatable="false">233</string>
+    <string name="country_gibraltar_code" translatable="false">gi</string>
+    <string name="country_gibraltar_name">Gibraltar</string>
+    <string name="country_gibraltar_number" translatable="false">350</string>
+    <string name="country_greece_code" translatable="false">gr</string>
+    <string name="country_greece_name">Greece</string>
+    <string name="country_greece_number" translatable="false">30</string>
+    <string name="country_greenland_code" translatable="false">gl</string>
+    <string name="country_greenland_name">Greenland</string>
+    <string name="country_greenland_number" translatable="false">299</string>
+    <string name="country_grenada_code" translatable="false">gd</string>
+    <string name="country_grenada_name">Grenada</string>
+    <string name="country_grenada_number" translatable="false">1473</string>
+    <string name="country_guadeloupe_code" translatable="false">gp</string>
+    <string name="country_guadeloupe_name">Guadeloupe</string>
+    <string name="country_guadeloupe_number" translatable="false">590</string>
+    <string name="country_guam_code" translatable="false">gu</string>
+    <string name="country_guam_name">Guam</string>
+    <string name="country_guam_number" translatable="false">1671</string>
+    <string name="country_guatemala_code" translatable="false">gt</string>
+    <string name="country_guatemala_name">Guatemala</string>
+    <string name="country_guatemala_number" translatable="false">502</string>
+    <string name="country_guernsey_code" translatable="false">gg</string>
+    <string name="country_guernsey_name">Guernsey</string>
+    <string name="country_guernsey_number" translatable="false">44</string>
+    <string name="country_guinea_bissau_code" translatable="false">gw</string>
+    <string name="country_guinea_bissau_name">Guinea-bissau</string>
+    <string name="country_guinea_bissau_number" translatable="false">245</string>
+    <string name="country_guinea_code" translatable="false">gn</string>
+    <string name="country_guinea_name">Guinea</string>
+    <string name="country_guinea_number" translatable="false">224</string>
+    <string name="country_guyana_code" translatable="false">gy</string>
+    <string name="country_guyana_name">Guyana</string>
+    <string name="country_guyana_number" translatable="false">592</string>
+    <string name="country_haiti_code" translatable="false">ht</string>
+    <string name="country_haiti_name">Haiti</string>
+    <string name="country_haiti_number" translatable="false">509</string>
+    <string name="country_holy_see_vatican_city_state_code" translatable="false">va</string>
+    <string name="country_holy_see_vatican_city_state_name">Holy See (vatican City State)</string>
+    <string name="country_holy_see_vatican_city_state_number" translatable="false">379</string>
+    <string name="country_honduras_code" translatable="false">hn</string>
+    <string name="country_honduras_name">Honduras</string>
+    <string name="country_honduras_number" translatable="false">504</string>
+    <string name="country_hong_kong_code" translatable="false">hk</string>
+    <string name="country_hong_kong_name">Hong Kong</string>
+    <string name="country_hong_kong_number" translatable="false">852</string>
+    <string name="country_hungary_code" translatable="false">hu</string>
+    <string name="country_hungary_name">Hungary</string>
+    <string name="country_hungary_number" translatable="false">36</string>
+    <string name="country_iceland_code" translatable="false">is</string>
+    <string name="country_iceland_name">Iceland</string>
+    <string name="country_iceland_number" translatable="false">354</string>
+    <string name="country_india_code" translatable="false">in</string>
+    <string name="country_india_name">India</string>
+    <string name="country_india_number" translatable="false">91</string>
+    <string name="country_indonesia_code" translatable="false">id</string>
+    <string name="country_indonesia_name">Indonesia</string>
+    <string name="country_indonesia_number" translatable="false">62</string>
+    <string name="country_iran_code" translatable="false">ir</string>
+    <string name="country_iran_name">Iran</string>
+    <string name="country_iran_number" translatable="false">98</string>
+    <string name="country_iraq_code" translatable="false">iq</string>
+    <string name="country_iraq_name">Iraq</string>
+    <string name="country_iraq_number" translatable="false">964</string>
+    <string name="country_ireland_code" translatable="false">ie</string>
+    <string name="country_ireland_name">Ireland</string>
+    <string name="country_ireland_number" translatable="false">353</string>
+    <string name="country_isle_of_man_code" translatable="false">im</string>
+    <string name="country_isle_of_man_name">Isle Of Man</string>
+    <string name="country_isle_of_man_number" translatable="false">44</string>
+    <string name="country_israel_code" translatable="false">il</string>
+    <string name="country_israel_name">Israel</string>
+    <string name="country_israel_number" translatable="false">972</string>
+    <string name="country_italy_code" translatable="false">it</string>
+    <string name="country_italy_name">Italy</string>
+    <string name="country_italy_number" translatable="false">39</string>
+    <string name="country_jamaica_code" translatable="false">jm</string>
+    <string name="country_jamaica_name">Jamaica</string>
+    <string name="country_jamaica_number" translatable="false">1876</string>
+    <string name="country_japan_code" translatable="false">jp</string>
+    <string name="country_japan_name">Japan</string>
+    <string name="country_japan_number" translatable="false">81</string>
+    <string name="country_jersey_code" translatable="false">je</string>
+    <string name="country_jersey_name">Jersey</string>
+    <string name="country_jersey_number" translatable="false">44</string>
+    <string name="country_jordan_code" translatable="false">jo</string>
+    <string name="country_jordan_name">Jordan</string>
+    <string name="country_jordan_number" translatable="false">962</string>
+    <string name="country_kazakhstan_code" translatable="false">kz</string>
+    <string name="country_kazakhstan_name">Kazakhstan</string>
+    <string name="country_kazakhstan_number" translatable="false">7</string>
+    <string name="country_kenya_code" translatable="false">ke</string>
+    <string name="country_kenya_name">Kenya</string>
+    <string name="country_kenya_number" translatable="false">254</string>
+    <string name="country_kiribati_code" translatable="false">ki</string>
+    <string name="country_kiribati_name">Kiribati</string>
+    <string name="country_kiribati_number" translatable="false">686</string>
+    <string name="country_kosovo_code" translatable="false">xk</string>
+    <string name="country_kosovo_name">Kosovo</string>
+    <string name="country_kosovo_number" translatable="false">383</string>
+    <string name="country_kuwait_code" translatable="false">kw</string>
+    <string name="country_kuwait_name">Kuwait</string>
+    <string name="country_kuwait_number" translatable="false">965</string>
+    <string name="country_kyrgyzstan_code" translatable="false">kg</string>
+    <string name="country_kyrgyzstan_name">Kyrgyzstan</string>
+    <string name="country_kyrgyzstan_number" translatable="false">996</string>
+    <string name="country_lao_peoples_democratic_republic_code" translatable="false">la</string>
+    <string name="country_lao_peoples_democratic_republic_name">Lao People\'s Democratic Republic</string>
+    <string name="country_lao_peoples_democratic_republic_number" translatable="false">856</string>
+    <string name="country_latvia_code" translatable="false">lv</string>
+    <string name="country_latvia_name">Latvia</string>
+    <string name="country_latvia_number" translatable="false">371</string>
+    <string name="country_lebanon_code" translatable="false">lb</string>
+    <string name="country_lebanon_name">Lebanon</string>
+    <string name="country_lebanon_number" translatable="false">961</string>
+    <string name="country_lesotho_code" translatable="false">ls</string>
+    <string name="country_lesotho_name">Lesotho</string>
+    <string name="country_lesotho_number" translatable="false">266</string>
+    <string name="country_liberia_code" translatable="false">lr</string>
+    <string name="country_liberia_name">Liberia</string>
+    <string name="country_liberia_number" translatable="false">231</string>
+    <string name="country_libya_code" translatable="false">ly</string>
+    <string name="country_libya_name">Libya</string>
+    <string name="country_libya_number" translatable="false">218</string>
+    <string name="country_liechtenstein_code" translatable="false">li</string>
+    <string name="country_liechtenstein_name">Liechtenstein</string>
+    <string name="country_liechtenstein_number" translatable="false">423</string>
+    <string name="country_lithuania_code" translatable="false">lt</string>
+    <string name="country_lithuania_name">Lithuania</string>
+    <string name="country_lithuania_number" translatable="false">370</string>
+    <string name="country_luxembourg_code" translatable="false">lu</string>
+    <string name="country_luxembourg_name">Luxembourg</string>
+    <string name="country_luxembourg_number" translatable="false">352</string>
+    <string name="country_macao_code" translatable="false">mo</string>
+    <string name="country_macao_name">Macao</string>
+    <string name="country_macao_number" translatable="false">853</string>
+    <string name="country_macedonia_code" translatable="false">mk</string>
+    <string name="country_macedonia_name">Macedonia</string>
+    <string name="country_macedonia_number" translatable="false">389</string>
+    <string name="country_madagascar_code" translatable="false">mg</string>
+    <string name="country_madagascar_name">Madagascar</string>
+    <string name="country_madagascar_number" translatable="false">261</string>
+    <string name="country_malawi_code" translatable="false">mw</string>
+    <string name="country_malawi_name">Malawi</string>
+    <string name="country_malawi_number" translatable="false">265</string>
+    <string name="country_malaysia_code" translatable="false">my</string>
+    <string name="country_malaysia_name">Malaysia</string>
+    <string name="country_malaysia_number" translatable="false">60</string>
+    <string name="country_maldives_code" translatable="false">mv</string>
+    <string name="country_maldives_name">Maldives</string>
+    <string name="country_maldives_number" translatable="false">960</string>
+    <string name="country_mali_code" translatable="false">ml</string>
+    <string name="country_mali_name">Mali</string>
+    <string name="country_mali_number" translatable="false">223</string>
+    <string name="country_malta_code" translatable="false">mt</string>
+    <string name="country_malta_name">Malta</string>
+    <string name="country_malta_number" translatable="false">356</string>
+    <string name="country_marshall_islands_code" translatable="false">mh</string>
+    <string name="country_marshall_islands_name">Marshall Islands</string>
+    <string name="country_marshall_islands_number" translatable="false">692</string>
+    <string name="country_martinique_code" translatable="false">mq</string>
+    <string name="country_martinique_name">Martinique</string>
+    <string name="country_martinique_number" translatable="false">596</string>
+    <string name="country_mauritania_code" translatable="false">mr</string>
+    <string name="country_mauritania_name">Mauritania</string>
+    <string name="country_mauritania_number" translatable="false">222</string>
+    <string name="country_mauritius_code" translatable="false">mu</string>
+    <string name="country_mauritius_name">Mauritius</string>
+    <string name="country_mauritius_number" translatable="false">230</string>
+    <string name="country_mayotte_code" translatable="false">yt</string>
+    <string name="country_mayotte_name">Mayotte</string>
+    <string name="country_mayotte_number" translatable="false">262</string>
+    <string name="country_mexico_code" translatable="false">mx</string>
+    <string name="country_mexico_name">Mexico</string>
+    <string name="country_mexico_number" translatable="false">52</string>
+    <string name="country_micronesia_code" translatable="false">fm</string>
+    <string name="country_micronesia_name">Micronesia</string>
+    <string name="country_micronesia_number" translatable="false">691</string>
+    <string name="country_moldova_code" translatable="false">md</string>
+    <string name="country_moldova_name">Moldova</string>
+    <string name="country_moldova_number" translatable="false">373</string>
+    <string name="country_monaco_code" translatable="false">mc</string>
+    <string name="country_monaco_name">Monaco</string>
+    <string name="country_monaco_number" translatable="false">377</string>
+    <string name="country_mongolia_code" translatable="false">mn</string>
+    <string name="country_mongolia_name">Mongolia</string>
+    <string name="country_mongolia_number" translatable="false">976</string>
+    <string name="country_montenegro_code" translatable="false">me</string>
+    <string name="country_montenegro_name">Montenegro</string>
+    <string name="country_montenegro_number" translatable="false">382</string>
+    <string name="country_montserrat_code" translatable="false">ms</string>
+    <string name="country_montserrat_name">Montserrat</string>
+    <string name="country_montserrat_number" translatable="false">1664</string>
+    <string name="country_morocco_code" translatable="false">ma</string>
+    <string name="country_morocco_name">Morocco</string>
+    <string name="country_morocco_number" translatable="false">212</string>
+    <string name="country_mozambique_code" translatable="false">mz</string>
+    <string name="country_mozambique_name">Mozambique</string>
+    <string name="country_mozambique_number" translatable="false">258</string>
+    <string name="country_myanmar_code" translatable="false">mm</string>
+    <string name="country_myanmar_name">Myanmar</string>
+    <string name="country_myanmar_number" translatable="false">95</string>
+    <string name="country_name_and_code" translatable="false">%1$s (%2$s)</string>
+    <string name="country_namibia_code" translatable="false">na</string>
+    <string name="country_namibia_name">Namibia</string>
+    <string name="country_namibia_number" translatable="false">264</string>
+    <string name="country_nauru_code" translatable="false">nr</string>
+    <string name="country_nauru_name">Nauru</string>
+    <string name="country_nauru_number" translatable="false">674</string>
+    <string name="country_nepal_code" translatable="false">np</string>
+    <string name="country_nepal_name">Nepal</string>
+    <string name="country_nepal_number" translatable="false">977</string>
+    <string name="country_netherlands_antilles_code" translatable="false">an</string>
+    <string name="country_netherlands_antilles_name">Netherlands Antilles</string>
+    <string name="country_netherlands_antilles_number" translatable="false">599</string>
+    <string name="country_netherlands_code" translatable="false">nl</string>
+    <string name="country_netherlands_name">Netherlands</string>
+    <string name="country_netherlands_number" translatable="false">31</string>
+    <string name="country_new_caledonia_code" translatable="false">nc</string>
+    <string name="country_new_caledonia_name">New Caledonia</string>
+    <string name="country_new_caledonia_number" translatable="false">687</string>
+    <string name="country_new_zealand_code" translatable="false">nz</string>
+    <string name="country_new_zealand_name">New Zealand</string>
+    <string name="country_new_zealand_number" translatable="false">64</string>
+    <string name="country_nicaragua_code" translatable="false">ni</string>
+    <string name="country_nicaragua_name">Nicaragua</string>
+    <string name="country_nicaragua_number" translatable="false">505</string>
+    <string name="country_niger_code" translatable="false">ne</string>
+    <string name="country_niger_name">Niger</string>
+    <string name="country_niger_number" translatable="false">227</string>
+    <string name="country_nigeria_code" translatable="false">ng</string>
+    <string name="country_nigeria_name">Nigeria</string>
+    <string name="country_nigeria_number" translatable="false">234</string>
+    <string name="country_niue_code" translatable="false">nu</string>
+    <string name="country_niue_name">Niue</string>
+    <string name="country_niue_number" translatable="false">683</string>
+    <string name="country_norfolk_island_code" translatable="false">nf</string>
+    <string name="country_norfolk_island_name">Norfolk Island</string>
+    <string name="country_norfolk_island_number" translatable="false">672</string>
+    <string name="country_north_korea_code" translatable="false">kp</string>
+    <string name="country_north_korea_name">North Korea</string>
+    <string name="country_north_korea_number" translatable="false">850</string>
+    <string name="country_northern_mariana_islands_code" translatable="false">mp</string>
+    <string name="country_northern_mariana_islands_name">Northern Mariana Islands</string>
+    <string name="country_northern_mariana_islands_number" translatable="false">1670</string>
+    <string name="country_norway_code" translatable="false">no</string>
+    <string name="country_norway_name">Norway</string>
+    <string name="country_norway_number" translatable="false">47</string>
+    <string name="country_oman_code" translatable="false">om</string>
+    <string name="country_oman_name">Oman</string>
+    <string name="country_oman_number" translatable="false">968</string>
+    <string name="country_pakistan_code" translatable="false">pk</string>
+    <string name="country_pakistan_name">Pakistan</string>
+    <string name="country_pakistan_number" translatable="false">92</string>
+    <string name="country_palau_code" translatable="false">pw</string>
+    <string name="country_palau_name">Palau</string>
+    <string name="country_palau_number" translatable="false">680</string>
+    <string name="country_palestian_territory_code" translatable="false">ps</string>
+    <string name="country_palestian_territory_name">Palestinian Territory, Occupied</string>
+    <string name="country_palestian_territory_number" translatable="false">970</string>
+    <string name="country_panama_code" translatable="false">pa</string>
+    <string name="country_panama_name">Panama</string>
+    <string name="country_panama_number" translatable="false">507</string>
+    <string name="country_papua_new_guinea_code" translatable="false">pg</string>
+    <string name="country_papua_new_guinea_name">Papua New Guinea</string>
+    <string name="country_papua_new_guinea_number" translatable="false">675</string>
+    <string name="country_paraguay_code" translatable="false">py</string>
+    <string name="country_paraguay_name">Paraguay</string>
+    <string name="country_paraguay_number" translatable="false">595</string>
+    <string name="country_peru_code" translatable="false">pe</string>
+    <string name="country_peru_name">Peru</string>
+    <string name="country_peru_number" translatable="false">51</string>
+    <string name="country_philippines_code" translatable="false">ph</string>
+    <string name="country_philippines_name">Philippines</string>
+    <string name="country_philippines_number" translatable="false">63</string>
+    <string name="country_pitcairn_code" translatable="false">pn</string>
+    <string name="country_pitcairn_name">Pitcairn</string>
+    <string name="country_pitcairn_number" translatable="false">64</string>
+    <string name="country_poland_code" translatable="false">pl</string>
+    <string name="country_poland_name">Poland</string>
+    <string name="country_poland_number" translatable="false">48</string>
+    <string name="country_portugal_code" translatable="false">pt</string>
+    <string name="country_portugal_name">Portugal</string>
+    <string name="country_portugal_number" translatable="false">351</string>
+    <string name="country_puerto_rico_code" translatable="false">pr</string>
+    <string name="country_puerto_rico_name">Puerto Rico</string>
+    <string name="country_puerto_rico_number" translatable="false">1</string>
+    <string name="country_qatar_code" translatable="false">qa</string>
+    <string name="country_qatar_name">Qatar</string>
+    <string name="country_qatar_number" translatable="false">974</string>
+    <string name="country_reunion_code" translatable="false">re</string>
+    <string name="country_reunion_name">Réunion</string>
+    <string name="country_reunion_number" translatable="false">262</string>
+    <string name="country_romania_code" translatable="false">ro</string>
+    <string name="country_romania_name">Romania</string>
+    <string name="country_romania_number" translatable="false">40</string>
+    <string name="country_russian_federation_code" translatable="false">ru</string>
+    <string name="country_russian_federation_name">Russian Federation</string>
+    <string name="country_russian_federation_number" translatable="false">7</string>
+    <string name="country_rwanda_code" translatable="false">rw</string>
+    <string name="country_rwanda_name">Rwanda</string>
+    <string name="country_rwanda_number" translatable="false">250</string>
+    <string name="country_saint_barthelemy_code" translatable="false">bl</string>
+    <string name="country_saint_barthelemy_name">Saint Barthélemy</string>
+    <string name="country_saint_barthelemy_number" translatable="false">590</string>
+    <string name="country_saint_helena_code" translatable="false">sh</string>
+    <string name="country_saint_helena_name">Saint Helena</string>
+    <string name="country_saint_helena_number" translatable="false">290</string>
+    <string name="country_saint_kitts_and_nevis_code" translatable="false">kn</string>
+    <string name="country_saint_kitts_and_nevis_name">Saint Kitts and Nevis</string>
+    <string name="country_saint_kitts_and_nevis_number" translatable="false">1869</string>
+    <string name="country_saint_lucia_code" translatable="false">lc</string>
+    <string name="country_saint_lucia_name">Saint Lucia</string>
+    <string name="country_saint_lucia_number" translatable="false">1758</string>
+    <string name="country_saint_martin_code" translatable="false">mf</string>
+    <string name="country_saint_martin_name">Saint Martin</string>
+    <string name="country_saint_martin_number" translatable="false">590</string>
+    <string name="country_saint_pierre_and_miquelon_code" translatable="false">pm</string>
+    <string name="country_saint_pierre_and_miquelon_name">Saint Pierre And Miquelon</string>
+    <string name="country_saint_pierre_and_miquelon_number" translatable="false">508</string>
+    <string name="country_saint_vincent_the_grenadines_code" translatable="false">vc</string>
+    <string name="country_saint_vincent_the_grenadines_name">Saint Vincent &amp; The Grenadines</string>
+    <string name="country_saint_vincent_the_grenadines_number" translatable="false">1784</string>
+    <string name="country_samoa_code" translatable="false">ws</string>
+    <string name="country_samoa_name">Samoa</string>
+    <string name="country_samoa_number" translatable="false">685</string>
+    <string name="country_san_marino_code" translatable="false">sm</string>
+    <string name="country_san_marino_name">San Marino</string>
+    <string name="country_san_marino_number" translatable="false">378</string>
+    <string name="country_sao_tome_and_principe_code" translatable="false">st</string>
+    <string name="country_sao_tome_and_principe_name">Sao Tome And Principe</string>
+    <string name="country_sao_tome_and_principe_number" translatable="false">239</string>
+    <string name="country_saudi_arabia_code" translatable="false">sa</string>
+    <string name="country_saudi_arabia_name">Saudi Arabia</string>
+    <string name="country_saudi_arabia_number" translatable="false">966</string>
+    <string name="country_senegal_code" translatable="false">sn</string>
+    <string name="country_senegal_name">Senegal</string>
+    <string name="country_senegal_number" translatable="false">221</string>
+    <string name="country_serbia_code" translatable="false">rs</string>
+    <string name="country_serbia_name">Serbia</string>
+    <string name="country_serbia_number" translatable="false">381</string>
+    <string name="country_seychelles_code" translatable="false">sc</string>
+    <string name="country_seychelles_name">Seychelles</string>
+    <string name="country_seychelles_number" translatable="false">248</string>
+    <string name="country_sierra_leone_code" translatable="false">sl</string>
+    <string name="country_sierra_leone_name">Sierra Leone</string>
+    <string name="country_sierra_leone_number" translatable="false">232</string>
+    <string name="country_singapore_code" translatable="false">sg</string>
+    <string name="country_singapore_name">Singapore</string>
+    <string name="country_singapore_number" translatable="false">65</string>
+    <string name="country_sint_maarten_code" translatable="false">sx</string>
+    <string name="country_sint_maarten_name">Sint Maarten</string>
+    <string name="country_sint_maarten_number" translatable="false">1721</string>
+    <string name="country_slovakia_code" translatable="false">sk</string>
+    <string name="country_slovakia_name">Slovakia</string>
+    <string name="country_slovakia_number" translatable="false">421</string>
+    <string name="country_slovenia_code" translatable="false">si</string>
+    <string name="country_slovenia_name">Slovenia</string>
+    <string name="country_slovenia_number" translatable="false">386</string>
+    <string name="country_solomon_islands_code" translatable="false">sb</string>
+    <string name="country_solomon_islands_name">Solomon Islands</string>
+    <string name="country_solomon_islands_number" translatable="false">677</string>
+    <string name="country_somalia_code" translatable="false">so</string>
+    <string name="country_somalia_name">Somalia</string>
+    <string name="country_somalia_number" translatable="false">252</string>
+    <string name="country_south_africa_code" translatable="false">za</string>
+    <string name="country_south_africa_name">South Africa</string>
+    <string name="country_south_africa_number" translatable="false">27</string>
+    <string name="country_south_georgia_code" translatable="false">gs</string>
+    <string name="country_south_georgia_name">South Georgia and the South Sandwich Islands</string>
+    <string name="country_south_georgia_number" translatable="false">500</string>
+    <string name="country_south_korea_code" translatable="false">kr</string>
+    <string name="country_south_korea_name">South Korea</string>
+    <string name="country_south_korea_number" translatable="false">82</string>
+    <string name="country_south_sudan_code" translatable="false">ss</string>
+    <string name="country_south_sudan_name">South Sudan</string>
+    <string name="country_south_sudan_number" translatable="false">211</string>
+    <string name="country_spain_code" translatable="false">es</string>
+    <string name="country_spain_name">Spain</string>
+    <string name="country_spain_number" translatable="false">34</string>
+    <string name="country_sri_lanka_code" translatable="false">lk</string>
+    <string name="country_sri_lanka_name">Sri Lanka</string>
+    <string name="country_sri_lanka_number" translatable="false">94</string>
+    <string name="country_sudan_code" translatable="false">sd</string>
+    <string name="country_sudan_name">Sudan</string>
+    <string name="country_sudan_number" translatable="false">249</string>
+    <string name="country_suriname_code" translatable="false">sr</string>
+    <string name="country_suriname_name">Suriname</string>
+    <string name="country_suriname_number" translatable="false">597</string>
+    <string name="country_swaziland_code" translatable="false">sz</string>
+    <string name="country_swaziland_name">Swaziland</string>
+    <string name="country_swaziland_number" translatable="false">268</string>
+    <string name="country_sweden_code" translatable="false">se</string>
+    <string name="country_sweden_name">Sweden</string>
+    <string name="country_sweden_number" translatable="false">46</string>
+    <string name="country_switzerland_code" translatable="false">ch</string>
+    <string name="country_switzerland_name">Switzerland</string>
+    <string name="country_switzerland_number" translatable="false">41</string>
+    <string name="country_syrian_arab_republic_code" translatable="false">sy</string>
+    <string name="country_syrian_arab_republic_name">Syrian Arab Republic</string>
+    <string name="country_syrian_arab_republic_number" translatable="false">963</string>
+    <string name="country_taiwan_code" translatable="false">tw</string>
+    <string name="country_taiwan_name">Taiwan</string>
+    <string name="country_taiwan_number" translatable="false">886</string>
+    <string name="country_tajikistan_code" translatable="false">tj</string>
+    <string name="country_tajikistan_name">Tajikistan</string>
+    <string name="country_tajikistan_number" translatable="false">992</string>
+    <string name="country_tanzania_code" translatable="false">tz</string>
+    <string name="country_tanzania_name">Tanzania</string>
+    <string name="country_tanzania_number" translatable="false">255</string>
+    <string name="country_thailand_code" translatable="false">th</string>
+    <string name="country_thailand_name">Thailand</string>
+    <string name="country_thailand_number" translatable="false">66</string>
+    <string name="country_the_democratic_republic_of_congo_code" translatable="false">cd</string>
+    <string name="country_the_democratic_republic_of_congo_name">Democratic Republic of the Congo</string>
+    <string name="country_the_democratic_republic_of_congo_number" translatable="false">243</string>
+    <string name="country_timor_leste_code" translatable="false">tl</string>
+    <string name="country_timor_leste_name">Timor-leste</string>
+    <string name="country_timor_leste_number" translatable="false">670</string>
+    <string name="country_togo_code" translatable="false">tg</string>
+    <string name="country_togo_name">Togo</string>
+    <string name="country_togo_number" translatable="false">228</string>
+    <string name="country_tokelau_code" translatable="false">tk</string>
+    <string name="country_tokelau_name">Tokelau</string>
+    <string name="country_tokelau_number" translatable="false">690</string>
+    <string name="country_tonga_code" translatable="false">to</string>
+    <string name="country_tonga_name">Tonga</string>
+    <string name="country_tonga_number" translatable="false">676</string>
+    <string name="country_trinidad_tobago_code" translatable="false">tt</string>
+    <string name="country_trinidad_tobago_name">Trinidad &amp; Tobago</string>
+    <string name="country_trinidad_tobago_number" translatable="false">1868</string>
+    <string name="country_tunisia_code" translatable="false">tn</string>
+    <string name="country_tunisia_name">Tunisia</string>
+    <string name="country_tunisia_number" translatable="false">216</string>
+    <string name="country_turkey_code" translatable="false">tr</string>
+    <string name="country_turkey_name">Turkey</string>
+    <string name="country_turkey_number" translatable="false">90</string>
+    <string name="country_turkmenistan_code" translatable="false">tm</string>
+    <string name="country_turkmenistan_name">Turkmenistan</string>
+    <string name="country_turkmenistan_number" translatable="false">993</string>
+    <string name="country_turks_and_caicos_islands_code" translatable="false">tc</string>
+    <string name="country_turks_and_caicos_islands_name">Turks and Caicos Islands</string>
+    <string name="country_turks_and_caicos_islands_number" translatable="false">1649</string>
+    <string name="country_tuvalu_code" translatable="false">tv</string>
+    <string name="country_tuvalu_name">Tuvalu</string>
+    <string name="country_tuvalu_number" translatable="false">688</string>
+    <string name="country_uganda_code" translatable="false">ug</string>
+    <string name="country_uganda_name">Uganda</string>
+    <string name="country_uganda_number" translatable="false">256</string>
+    <string name="country_ukraine_code" translatable="false">ua</string>
+    <string name="country_ukraine_name">Ukraine</string>
+    <string name="country_ukraine_number" translatable="false">380</string>
+    <string name="country_united_arab_emirates_code" translatable="false">ae</string>
+    <string name="country_united_arab_emirates_name">United Arab Emirates</string>
+    <string name="country_united_arab_emirates_number" translatable="false">971</string>
+    <string name="country_united_kingdom_code" translatable="false">gb</string>
+    <string name="country_united_kingdom_name">United Kingdom</string>
+    <string name="country_united_kingdom_number" translatable="false">44</string>
+    <string name="country_united_states_code" translatable="false">us</string>
+    <string name="country_united_states_name">United States</string>
+    <string name="country_united_states_number" translatable="false">1</string>
+    <string name="country_uruguay_code" translatable="false">uy</string>
+    <string name="country_uruguay_name">Uruguay</string>
+    <string name="country_uruguay_number" translatable="false">598</string>
+    <string name="country_us_virgin_islands_code" translatable="false">vi</string>
+    <string name="country_us_virgin_islands_name">US Virgin Islands</string>
+    <string name="country_us_virgin_islands_number" translatable="false">1340</string>
+    <string name="country_uzbekistan_code" translatable="false">uz</string>
+    <string name="country_uzbekistan_name">Uzbekistan</string>
+    <string name="country_uzbekistan_number" translatable="false">998</string>
+    <string name="country_vanuatu_code" translatable="false">vu</string>
+    <string name="country_vanuatu_name">Vanuatu</string>
+    <string name="country_vanuatu_number" translatable="false">678</string>
+    <string name="country_venezuela_code" translatable="false">ve</string>
+    <string name="country_venezuela_name">Venezuela</string>
+    <string name="country_venezuela_number" translatable="false">58</string>
+    <string name="country_viet_nam_code" translatable="false">vn</string>
+    <string name="country_viet_nam_name">Vietnam</string>
+    <string name="country_viet_nam_number" translatable="false">84</string>
+    <string name="country_wallis_and_futuna_code" translatable="false">wf</string>
+    <string name="country_wallis_and_futuna_name">Wallis And Futuna</string>
+    <string name="country_wallis_and_futuna_number" translatable="false">681</string>
+    <string name="country_yemen_code" translatable="false">ye</string>
+    <string name="country_yemen_name">Yemen</string>
+    <string name="country_yemen_number" translatable="false">967</string>
+    <string name="country_zambia_code" translatable="false">zm</string>
+    <string name="country_zambia_name">Zambia</string>
+    <string name="country_zambia_number" translatable="false">260</string>
+    <string name="country_zimbabwe_code" translatable="false">zw</string>
+    <string name="country_zimbabwe_name">Zimbabwe</string>
+    <string name="country_zimbabwe_number" translatable="false">263</string>
+    <string name="define_zxingandroidembedded" translatable="false"/>
+    <string name="delete_saved_card_button_Cancel">Cancel</string>
+    <string name="delete_saved_card_button_Delete">Delete</string>
+    <string name="delete_saved_card_msg">Are you sure you would like to delete card </string>
+    <string name="delete_saved_card_title">Delete Card</string>
+    <string name="device_has_aproblem_in_connectivity_manager">Device has a problem in Connectivity manager</string>
+    <string name="dismiss">Dismiss</string>
+    <string name="edittext_hint_CVV">CVV</string>
+    <string name="edittext_hint_address_on_card">Address on Card</string>
+    <string name="edittext_hint_card_number">Card number</string>
+    <string name="edittext_hint_city">City</string>
+    <string name="edittext_hint_email">Email</string>
+    <string name="edittext_hint_expiration_date">MM/YY</string>
+    <string name="edittext_hint_line1">Line 1</string>
+    <string name="edittext_hint_line2">Line 2</string>
+    <string name="edittext_hint_name">Name</string>
+    <string name="edittext_hint_name_on_card">Name on card</string>
+    <string name="edittext_hint_phone_number">Phone number</string>
+    <string name="edittext_hint_state">State</string>
+    <string name="edittext_hint_zip_code">Zip code</string>
     <string name="ef_camera">CAMERA</string>
     <string name="ef_content_desc_folder" translatable="false">Folder</string>
     <string name="ef_content_desc_image" translatable="false">Image</string>
@@ -2073,24 +3261,51 @@
     <string name="ef_title_folder">Folder</string>
     <string name="ef_title_select_image">Tap to select images</string>
     <string name="ef_video" translatable="false">Video</string>
+    <string name="email_sent" translatable="false">An email has been sent to</string>
+    <string name="email_sms__sent" translatable="false">An SMS and email has been sent " </string>
     <string name="english">English</string>
+    <string name="error_deleting_card_msg">The card can not be deleted right now. Please try it later.</string>
+    <string name="error_deleting_card_title">Sorry</string>
     <string name="error_failed_pick_gallery_image">Failed to pick Gallery image</string>
     <string name="error_failed_to_compress_image">Failed to compress image</string>
     <string name="error_failed_to_create_camera_image_file">Failed to create Camera image file</string>
     <string name="error_failed_to_crop_image">Failed to crop image</string>
     <string name="error_icon_content_description">Error</string>
     <string name="error_task_cancelled">Task Cancelled</string>
+    <string name="error_unregister_carrier_number" translatable="false">EditText for carrier number is not registered. Register it using registerPhoneNumberTextView() before getFullNumber() or setFullNumber().</string>
     <string name="exposed_dropdown_menu_content_description">Show dropdown menu</string>
+    <string name="extra_fees_alert_confirm_message_cancel">Cancel</string>
+    <string name="extra_fees_alert_confirm_message_confirm">Confirm</string>
+    <string name="extra_fees_alert_confirm_message_title">Confirm extra charges</string>
+    <string name="extra_fees_alert_message">You will be charged an additional fee of %s for this type of payment, totaling an amount of %s </string>
     <string name="fab_transformation_scrim_behavior" translatable="false">com.google.android.material.transformation.FabTransformationScrimBehavior</string>
     <string name="fab_transformation_sheet_behavior" translatable="false">com.google.android.material.transformation.FabTransformationSheetBehavior</string>
     <string name="fallback_menu_item_copy_link">Copy link</string>
     <string name="fallback_menu_item_open_in_browser">Open in browser</string>
     <string name="fallback_menu_item_share_link">Share link</string>
+    <string name="fawry_cash_location" translatable="false">Please visit a Fawry Cash Location \n using the link below to complete your payment</string>
     <string name="fcm_fallback_notification_channel_label">Miscellaneous</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hide_bottom_view_on_scroll_behavior" translatable="false">com.google.android.material.behavior.HideBottomViewOnScrollBehavior</string>
     <string description="Content description for an icon that appears in the title area of a dialog" name="icon_content_description">Dialog Icon</string>
     <string name="image_picker_provider_authority_suffix">.imagepicker.provider</string>
+    <string name="internet_connection_is_not_available">Internet connection is not available</string>
+    <string name="internet_connectivity_message">Internet connection not available</string>
+    <string name="internet_connectivity_title">Network Error</string>
     <string name="item_view_role_description">Tab</string>
+    <string name="key_sdkLanguage">key_sdkLanguage</string>
+    <string name="key_sdk_appearance_mode">key_sdk_appearance_mode</string>
+    <string name="key_sdk_transaction_currency">key_sdk_transaction_currency</string>
+    <string name="key_sdk_transaction_mode">key_sdk_transaction_mode</string>
+    <string name="library_zxingandroidembedded_author" translatable="false">JourneyApps</string>
+    <string name="library_zxingandroidembedded_authorWebsite" translatable="false">https://journeyapps.com/</string>
+    <string name="library_zxingandroidembedded_isOpenSource" translatable="false">true</string>
+    <string name="library_zxingandroidembedded_libraryDescription" translatable="false">Barcode scanning library for Android, using ZXing for decoding.</string>
+    <string name="library_zxingandroidembedded_libraryName" translatable="false">ZXing Android Embedded</string>
+    <string name="library_zxingandroidembedded_libraryVersion" translatable="false"/>
+    <string name="library_zxingandroidembedded_libraryWebsite" translatable="false">https://github.com/journeyapps/zxing-android-embedded</string>
+    <string name="library_zxingandroidembedded_licenseId" translatable="false">apache_2_0</string>
+    <string name="library_zxingandroidembedded_repositoryLink" translatable="false">https://github.com/journeyapps/zxing-android-embedded</string>
     <string name="material_clock_display_divider" translatable="false">:</string>
     <string description="Description for the toggle to choose between AM and PM [CHAR_LIMIT=NONE] " name="material_clock_toggle_content_description">Select AM or PM</string>
     <string description="Description for button to switch to select the hour [CHAR_LIMIT=NONE]" name="material_hour_selection">Select hour</string>
@@ -2151,28 +3366,76 @@
     <string description="a11y string to indicate this button switches the user to choosing a year [CHAR_LIMIT=NONE]" name="mtrl_picker_toggle_to_year_selection">Tap to switch to selecting a year</string>
     <string name="nav_app_bar_navigate_up_description">Navigate up</string>
     <string name="nav_app_bar_open_drawer_description">Open navigation drawer</string>
+    <string name="no_result_found">No result found</string>
+    <string name="ok" translatable="false">OK</string>
+    <string name="order_code" translatable="false">Order Code</string>
+    <string name="otp_cancel_dialog">No</string>
+    <string name="otp_cancel_payment_message">Would you like to cancel payment</string>
+    <string name="otp_cancel_payment_title">Cancel Payment</string>
+    <string name="otp_confirm_dialog">Confirm</string>
     <string name="password_toggle_content_description">Show password</string>
     <string name="path_password_eye" translatable="false">M12,4.5C7,4.5 2.73,7.61 1,12c1.73,4.39 6,7.5 11,7.5s9.27,-3.11 11,-7.5c-1.73,-4.39 -6,-7.5 -11,-7.5zM12,17c-2.76,0 -5,-2.24 -5,-5s2.24,-5 5,-5 5,2.24 5,5 -2.24,5 -5,5zM12,9c-1.66,0 -3,1.34 -3,3s1.34,3 3,3 3,-1.34 3,-3 -1.34,-3 -3,-3z</string>
     <string name="path_password_eye_mask_strike_through" translatable="false">M2,4.27 L19.73,22 L22.27,19.46 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_eye_mask_visible" translatable="false">M2,4.27 L2,4.27 L4.54,1.73 L4.54,1.73 L4.54,1 L23,1 L23,23 L1,23 L1,4.27 Z</string>
     <string name="path_password_strike_through" translatable="false">M3.27,4.27 L19.74,20.74</string>
+    <string name="pay">Pay</string>
+    <string name="payment_in_progress" translatable="false">Payment in Progress</string>
+    <string name="payment_status_alert_declined">Declined</string>
+    <string name="payment_status_alert_failed">Failed</string>
+    <string name="payment_status_alert_invalid">Invalid</string>
+    <string name="payment_status_alert_successful">Successful</string>
+    <string name="payment_status_alert_timedout">TIMEDOUT</string>
+    <string name="payment_status_alert_unknown">UNKNOWN</string>
     <string name="permission_camera_denied">
         <![CDATA[Storage permission is needed to take a picture. Please allow storage permission from Settings > Permissions.]]></string>
     <string name="permission_camera_extended_denied">
         <![CDATA[Camera and Storage permissions are needed to take a picture. Please allow both the requested permissions from Settings > Permissions.]]></string>
     <string name="permission_gallery_denied">
         <![CDATA[Storage permission is needed to pick gallery image. Please allow storage permission from Settings > Permissions.]]></string>
+    <string name="phone_code" translatable="false">+%s</string>
+    <string name="retry">Retry</string>
+    <string name="save_card">Save Card</string>
+    <string name="sdk_error">Error</string>
+    <string name="sdk_not_configure_correctly">SDK Not Configured Correctly</string>
+    <string name="search">Search</string>
+    <string name="search_hint">Search…</string>
     <string name="search_menu_title">Search</string>
+    <string name="select_country">Select Country</string>
+    <string name="select_currency_title">Select Currency</string>
+    <string name="sms_sent" translatable="false">An sms has been sent to</string>
     <string name="status_bar_notification_info_overflow">999+</string>
+    <string name="textview_disclaimer_go_pay_checkouts">By enabling goPay, your card details will be saved with Tap Payments in order for you to get faster and more secure checkouts in multiple apps and websites</string>
+    <string name="textview_disclaimer_otp_sent_number">Please enter the OTP that has been sent to </string>
+    <string name="textview_disclaimer_save_card">For faster and more secure checkout, save your card</string>
+    <string name="textview_disclaimer_save_card_header_title">Enter Card Details</string>
+    <string name="textview_disclaimer_save_card_info">Saved cards will only be used with your approval, you can remove them at any time.</string>
+    <string name="textview_placeholder_last_four_digits">••••%s</string>
+    <string name="textview_title_address_on_card">Address on Card</string>
+    <string name="textview_title_country">Country</string>
+    <string name="textview_title_others">Others</string>
+    <string name="textview_title_personal_info">Your Personal Info</string>
+    <string name="textview_title_recent">Recent</string>
+    <string name="textview_title_recent_cancel">CANCEL</string>
+    <string name="textview_title_recent_edit">EDIT</string>
+    <string name="textview_title_resend_again">Resend OTP</string>
+    <string name="textview_title_save_for_gopay">Save for goPay Checkouts</string>
+    <string name="textview_title_save_for_merchant">Save for %s Checkouts</string>
     <string name="title_activity_home">Home</string>
     <string name="title_camera">Camera</string>
     <string name="title_choose_image_provider">Choose</string>
     <string name="title_gallery">Gallery</string>
+    <string name="toast_icon">toast_icon</string>
+    <string name="tokenize">Pay</string>
     <string name="ucrop_error_input_data_is_absent" translatable="false">Both input and output Uri must be specified</string>
     <string name="ucrop_label_edit_photo">Edit Photo</string>
     <string name="ucrop_label_original">Original</string>
     <string name="ucrop_menu_crop">Crop</string>
     <string name="ucrop_mutate_exception_hint" translatable="false">Therefore, override color resource (ucrop_color_toolbar_widget) in your app to make it work on pre-L devices</string>
+    <string name="with_your_fawry_pay_reference" translatable="false">with your Fawry Pay Reference.</string>
+    <string name="zxing_app_name">Barcode Scanner</string>
+    <string name="zxing_button_ok">OK</string>
+    <string name="zxing_msg_camera_framework_bug">Sorry, the Android camera encountered a problem. You may need to restart the device.</string>
+    <string name="zxing_msg_default_status">Place a barcode inside the viewfinder rectangle to scan it.</string>
     <style name="AlertDialog.AppCompat" parent="Base.AlertDialog.AppCompat"/>
     <style name="AlertDialog.AppCompat.Light" parent="Base.AlertDialog.AppCompat.Light"/>
     <style name="AlertDialogTheme" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
@@ -2186,6 +3449,9 @@
     <style name="AndroidThemeColorAccentYellow" ns1:ignore="NewApi">
     <item name="android:colorAccent">#FFFFFF00</item>
   </style>
+    <style name="Animation">
+        <item name="android:windowEnterAnimation">@anim/popup_show</item>
+    </style>
     <style name="Animation.AppCompat.Dialog" parent="Base.Animation.AppCompat.Dialog"/>
     <style name="Animation.AppCompat.DropDownUp" parent="Base.Animation.AppCompat.DropDownUp"/>
     <style name="Animation.AppCompat.Tooltip" parent="Base.Animation.AppCompat.Tooltip"/>
@@ -3389,6 +4655,7 @@
 
         <item name="drawerArrowStyle">@style/Widget.AppCompat.DrawerArrowToggle</item>
 
+        <item name="checkedTextViewStyle">?android:attr/checkedTextViewStyle</item>
         <item name="checkboxStyle">@style/Widget.AppCompat.CompoundButton.CheckBox</item>
         <item name="radioButtonStyle">@style/Widget.AppCompat.CompoundButton.RadioButton</item>
         <item name="switchStyle">@style/Widget.AppCompat.CompoundButton.Switch</item>
@@ -4260,7 +5527,58 @@
     <style name="DialogButtonStyle" parent="Widget.AppCompat.Button.ButtonBar.AlertDialog">
         <item name="android:textColor">@color/colorPrimary</item>
     </style>
+    <style name="EditText">
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:textColor">@color/greyish_brown</item>
+        <item name="android:textSize">@dimen/font_size_16sp</item>
+        <item name="android:fontFamily" ns1:targetApi="jelly_bean">sans-serif-light</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="EditText.Password"/>
     <style name="EmptyTheme"/>
+    <style name="FullScreenDialogStyle" parent="Theme.AppCompat.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+
+        <!-- Set this to true if you want Full Screen without status bar -->
+        <item name="android:windowFullscreen">false</item>
+
+        <item name="android:windowIsFloating">false</item>
+
+        <!-- This is important! Don't forget to set window background -->
+
+        <!-- Additionally if you want animations when dialog opening -->
+        <item name="android:windowEnterAnimation">@anim/slide_in_left</item>
+        <item name="android:windowExitAnimation">@anim/slide_out_left</item>
+    </style>
+    <style name="GoSellSDKActionBar">
+        <item name="android:background">@color/french_gray_new</item>
+    </style>
+    <style name="GoSellSDKAppTheme" parent="Theme.MaterialComponents.Light.Bridge">
+        <item name="actionBarStyle">@style/GoSellSDKActionBar</item>
+        <item name="android:statusBarColor" ns1:ignore="NewApi">@color/french_gray</item>
+    </style>
+    <style name="GoSellSDKAppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor" ns1:ignore="NewApi">@color/french_gray</item>
+    </style>
+    <style name="GoSellSDKAppTheme.Translucent">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+    </style>
+    <style name="GoSellSDKAppTheme_Full" parent="GoSellSDKAppTheme">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor" ns1:ignore="NewApi">@color/french_gray</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
     <style name="HeaderTextGreenBold" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">@dimen/_17sdp</item>
         <item name="android:textColor">@color/colorPrimary</item>
@@ -4295,6 +5613,57 @@
         <item name="textInputStyle">@style/textInput</item>
      <item name="android:windowBackground">@null</item>
     </style>
+    <style name="MD_ActionButton">
+    <item name="android:layout_width">wrap_content</item>
+    <item name="android:layout_height">@dimen/md_button_height</item>
+    <item name="android:layout_gravity">center_vertical</item>
+  </style>
+    <style name="MD_ActionButton.Text" ns1:ignore="NewApi">
+    <item name="android:textSize">@dimen/md_button_textsize</item>
+    <item name="android:singleLine">true</item>
+    <item name="android:layout_gravity">center_vertical</item>
+    <item name="android:gravity">center</item>
+    <item name="android:stateListAnimator">@null</item>
+    <item name="android:background">@null</item>
+    <item name="android:minWidth">@dimen/md_button_min_width</item>
+    <item name="android:paddingLeft">@dimen/md_button_textpadding_horizontal</item>
+    <item name="android:paddingRight">@dimen/md_button_textpadding_horizontal</item>
+  </style>
+    <style name="MD_ActionButtonStacked" ns1:ignore="NewApi" parent="@style/MD_ActionButton">
+    <item name="android:layout_width">match_parent</item>
+    <item name="android:paddingLeft">@dimen/md_button_padding_horizontal_internalexternal</item>
+    <item name="android:paddingStart">@dimen/md_button_padding_horizontal_internalexternal
+    </item>
+    <item name="android:paddingRight">@dimen/md_button_padding_horizontal_internalexternal
+    </item>
+    <item name="android:paddingEnd">@dimen/md_button_padding_horizontal_internalexternal</item>
+  </style>
+    <style name="MD_Dark" parent="Theme.AppCompat.Dialog.Alert">
+    <item name="md_divider">@color/md_divider_white</item>
+    <item name="md_list_selector">@drawable/md_selector_dark</item>
+    <item name="md_btn_stacked_selector">@drawable/md_selector_dark</item>
+    <item name="md_btn_positive_selector">@drawable/md_btn_selector_dark</item>
+    <item name="md_btn_neutral_selector">@drawable/md_btn_selector_dark</item>
+    <item name="md_btn_negative_selector">@drawable/md_btn_selector_dark</item>
+
+    <item name="android:windowAnimationStyle">@style/MD_WindowAnimation</item>
+    <item name="android:backgroundDimEnabled">true</item>
+  </style>
+    <style name="MD_Light" parent="Theme.AppCompat.Light.Dialog.Alert">
+    <item name="md_divider">@color/md_divider_black</item>
+    <item name="md_list_selector">@drawable/md_selector</item>
+    <item name="md_btn_stacked_selector">@drawable/md_selector</item>
+    <item name="md_btn_positive_selector">@drawable/md_btn_selector</item>
+    <item name="md_btn_neutral_selector">@drawable/md_btn_selector</item>
+    <item name="md_btn_negative_selector">@drawable/md_btn_selector</item>
+
+    <item name="android:windowAnimationStyle">@style/MD_WindowAnimation</item>
+    <item name="android:backgroundDimEnabled">true</item>
+  </style>
+    <style name="MD_WindowAnimation">
+    <item name="android:windowEnterAnimation">@anim/popup_enter</item>
+    <item name="android:windowExitAnimation">@anim/popup_exit</item>
+  </style>
     <style name="MaterialAlertDialog.MaterialComponents" parent="AlertDialog.AppCompat">
     <item name="android:layout">@layout/mtrl_alert_dialog</item>
     <item name="listItemLayout">@layout/mtrl_alert_select_dialog_item</item>
@@ -4659,6 +6028,13 @@
         <item name="android:paddingLeft">@dimen/abc_action_bar_overflow_padding_start_material</item>
         <item name="android:paddingRight">@dimen/abc_action_bar_overflow_padding_end_material</item>
     </style>
+    <style name="SecurityText">
+        <item name="android:textColor">@color/security_text_color</item>
+        <item name="android:textSize">@dimen/font_size_13sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily" ns1:targetApi="jelly_bean">@font/avenir_next_regular</item>
+        <item name="android:lineSpacingExtra">@dimen/title_lineSpacingExtra_0</item>
+    </style>
     <style name="ShapeAppearance.MaterialComponents" parent="">
     <item name="cornerFamily">rounded</item>
   </style>
@@ -4773,6 +6149,12 @@
         <item name="android:textSize">@dimen/_17sdp</item>
         <item name="android:textColor">@color/colorPrimary</item>
         <item name="android:fontFamily">@font/sfui_display_bold</item>
+    </style>
+    <style name="SwitchPrimary">
+        <item name="colorControlActivated">@color/vibrant_green</item>
+    </style>
+    <style name="SwitchSecondary">
+        <item name="colorControlActivated">@color/azure_radiance</item>
     </style>
     <style name="Test.ShapeAppearanceOverlay.MaterialComponents.MaterialCalendar.Day" parent="">
     <item name="cornerFamily">rounded</item>
@@ -5035,6 +6417,70 @@
         <item name="strokeColor">@color/colorPrimary</item>
         <item name="android:editTextPreferenceStyle">@style/outlinedEdittext</item>
     </style>
+    <style name="TextInputLayout.Hint" parent="TextAppearance.AppCompat.Small">
+        <item name="android:textColor">@color/silver_light</item>
+        <item name="android:fontFamily" ns1:targetApi="jelly_bean">sans-serif</item>
+        <item name="android:textSize">@dimen/font_size_11sp</item>
+        <item name="android:textStyle">normal</item>
+
+    </style>
+    <style name="TextView"/>
+    <style name="TextView.Disclaimer"/>
+    <style name="TextView.Disclaimer.Small">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_size_13sp</item>
+        <item name="android:fontFamily" ns1:targetApi="jelly_bean">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="TextView.Disclaimer.Thin">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_size_13sp</item>
+        <item name="android:fontFamily" ns1:targetApi="jelly_bean">sans-serif-light</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="TextView.Hyperlink">
+        <item name="android:textColor">@color/azure_radiance</item>
+        <item name="android:textSize">@dimen/font_size_16sp</item>
+        <item name="android:fontFamily" ns1:targetApi="jelly_bean">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="TextView.Title">
+        <item name="android:textColor">@color/bt_black_87</item>
+        <item name="android:textSize">@dimen/font_size_17sp</item>
+        <item name="android:fontFamily" ns1:targetApi="jelly_bean">sans-serif</item>
+        <item name="android:lineSpacingExtra">@dimen/title_lineSpacingExtra</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="TextView.Title.Header">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_size_20sp</item>
+        <item name="android:fontFamily" ns1:targetApi="jelly_bean">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="TextView.Title.SectionHeader">
+        <item name="android:textColor">@color/dark_gray</item>
+        <item name="android:textSize">@dimen/font_size_16sp</item>
+        <item name="android:fontFamily" ns1:targetApi="jelly_bean">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="TextView.Title.Small">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_size_16sp</item>
+        <item name="android:fontFamily" ns1:targetApi="jelly_bean">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="TextView.Title.Thin">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textSize">@dimen/font_size_16sp</item>
+        <item name="android:fontFamily" ns1:targetApi="jelly_bean">sans-serif-thin</item>
+        <item name="android:textStyle">normal</item>
+    </style>
+    <style name="TextView.Title.Tiny">
+        <item name="android:textColor">@color/greyish_brown</item>
+        <item name="android:textSize">@dimen/font_size_14sp</item>
+        <item name="android:fontFamily" ns1:targetApi="jelly_bean">sans-serif</item>
+        <item name="android:textStyle">normal</item>
+    </style>
     <style name="Theme.AppCompat" parent="Base.Theme.AppCompat"/>
     <style name="Theme.AppCompat.CompactMenu" parent="Base.Theme.AppCompat.CompactMenu"/>
     <style name="Theme.AppCompat.DayNight" parent="Theme.AppCompat.Light"/>
@@ -5184,6 +6630,16 @@
     <item name="windowActionBar">false</item>
     <item name="windowNoTitle">true</item>
   </style>
+    <style name="Theme.Transparent" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="colorPrimaryDark">@android:color/transparent</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
     <style name="Theme.Transparent.ImagePicker" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="android:windowIsTranslucent">true</item>
         <item name="android:windowBackground">@android:color/transparent</item>
@@ -5388,6 +6844,19 @@
         <item name="android:textStyle">bold</item>
         <item name="android:textSize">21sp</item>
 
+    </style>
+    <style name="TransparentCompat" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation</item>
+        <item name="android:statusBarColor" ns1:ignore="NewApi">@color/french_gray</item>
+    </style>
+    <style name="TransparentCompat1" parent="@style/Theme.AppCompat.Light.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
     </style>
     <style name="Widget.AppCompat.ActionBar" parent="Base.Widget.AppCompat.ActionBar">
     </style>
@@ -6330,17 +7799,135 @@
     <item name="android:textAppearance">@style/TextAppearance.MaterialComponents.Tooltip</item>
     <item name="shapeAppearance">@style/ShapeAppearance.MaterialComponents.Tooltip</item>
   </style>
+    <style name="Widget.MaterialProgressBar.ProgressBar" parent="android:Widget.ProgressBar">
+        <item name="android:indeterminateDrawable">@null</item>
+        <!-- We have support for determinate circular progress drawable. -->
+        <item name="android:indeterminateOnly">false</item>
+        <item name="android:minWidth">48dp</item>
+        <item name="android:maxWidth">48dp</item>
+        <item name="android:minHeight">48dp</item>
+        <item name="android:maxHeight">48dp</item>
+    </style>
+    <style name="Widget.MaterialProgressBar.ProgressBar.Horizontal" parent="android:Widget.ProgressBar.Horizontal">
+        <!--
+        Disabled for correct behavior on Android 4.x, see
+        https://github.com/android/platform_frameworks_base/commit/911743652b597057a1bd7ef8a921e9ff8dce0f4a#diff-149f45c5ff2d3185bb79688ba17bc432L536
+        <item name="android:progressDrawable">@null</item>
+        -->
+        <item name="android:indeterminateDrawable">@null</item>
+        <item name="android:minHeight">16dp</item>
+        <item name="android:maxHeight">16dp</item>
+    </style>
+    <style name="Widget.MaterialProgressBar.ProgressBar.Horizontal.NoPadding">
+        <item name="android:minHeight">4dp</item>
+        <item name="android:maxHeight">4dp</item>
+    </style>
+    <style name="Widget.MaterialProgressBar.ProgressBar.Large">
+        <item name="android:minWidth">76dp</item>
+        <item name="android:maxWidth">76dp</item>
+        <item name="android:minHeight">76dp</item>
+        <item name="android:maxHeight">76dp</item>
+    </style>
+    <style name="Widget.MaterialProgressBar.ProgressBar.Large.NoPadding">
+        <item name="android:minWidth">66.5dp</item>
+        <item name="android:maxWidth">66.5dp</item>
+        <item name="android:minHeight">66.5dp</item>
+        <item name="android:maxHeight">66.5dp</item>
+    </style>
+    <style name="Widget.MaterialProgressBar.ProgressBar.NoPadding">
+        <item name="android:minWidth">42dp</item>
+        <item name="android:maxWidth">42dp</item>
+        <item name="android:minHeight">42dp</item>
+        <item name="android:maxHeight">42dp</item>
+    </style>
+    <style name="Widget.MaterialProgressBar.ProgressBar.Small">
+        <item name="android:minWidth">16dp</item>
+        <item name="android:maxWidth">16dp</item>
+        <item name="android:minHeight">16dp</item>
+        <item name="android:maxHeight">16dp</item>
+    </style>
+    <style name="Widget.MaterialProgressBar.ProgressBar.Small.NoPadding">
+        <item name="android:minWidth">14dp</item>
+        <item name="android:maxWidth">14dp</item>
+        <item name="android:minHeight">14dp</item>
+        <item name="android:maxHeight">14dp</item>
+    </style>
     <style name="Widget.Support.CoordinatorLayout" parent="android:Widget">
         <item name="statusBarBackground">#000000</item>
+    </style>
+    <style name="bt_base_textview">
+        <item name="android:textSize">@dimen/bt_input_text_size</item>
+        <item name="android:fontFamily" ns1:targetApi="jelly_bean">sans-serif-light</item>
+    </style>
+    <style name="bt_card_form_field" parent="bt_base_textview">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginStart">@dimen/edit_text_default_padding</item>
+        <item name="android:layout_marginLeft">@dimen/edit_text_default_padding</item>
+        <item name="android:textColorHint">@color/bt_light_gray</item>
+        <item name="android:textCursorDrawable" ns1:ignore="NewApi">@null</item>
+    </style>
+    <style name="bt_expiration_date_dialog_dark" parent="bt_expiration_date_dialog_sheet">
+        <item name="bt_expiration_date_sheet_background">@color/white</item>
+        <item name="bt_expiration_date_dialog_label">@color/black</item>
+        <item name="bt_expiration_date_dialog_divider">@color/french_gray</item>
+        <item name="bt_expiration_date_scrollbar_thumb_vertical">@color/black</item>
+        <item name="bt_expiration_date_scrollbar_track_vertical">@color/black</item>
+    </style>
+    <style name="bt_expiration_date_dialog_grid_view">
+        <item name="android:layout_marginLeft">@dimen/bt_expiration_date_sheet_left_right_margin</item>
+        <item name="android:layout_marginStart" ns1:targetApi="jelly_bean_mr1">@dimen/bt_expiration_date_sheet_left_right_margin</item>
+        <item name="android:layout_marginRight">@dimen/bt_expiration_date_sheet_left_right_margin</item>
+        <item name="android:layout_marginEnd" ns1:targetApi="jelly_bean_mr1">@dimen/bt_expiration_date_sheet_left_right_margin</item>
+        <item name="android:layout_marginBottom">@dimen/bt_expiration_date_sheet_top_bottom_margin</item>
+        <item name="android:listSelector">@android:color/transparent</item>
+        <item name="android:choiceMode">singleChoice</item>
+        <item name="android:numColumns">auto_fit</item>
+        <item name="android:columnWidth">72dp</item>
+    </style>
+    <style name="bt_expiration_date_dialog_label">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:paddingTop">@dimen/bt_expiration_date_sheet_label_padding_top</item>
+        <item name="android:paddingBottom">@dimen/bt_expiration_date_sheet_label_padding_bottom</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textColor">?attr/bt_expiration_date_dialog_label</item>
+    </style>
+    <style name="bt_expiration_date_dialog_light" parent="bt_expiration_date_dialog_sheet">
+        <item name="bt_expiration_date_sheet_background">@color/bt_expiration_date_sheet_background_light</item>
+        <item name="bt_expiration_date_dialog_label">@color/bt_black_54</item>
+        <item name="bt_expiration_date_dialog_divider">@color/bt_black_12</item>
+        <item name="bt_expiration_date_scrollbar_thumb_vertical">@color/bt_black_54</item>
+        <item name="bt_expiration_date_scrollbar_track_vertical">@color/bt_black_12</item>
+    </style>
+    <style name="bt_expiration_date_dialog_sheet" parent="@android:style/Theme.Dialog">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowAnimationStyle">@style/bt_expiration_date_dialog_sheet_animation</item>
+    </style>
+    <style name="bt_expiration_date_dialog_sheet_animation">
+        <item name="android:windowEnterAnimation">@anim/bt_expiration_date_dialog_open</item>
+        <item name="android:windowExitAnimation">@anim/bt_expiration_date_dialog_close</item>
+    </style>
+    <style name="bt_expiration_date_dialog_year_grid_view" parent="bt_expiration_date_dialog_grid_view">
+        <item name="android:paddingRight">8dp</item>
+        <item name="android:paddingEnd" ns1:targetApi="jelly_bean_mr1">8dp</item>
+        <item name="android:paddingStart" ns1:targetApi="jelly_bean_mr1">0dp</item>
+        <item name="android:scrollbarSize">3dp</item>
+        <item name="android:scrollbarStyle">outsideOverlay</item>
+        <item name="android:fadeScrollbars">false</item>
+        <item name="android:scrollbarAlwaysDrawVerticalTrack">true</item>
     </style>
     <style name="circleImageView" parent="">
         <item name="cornerFamily">rounded</item>
         <item name="cornerSize">50%</item>
     </style>
     <style name="com_facebook_activity_theme" parent="@style/Theme.AppCompat.NoActionBar">
-        <item name="android:windowIsTranslucent">true</item>
-        <item name="android:windowBackground">@android:color/transparent</item>
-        <item name="android:windowNoTitle">true</item>
+      <item name="android:windowIsTranslucent">true</item>
+      <item name="android:windowBackground">@android:color/transparent</item>
+      <item name="android:windowNoTitle">true</item>
     </style>
     <style name="com_facebook_auth_dialog" parent="@style/Theme.AppCompat.Dialog">
         <item name="android:windowIsTranslucent">true</item>
@@ -6361,7 +7948,7 @@
     </style>
     <style name="com_facebook_button" parent="@android:style/Widget.Button">
         <item name="android:background">@drawable/com_facebook_button_background</item>
-        <item name="android:drawablePadding">6dp</item>
+        <item name="android:drawablePadding">4dp</item>
         <item name="android:gravity">center</item>
         <item name="android:paddingBottom">5dp</item>
         <item name="android:paddingLeft">8dp</item>
@@ -6380,20 +7967,19 @@
         <item name="android:textColor">@color/com_facebook_send_button_text_color</item>
     </style>
     <style name="com_facebook_button_share" parent="com_facebook_button">
-        <item name="android:drawableLeft">@drawable/com_facebook_button_icon</item>
         <item name="android:text">@string/com_facebook_share_button_text</item>
     </style>
-    <style name="com_facebook_loginview_default_style" parent="com_facebook_button">
-        <item name="android:background">@drawable/com_facebook_button_login_background</item>
-        <item name="android:drawablePadding">5dp</item>
-        <item name="android:paddingLeft">6dp</item>
-        <item name="android:paddingRight">6dp</item>
-        <item name="android:textSize">13.0dp</item>
-    </style>
-    <style name="com_facebook_loginview_silver_style" parent="com_facebook_loginview_default_style">
-        <item name="android:background">@drawable/com_facebook_button_login_silver_background</item>
-        <item name="android:drawableLeft">@null</item>
-        <item name="android:textColor">#4b5164</item>
+    <style name="com_facebook_loginview_default_style" parent="com_facebook_button"/>
+    <style name="custom_style_cvv_expdate">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_marginStart">@dimen/edit_text_default_padding</item>
+        <item name="android:layout_marginLeft">@dimen/edit_text_default_padding</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:textColor">@color/greyish_brown</item>
+        <item name="android:textSize">@dimen/font_size_16sp</item>
+        <item name="android:fontFamily" ns1:targetApi="jelly_bean">sans-serif-light</item>
+        <item name="android:textStyle">normal</item>
     </style>
     <style name="ef_AppTheme" parent="ef_BaseTheme">
         <item name="colorPrimary">@color/ef_colorPrimary</item>
@@ -6421,6 +8007,14 @@
         <item name="strokeColor">@color/colorPrimary</item>
         <item name="android:editTextPreferenceStyle">@style/outlinedEdittext</item>
     </style>
+    <style name="header_text">
+        <item name="android:textColor">@color/greyish_brown</item>
+        <item name="android:textSize">@dimen/font_size_20sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily" ns1:targetApi="jelly_bean">@font/roboto_regular</item>
+        <item name="android:lineSpacingExtra">@dimen/title_lineSpacingExtra_0</item>
+
+    </style>
     <style name="normalText" parent="Widget.AppCompat.TextView">
         <item name="android:textSize">@dimen/button_text_size</item>
         <item name="android:textColor">@color/colorPrimary</item>
@@ -6436,8 +8030,19 @@
 
         <item name="android:fontFamily">@font/sfui_display_regular</item>
     </style>
+    <style name="popup_window_animation_phone">
+        <item name="android:windowEnterAnimation">@android:anim/fade_in</item>
+    </style>
     <style name="progressBarBlue" parent="@style/Theme.AppCompat">
         <item name="colorAccent">@color/colorPrimary</item>
+    </style>
+    <style name="secondary_text">
+        <item name="android:textColor">@color/greyish_brown</item>
+        <item name="android:textSize">@dimen/font_size_13sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:fontFamily" ns1:targetApi="jelly_bean">@font/roboto_light</item>
+        <item name="android:lineSpacingExtra">@dimen/title_lineSpacingExtra_11</item>
+
     </style>
     <style name="textButton" parent="Widget.MaterialComponents.Button.TextButton">
         <item name="android:textColor">@color/white</item>
@@ -6503,6 +8108,8 @@
         <item name="android:background">?attr/selectableItemBackgroundBorderless</item>
         <item name="android:clickable">true</item>
     </style>
+    <style name="zxing_CaptureTheme" parent="android:Theme.Holo.NoActionBar.Fullscreen">
+  </style>
     <declare-styleable name="ActionBar">
         <!-- The type of navigation to use. -->
         <attr name="navigationMode">
@@ -6758,6 +8365,9 @@
          is scrollable. -->
     <attr format="reference" name="layout_scrollInterpolator"/>
   </declare-styleable>
+    <declare-styleable name="AppCompatEmojiHelper">
+
+    </declare-styleable>
     <declare-styleable name="AppCompatImageView">
         <attr name="android:src"/>
         <!-- Sets a drawable as the content of this ImageView. Allows the use of vector drawable
@@ -6898,6 +8508,8 @@
                  result to valid color values. Saturate(S + D) -->
             <enum name="add" value="16"/>
         </attr>
+        <!-- Display the emoji if emojicompat has this character for emoji not on the system -->
+        <attr format="boolean" name="emojiCompatEnabled"/>
     </declare-styleable>
     <declare-styleable name="AppCompatTheme">
 
@@ -7322,6 +8934,7 @@
     <attr format="dimension" name="horizontalOffset"/>
     <attr format="dimension" name="verticalOffset"/>
   </declare-styleable>
+    <declare-styleable name="BarcodeScannerView"><attr format="boolean" name="shouldScaleToFill"/></declare-styleable>
     <declare-styleable name="BaseProgressIndicator">
     <!-- Whether the progress indicator should be indeterminate mode. -->
     <attr name="android:indeterminate"/>
@@ -7542,6 +9155,34 @@
         <attr format="enum" name="carousel_emptyViewsBehavior">
             <enum name="invisible" value="4"/>
             <enum name="gone" value="8"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="CheckedTextView">
+        <attr name="android:checkMark"/>
+        <!-- Compat attr to load backported drawable types -->
+        <attr format="reference" name="checkMarkCompat"/>
+        <!-- Tint to apply to the check mark drawable. -->
+        <attr format="color" name="checkMarkTint"/>
+
+        <!-- Blending mode used to apply the check mark tint. -->
+        <attr name="checkMarkTintMode">
+            <!-- The tint is drawn on top of the drawable.
+                 [Sa + (1 - Sa)*Da, Rc = Sc + (1 - Sa)*Dc] -->
+            <enum name="src_over" value="3"/>
+            <!-- The tint is masked by the alpha channel of the drawable. The drawable’s
+                 color channels are thrown out. [Sa * Da, Sc * Da] -->
+            <enum name="src_in" value="5"/>
+            <!-- The tint is drawn above the drawable, but with the drawable’s alpha
+                 channel masking the result. [Da, Sc * Da + (1 - Sa) * Dc] -->
+            <enum name="src_atop" value="9"/>
+            <!-- Multiplies the color and alpha channels of the drawable with those of
+                 the tint. [Sa * Da, Sc * Dc] -->
+            <enum name="multiply" value="14"/>
+            <!-- [Sa + Da - Sa * Da, Sc + Dc - Sc * Dc] -->
+            <enum name="screen" value="15"/>
+            <!-- Combines the tint and icon color and alpha channels, clamping the
+                 result to valid color values. Saturate(S + D) -->
+            <enum name="add" value="16"/>
         </attr>
     </declare-styleable>
     <declare-styleable name="Chip">
@@ -7776,6 +9417,20 @@
 
     <attr format="dimension" name="selectorSize"/>
   </declare-styleable>
+    <declare-styleable name="CodeScannerView">
+        <attr format="color" name="maskColor"/>
+        <attr format="color" name="frameColor"/>
+        <attr format="color" name="autoFocusButtonColor"/>
+        <attr format="color" name="flashButtonColor"/>
+        <attr format="boolean" name="autoFocusButtonVisible"/>
+        <attr format="boolean" name="flashButtonVisible"/>
+        <attr format="dimension" name="frameThickness"/>
+        <attr format="dimension" name="frameCornersSize"/>
+        <attr format="dimension" name="frameCornersRadius"/>
+        <attr format="float" name="frameAspectRatioWidth"/>
+        <attr format="float" name="frameAspectRatioHeight"/>
+        <attr format="float" name="frameSize"/>
+    </declare-styleable>
     <declare-styleable name="CollapsingToolbarLayout">
     <!--  Specifies extra space on the start, top, end and bottom
           sides of the the expanded title text. Margin values should be positive. -->
@@ -8676,6 +10331,30 @@
             <flag name="all" value="0x77"/>
         </attr>
     </declare-styleable>
+    <declare-styleable name="CountryCodePicker">
+    <attr format="integer" name="ccp_defaultCode"/>
+    <attr format="color" name="ccp_textColor"/>
+    <attr format="color" name="ccp_backgroundColor"/>
+    <attr format="dimension" name="ccp_textSize"/>
+    <attr format="string" name="ccp_textFont"/>
+    <attr format="dimension" name="ccp_arrowSize"/>
+    <attr format="string" name="ccp_countryPreference"/>
+    <attr format="string" name="ccp_defaultNameCode"/>
+    <attr format="boolean" name="ccp_hideNameCode"/>
+    <attr format="boolean" name="ccp_keyboardAutoPopOnSearch"/>
+    <attr format="string" name="ccp_customMasterCountries"/>
+    <attr format="boolean" name="ccp_showFlag"/>
+    <attr format="boolean" name="ccp_showFullName"/>
+    <attr format="boolean" name="ccp_selectionDialogShowSearch"/>
+    <attr format="boolean" name="ccp_clickable"/>
+    <attr format="boolean" name="ccp_hidePhoneCode"/>
+    <attr format="boolean" name="ccp_enableHint"/>
+    <attr format="boolean" name="ccp_enablePhoneAutoFormatter"/>
+    <attr format="boolean" name="ccp_setCountryByTimeZone"/>
+
+    <!--For dialog-->
+    <attr format="color" name="ccp_dialogTextColor"/>
+  </declare-styleable>
     <declare-styleable name="CustomAttribute">
         <attr format="string" name="attributeName"/>
         <attr format="string" name="methodName"/>
@@ -9376,6 +11055,38 @@
 
 <attr format="boolean" name="circleCrop"/>
 </declare-styleable>
+    <declare-styleable name="LongShadowsFrameLayoutWrapper"><attr name="calculateAsync"/><attr name="showWhenAllReady"/><attr name="shouldClipChildren"/><attr name="shouldClipToPadding"/><attr name="animateShadow"/><attr name="animationDuration"/></declare-styleable>
+    <declare-styleable name="LongShadowsImageView"><attr name="shadow_angle"/><attr name="shadow_startColor"/><attr name="shadow_endColor"/><attr name="shadow_length"/><attr name="shadow_blur_enabled"/><attr name="shadow_blur_radius"/><attr name="shadow_alpha"/><attr name="background_transparent"/><attr name="background_color_to_ignore"/></declare-styleable>
+    <declare-styleable name="LongShadowsTextView"><attr name="shadow_angle"/><attr name="shadow_startColor"/><attr name="shadow_endColor"/><attr name="shadow_length"/><attr name="shadow_blur_enabled"/><attr name="shadow_blur_radius"/><attr name="shadow_alpha"/><attr name="background_transparent"/><attr name="background_color_to_ignore"/></declare-styleable>
+    <declare-styleable name="LongShadowsView"><attr name="shadow_angle"/><attr name="shadow_startColor"/><attr name="shadow_endColor"/><attr name="shadow_length"/><attr name="shadow_blur_enabled"/><attr name="shadow_blur_radius"/><attr name="shadow_alpha"/><attr name="background_transparent"/><attr name="background_color_to_ignore"/></declare-styleable>
+    <declare-styleable name="LongShadowsWrapper"><attr name="calculateAsync"/><attr name="showWhenAllReady"/><attr name="shouldClipChildren"/><attr name="shouldClipToPadding"/><attr name="animateShadow"/><attr name="animationDuration"/></declare-styleable>
+    <declare-styleable name="LottieAnimationView">
+        <attr format="string" name="lottie_fileName"/>
+        <attr format="reference" name="lottie_rawRes"/>
+        <attr format="string" name="lottie_url"/>
+        <attr format="reference" name="lottie_fallbackRes"/>
+        <attr format="boolean" name="lottie_autoPlay"/>
+        <attr format="boolean" name="lottie_loop"/>
+        <attr format="enum" name="lottie_repeatMode">
+            <enum name="restart" value="1"/>
+            <enum name="reverse" value="2"/>
+        </attr>
+        <attr format="integer" name="lottie_repeatCount"/>
+        <attr format="string" name="lottie_imageAssetsFolder"/>
+        <attr format="float" name="lottie_progress"/>
+        <attr format="boolean" name="lottie_enableMergePathsForKitKatAndAbove"/>
+        <attr format="color" name="lottie_colorFilter"/>
+        <attr format="float" name="lottie_scale"/>
+        <attr format="float" name="lottie_speed"/>
+        <attr format="boolean" name="lottie_cacheComposition"/>
+        <!-- These values must be kept in sync with the RenderMode enum -->
+        <attr format="enum" name="lottie_renderMode">
+            <enum name="automatic" value="0"/>
+            <enum name="hardware" value="1"/>
+            <enum name="software" value="2"/>
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="MDRootLayout"><attr format="boolean" name="md_reduce_padding_no_title_no_buttons"/></declare-styleable>
     <declare-styleable name="MapAttrs"><attr name="mapType">
 <enum name="none" value="0"/>
 
@@ -9434,6 +11145,10 @@
 <attr format="float" name="latLngBoundsNorthEastLatitude"/>
 
 <attr format="float" name="latLngBoundsNorthEastLongitude"/>
+
+<attr format="color" name="backgroundColor"/>
+
+<attr format="string" name="mapId"/>
 </declare-styleable>
     <declare-styleable name="MaterialAlertDialog">
     <attr format="dimension" name="backgroundInsetStart"/>
@@ -9594,6 +11309,41 @@
     <!-- Tint for the checkbox. -->
     <attr name="buttonTint"/>
   </declare-styleable>
+    <declare-styleable name="MaterialProgressBar"><attr format="enum" name="mpb_progressStyle">
+            <enum name="circular" value="0"/>
+            <enum name="horizontal" value="1"/>
+        </attr><attr format="boolean" name="mpb_setBothDrawables"/><attr format="boolean" name="mpb_useIntrinsicPadding"/><attr format="boolean" name="mpb_showProgressBackground"/><attr format="enum" name="mpb_determinateCircularProgressStyle">
+            <enum name="normal" value="0"/>
+            <enum name="dynamic" value="1"/>
+        </attr><attr format="color|reference" name="mpb_progressTint"/><attr format="enum" name="mpb_progressTintMode">
+            <enum name="src_over" value="3"/>
+            <enum name="src_in" value="5"/>
+            <enum name="src_atop" value="9"/>
+            <enum name="multiply" value="14"/>
+            <enum name="screen" value="15"/>
+            <enum name="add" value="16"/>
+        </attr><attr format="color|reference" name="mpb_secondaryProgressTint"/><attr format="enum" name="mpb_secondaryProgressTintMode">
+            <enum name="src_over" value="3"/>
+            <enum name="src_in" value="5"/>
+            <enum name="src_atop" value="9"/>
+            <enum name="multiply" value="14"/>
+            <enum name="screen" value="15"/>
+            <enum name="add" value="16"/>
+        </attr><attr format="color|reference" name="mpb_progressBackgroundTint"/><attr format="enum" name="mpb_progressBackgroundTintMode">
+            <enum name="src_over" value="3"/>
+            <enum name="src_in" value="5"/>
+            <enum name="src_atop" value="9"/>
+            <enum name="multiply" value="14"/>
+            <enum name="screen" value="15"/>
+            <enum name="add" value="16"/>
+        </attr><attr format="color|reference" name="mpb_indeterminateTint"/><attr format="enum" name="mpb_indeterminateTintMode">
+            <enum name="src_over" value="3"/>
+            <enum name="src_in" value="5"/>
+            <enum name="src_atop" value="9"/>
+            <enum name="multiply" value="14"/>
+            <enum name="screen" value="15"/>
+            <enum name="add" value="16"/>
+        </attr></declare-styleable>
     <declare-styleable name="MaterialRadioButton">
     <!-- When set to true, MaterialRadioButton will tint itself according to
       Material Theme colors. When set to false, Material Theme colors will
@@ -10164,6 +11914,31 @@
         <attr format="color" name="bar_success_color"/>
         <attr format="string" name="text_typeface"/>
     </declare-styleable>
+    <declare-styleable name="PayButtonView">
+        <attr name="android:layout_height"/>
+
+        <attr name="android:layout_marginTop"/>
+        <attr name="android:layout_marginBottom"/>
+        <attr name="android:layout_marginLeft"/>
+        <attr name="android:layout_marginRight"/>
+        <attr name="android:layout_marginStart"/>
+        <attr name="android:layout_marginEnd"/>
+
+        <attr name="android:paddingTop"/>
+        <attr name="android:paddingBottom"/>
+        <attr name="android:paddingLeft"/>
+        <attr name="android:paddingStart"/>
+        <attr name="android:paddingRight"/>
+        <attr name="android:paddingEnd"/>
+
+        <attr name="android:textSize"/>
+        <attr name="android:textColor"/>
+        <attr name="android:textStyle"/>
+
+        <attr name="android:background"/>
+        <attr name="android:gravity"/>
+        <attr name="android:text"/>
+    </declare-styleable>
     <declare-styleable name="PopupWindow">
         <!-- Whether the popup window should overlap its anchor view. -->
         <attr format="boolean" name="overlapAnchor"/>
@@ -10431,6 +12206,19 @@
     <attr format="dimension" name="contentPaddingStart"/>
     <attr name="contentPaddingTop"/>
   </declare-styleable>
+    <declare-styleable name="ShimmerFrameLayout"><attr format="boolean" name="shimmer_clip_to_children"/><attr format="boolean" name="shimmer_colored"/><attr format="color" name="shimmer_base_color"/><attr format="color" name="shimmer_highlight_color"/><attr format="float" name="shimmer_base_alpha"/><attr format="float" name="shimmer_highlight_alpha"/><attr format="boolean" name="shimmer_auto_start"/><attr format="integer" name="shimmer_duration"/><attr format="integer" name="shimmer_repeat_count"/><attr format="integer" name="shimmer_repeat_delay"/><attr format="enum" name="shimmer_repeat_mode">
+      <enum name="restart" value="1"/>
+      <enum name="reverse" value="2"/>
+    </attr><attr format="enum" name="shimmer_direction">
+      <enum name="left_to_right" value="0"/>
+      <enum name="top_to_bottom" value="1"/>
+      <enum name="right_to_left" value="2"/>
+      <enum name="bottom_to_top" value="3"/>
+    </attr><attr format="float" name="shimmer_dropoff"/><attr format="dimension" name="shimmer_fixed_width"/><attr format="dimension" name="shimmer_fixed_height"/><attr format="float" name="shimmer_intensity"/><attr format="float" name="shimmer_width_ratio"/><attr format="float" name="shimmer_height_ratio"/><attr format="enum" name="shimmer_shape">
+      <enum name="linear" value="0"/>
+      <enum name="radial" value="1"/>
+    </attr><attr format="float" name="shimmer_tilt"/></declare-styleable>
+    <declare-styleable name="ShimmerLayout"><attr format="color|reference" name="shimmer_color"/><attr format="integer|reference" name="shimmer_animation_duration"/><attr format="boolean|reference" name="shimmer_auto_start"/><attr format="integer|reference" name="shimmer_angle"/><attr format="float|reference" name="shimmer_mask_width"/><attr format="float|reference" name="shimmer_gradient_center_color_width"/><attr format="boolean|reference" name="shimmer_reverse_animation"/></declare-styleable>
     <declare-styleable name="SignInButton"><attr format="reference" name="buttonSize">
 <enum name="standard" value="0"/>
 
@@ -10541,6 +12329,18 @@
     <attr name="roundingBorderPadding"/>
 
   </declare-styleable>
+    <declare-styleable name="SkeletonLayout">
+        <attr format="color" name="maskColor"/>
+        <attr format="dimension" name="maskCornerRadius"/>
+        <attr format="boolean" name="showShimmer"/>
+        <attr format="color" name="shimmerColor"/>
+        <attr format="integer" name="shimmerDurationInMillis"/>
+        <attr format="enum" name="shimmerDirection">
+            <enum name="left_to_right" value="0"/>
+            <enum name="right_to_left" value="1"/>
+        </attr>
+        <attr format="integer" name="shimmerAngle"/>
+    </declare-styleable>
     <declare-styleable name="Slider">
     <attr name="android:value"/>
     <attr name="android:valueFrom"/>
@@ -10856,6 +12656,7 @@
          tab item bounds. -->
     <attr format="boolean" name="tabUnboundedRipple"/>
   </declare-styleable>
+    <declare-styleable name="TapLoadingView"><attr format="boolean" name="useCustomColor"/><attr format="color" name="customColor"/></declare-styleable>
     <declare-styleable name="TextAppearance">
         <attr name="android:textSize"/>
         <attr name="android:textColor"/>
@@ -11327,6 +13128,32 @@
         <attr format="dimension" name="region_heightMoreThan"/>
         <attr name="constraints"/>
     </declare-styleable>
+    <declare-styleable name="VeilLayout">
+    <attr format="boolean" name="veilLayout_veiled"/>
+    <attr format="reference" name="veilLayout_layout"/>
+    <attr format="reference" name="veilLayout_drawable"/>
+    <attr format="dimension" name="veilLayout_radius"/>
+    <attr format="boolean" name="veilLayout_shimmerEnable"/>
+    <attr format="color" name="veilLayout_baseColor"/>
+    <attr format="color" name="veilLayout_highlightColor"/>
+    <attr format="float" name="veilLayout_baseAlpha"/>
+    <attr format="float" name="veilLayout_highlightAlpha"/>
+    <attr format="float" name="veilLayout_dropOff"/>
+    <attr format="boolean" name="veilLayout_defaultChildVisible"/>
+  </declare-styleable>
+    <declare-styleable name="VeilRecyclerFrameView">
+    <attr format="boolean" name="veilFrame_veiled"/>
+    <attr format="reference" name="veilFrame_layout"/>
+    <attr format="reference" name="veilFrame_drawable"/>
+    <attr format="dimension" name="veilFrame_radius"/>
+    <attr format="boolean" name="veilFrame_shimmerEnable"/>
+    <attr format="color" name="veilFrame_baseColor"/>
+    <attr format="color" name="veilFrame_highlightColor"/>
+    <attr format="float" name="veilFrame_baseAlpha"/>
+    <attr format="float" name="veilFrame_highlightAlpha"/>
+    <attr format="float" name="veilFrame_dropOff"/>
+    <attr format="boolean" name="veilFrame_defaultChildVisible"/>
+  </declare-styleable>
     <declare-styleable name="View">
         <!-- Sets the padding, in pixels, of the start edge; see {@link android.R.attr#padding}. -->
         <attr format="dimension" name="paddingStart"/>
@@ -11401,42 +13228,78 @@
         <attr format="reference" name="ifTagSet"/>
         <attr format="reference" name="ifTagNotSet"/>
     </declare-styleable>
-    <declare-styleable name="com_facebook_like_view"><attr format="color" name="com_facebook_foreground_color"/><attr format="string" name="com_facebook_object_id"/><attr name="com_facebook_object_type">
-            
+    <declare-styleable name="WheelPicker"><attr format="reference" name="wheel_data"/><attr format="integer" name="wheel_selected_item_position"/><attr format="dimension" name="wheel_item_text_size"/><attr format="color" name="wheel_item_text_color"/><attr format="color" name="wheel_selected_item_text_color"/><attr format="boolean" name="wheel_same_width"/><attr format="string" name="wheel_maximum_width_text"/><attr format="integer" name="wheel_maximum_width_text_position"/><attr format="integer" name="wheel_visible_item_count"/><attr format="dimension" name="wheel_item_space"/><attr format="boolean" name="wheel_cyclic"/><attr format="boolean" name="wheel_indicator"/><attr format="color" name="wheel_indicator_color"/><attr format="dimension" name="wheel_indicator_size"/><attr format="boolean" name="wheel_curtain"/><attr format="color" name="wheel_curtain_color"/><attr format="boolean" name="wheel_atmospheric"/><attr format="boolean" name="wheel_curved"/><attr format="enum" name="wheel_item_align"><enum name="center" value="0"/><enum name="left" value="1"/><enum name="right" value="2"/></attr></declare-styleable>
+    <declare-styleable name="com_facebook_like_view">
+        <attr format="color" name="com_facebook_foreground_color"/>
+        <attr format="string" name="com_facebook_object_id"/>
+        <attr name="com_facebook_object_type">
+            <!-- Keep in sync with Enums in Likeview -->
             <enum name="unknown" value="0"/>
             <enum name="open_graph" value="1"/>
             <enum name="page" value="2"/>
-        </attr><attr name="com_facebook_style">
-            
+        </attr>
+        <attr name="com_facebook_style">
+            <!-- Keep in sync with Enums in LikeView -->
             <enum name="standard" value="0"/>
             <enum name="button" value="1"/>
             <enum name="box_count" value="2"/>
-        </attr><attr name="com_facebook_auxiliary_view_position">
-            
+        </attr>
+        <attr name="com_facebook_auxiliary_view_position">
+            <!-- Keep in sync with Enums in LikeView -->
             <enum name="bottom" value="0"/>
             <enum name="inline" value="1"/>
             <enum name="top" value="2"/>
-        </attr><attr name="com_facebook_horizontal_alignment">
-            
+        </attr>
+        <attr name="com_facebook_horizontal_alignment">
+            <!-- Keep in sync with Enums in LikeView -->
             <enum name="center" value="0"/>
             <enum name="left" value="1"/>
             <enum name="right" value="2"/>
-        </attr></declare-styleable>
-    <declare-styleable name="com_facebook_login_view"><attr format="boolean" name="com_facebook_confirm_logout"/><attr format="string" name="com_facebook_login_text"/><attr format="string" name="com_facebook_logout_text"/><attr name="com_facebook_tooltip_mode">
-            
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="com_facebook_login_view">
+        <attr format="boolean" name="com_facebook_confirm_logout"/>
+        <attr format="string" name="com_facebook_login_text"/>
+        <attr format="string" name="com_facebook_logout_text"/>
+        <attr name="com_facebook_tooltip_mode">
+            <!-- Keep in sync with Enums in LoginButton -->
             <enum name="automatic" value="0"/>
             <enum name="display_always" value="1"/>
             <enum name="never_display" value="2"/>
-        </attr></declare-styleable>
-    <declare-styleable name="com_facebook_profile_picture_view"><attr name="com_facebook_preset_size">
-            
+        </attr>
+    </declare-styleable>
+    <declare-styleable name="com_facebook_profile_picture_view">
+        <attr name="com_facebook_preset_size">
+            <!-- Keep in sync with constants in ProfilePictureView -->
             <enum name="small" value="-2"/>
             <enum name="normal" value="-3"/>
             <enum name="large" value="-4"/>
-        </attr><attr format="boolean" name="com_facebook_is_cropped"/></declare-styleable>
+        </attr>
+        <attr format="boolean" name="com_facebook_is_cropped"/>
+    </declare-styleable>
     <declare-styleable name="include">
         <attr name="constraintSet"/>
     </declare-styleable>
     <declare-styleable name="ucrop_AspectRatioTextView"><attr format="string" name="ucrop_artv_ratio_title"/><attr format="float" name="ucrop_artv_ratio_x"/><attr format="float" name="ucrop_artv_ratio_y"/></declare-styleable>
     <declare-styleable name="ucrop_UCropView"><attr format="float" name="ucrop_aspect_ratio_x"/><attr format="float" name="ucrop_aspect_ratio_y"/><attr format="boolean" name="ucrop_show_oval_crop_frame"/><attr format="boolean" name="ucrop_circle_dimmed_layer"/><attr format="color" name="ucrop_dimmed_color"/><attr format="dimension" name="ucrop_grid_stroke_size"/><attr format="color" name="ucrop_grid_color"/><attr format="integer" name="ucrop_grid_row_count"/><attr format="integer" name="ucrop_grid_column_count"/><attr format="boolean" name="ucrop_show_grid"/><attr format="dimension" name="ucrop_frame_stroke_size"/><attr format="color" name="ucrop_frame_color"/><attr format="boolean" name="ucrop_show_frame"/></declare-styleable>
+    <declare-styleable name="zxing_camera_preview">
+    <attr format="dimension" name="zxing_framing_rect_width"/>
+    <attr format="dimension" name="zxing_framing_rect_height"/>
+    <attr format="boolean" name="zxing_use_texture_view"/>
+    <attr format="enum" name="zxing_preview_scaling_strategy">
+      <enum name="centerCrop" value="1"/>
+      <enum name="fitCenter" value="2"/>
+      <enum name="fitXY" value="3"/>
+    </attr>
+  </declare-styleable>
+    <declare-styleable name="zxing_finder">
+    <attr format="color" name="zxing_possible_result_points"/>
+    <attr format="color" name="zxing_result_view"/>
+    <attr format="color" name="zxing_viewfinder_laser"/>
+    <attr format="color" name="zxing_viewfinder_mask"/>
+    <attr format="boolean" name="zxing_viewfinder_laser_visibility"/>
+  </declare-styleable>
+    <declare-styleable name="zxing_view">
+    <attr format="reference" name="zxing_scanner_layout"/>
+  </declare-styleable>
 </resources>

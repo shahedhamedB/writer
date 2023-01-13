@@ -7,5 +7,13 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="com.example.dynamodb.ui.homewether.HomeFragment"
-        android:label="HomeFragment" />
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_weaterDitalesFragment"
+            app:destination="@id/weaterDitalesFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/weaterDitalesFragment"
+        android:name="com.example.dynamodb.ui.weaterdetailes.WeaterDitalesFragment"
+        android:label="WeaterDitalesFragment" />
 </navigation>
